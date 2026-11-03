@@ -90,4 +90,53 @@ SAMPLES: dict[str, list[DocConfig]] = {
             injection=True,
         ),
     ],
+    "modern": [
+        # India: Rs. 1,23,456.00 (lakh grouping), 21-Mar-2026 dates, GST 18%.
+        DocConfig(
+            doc_id="sample-modern-01",
+            layout="modern",
+            seed=301,
+            region="IN",
+            currency="INR",
+            date_style="short_dmy",
+            number_style="indian",
+            currency_display="symbol_prefix",
+            currency_note=False,
+            tax_label="GST",
+            tax_rate=Decimal("0.18"),
+        ),
+        # Japan: zero-decimal yen (¥12,000; "¥" alone is ambiguous, the note
+        # says JPY), ISO dates, consumption tax 10%, unusual invoice-number label.
+        DocConfig(
+            doc_id="sample-modern-02",
+            layout="modern",
+            seed=302,
+            region="JP",
+            currency="JPY",
+            date_style="iso",
+            number_style="us",
+            currency_display="symbol_prefix",
+            currency_note=True,
+            tax_label="Consumption tax",
+            tax_rate=Decimal("0.10"),
+            labels={"invoice_number": "Document no."},
+        ),
+        # Australia-style: A$, DD/MM/YYYY, hourly services, no tax, no subtotal
+        # line, no bill-to block (optional fields missing).
+        DocConfig(
+            doc_id="sample-modern-03",
+            layout="modern",
+            seed=303,
+            region="UK",
+            currency="AUD",
+            date_style="eu_slash",
+            number_style="us",
+            currency_display="symbol_prefix",
+            currency_note=False,
+            services=True,
+            tax_rate=None,
+            show_subtotal=False,
+            has_bill_to=False,
+        ),
+    ],
 }

@@ -138,9 +138,14 @@ def _descriptions(rng: random.Random, count: int, services: bool) -> list[str]:
     return result
 
 
+# Rough price level relative to USD, so amounts look plausible (and INR totals
+# reach lakh grouping: 1,23,456.00).
+PRICE_SCALE = {"JPY": Decimal(100), "INR": Decimal(80)}
+
+
 def _lines(rng: random.Random, config: DocConfig, places: int) -> list[Line]:
     count = rng.randint(*config.n_lines)
-    scale = Decimal(100) if places == 0 else Decimal(1)  # JPY prices are ~100x
+    scale = PRICE_SCALE.get(config.currency, Decimal(1))
     lines = []
     for description in _descriptions(rng, count, config.services):
         if config.services:
