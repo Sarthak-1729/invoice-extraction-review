@@ -5,7 +5,7 @@ from decimal import ROUND_HALF_UP, Decimal
 from typing import Literal
 
 DateStyle = Literal["us_slash", "eu_slash", "dotted", "iso", "long_mdy", "long_dmy", "short_dmy"]
-NumberStyle = Literal["us", "eu", "space", "indian", "plain"]
+NumberStyle = Literal["us", "eu", "space", "swiss", "indian", "plain"]
 CurrencyDisplay = Literal["symbol_prefix", "symbol_suffix", "code_prefix", "code_suffix", "none"]
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
@@ -20,6 +20,7 @@ _SEPARATORS = {
     "us": (",", "."),
     "eu": (".", ","),
     "space": (" ", ","),
+    "swiss": ("'", "."),
     "indian": (",", "."),
     "plain": ("", "."),
 }

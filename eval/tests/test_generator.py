@@ -30,6 +30,7 @@ ALL_SAMPLES = [config for configs in SAMPLES.values() for config in configs]
         ("1234567.891", "us", 2, "1,234,567.89"),
         ("1234567.891", "eu", 2, "1.234.567,89"),
         ("1234567.891", "space", 2, "1 234 567,89"),
+        ("1234567.891", "swiss", 2, "1'234'567.89"),
         ("1234567.891", "indian", 2, "12,34,567.89"),
         ("1234567.891", "plain", 2, "1234567.89"),
         ("999", "us", 2, "999.00"),
@@ -59,9 +60,9 @@ def test_format_date(style, expected):
     assert format_date(date(2026, 3, 25), style) == expected
 
 
-@pytest.mark.parametrize("style", ["us", "eu", "space", "indian", "plain"])
+@pytest.mark.parametrize("style", ["us", "eu", "space", "swiss", "indian", "plain"])
 @pytest.mark.parametrize("display", ["symbol_prefix", "symbol_suffix", "code_prefix", "none"])
-@pytest.mark.parametrize("currency", ["USD", "EUR", "INR", "JPY"])
+@pytest.mark.parametrize("currency", ["USD", "EUR", "CHF", "INR", "JPY"])
 def test_printed_money_parses_back_to_value(style, display, currency):
     """Generator formatting and app parsing must agree, or labels would be unreachable."""
     value = Decimal("1234567.5") if currency != "JPY" else Decimal("1234567")
