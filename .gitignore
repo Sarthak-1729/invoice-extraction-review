@@ -22,6 +22,9 @@ node_modules/
 frontend/dist/
 coverage/
 
+# Layout review samples (regenerate with: python -m eval.generator.generate samples)
+eval/samples/
+
 # Runtime data (never commit uploads or databases)
 data/
 uploads/
