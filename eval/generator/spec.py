@@ -51,6 +51,9 @@ class DocConfig:
     has_bill_to: bool = True
     show_subtotal: bool = True
     labels: dict[str, str] = field(default_factory=dict)  # e.g. {"total": "Amount payable"}
+    # Line-item column order for the multipage layout (others use a fixed order).
+    # Names: "sku", "description", "quantity", "unit_price", "amount".
+    columns: tuple[str, ...] | None = None
     arithmetic_error: ArithmeticErrorKind | None = None
     injection: bool = False
 
@@ -132,7 +135,7 @@ def _descriptions(rng: random.Random, count: int, services: bool) -> list[str]:
         return rng.sample(pool, count)
     result: list[str] = []
     while len(result) < count:
-        text = f"{rng.choice(pool)} (ref {rng.randint(1000, 9999)})"
+        text = f"{rng.choice(pool)} #{rng.randint(1000, 9999)}"
         if text not in result:
             result.append(text)
     return result
@@ -196,6 +199,12 @@ def build_spec(config: DocConfig) -> InvoiceSpec:
         (not config.show_subtotal, "no_subtotal"),
         (config.services, "services"),
         (bool(config.labels), "odd_labels"),
+        (config.columns is not None and "sku" in config.columns, "sku_column"),
+        (
+            config.columns is not None
+            and config.columns.index("amount") < config.columns.index("quantity"),
+            "amount_before_qty",
+        ),
         (config.injection, "injection"),
         (config.arithmetic_error is not None, f"arith_error:{config.arithmetic_error}"),
     ]:

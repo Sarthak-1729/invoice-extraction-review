@@ -139,4 +139,50 @@ SAMPLES: dict[str, list[DocConfig]] = {
             has_bill_to=False,
         ),
     ],
+    "multipage": [
+        # USD, 40-48 lines, default columns with an SKU column, sales tax 7%.
+        DocConfig(
+            doc_id="sample-multi-01",
+            layout="multipage",
+            seed=401,
+            n_lines=(40, 48),
+            tax_rate=Decimal("0.07"),
+            columns=("sku", "description", "quantity", "unit_price", "amount"),
+        ),
+        # EUR, DD.MM.YYYY, 1.234,56 €, columns with Amount BEFORE Qty, VAT 20%,
+        # deliberate line error somewhere in a long table, unusual total label.
+        DocConfig(
+            doc_id="sample-multi-02",
+            layout="multipage",
+            seed=402,
+            region="EU",
+            currency="EUR",
+            date_style="dotted",
+            number_style="eu",
+            currency_display="symbol_suffix",
+            n_lines=(35, 45),
+            tax_label="VAT",
+            tax_rate=Decimal("0.20"),
+            columns=("sku", "description", "amount", "quantity", "unit_price"),
+            labels={"total": "Balance due"},
+            arithmetic_error="line",
+        ),
+        # CAD, plain numbers (CAD 1234.56), long dates, no due date, quantity
+        # first and no SKU, 55-60 lines (three pages).
+        DocConfig(
+            doc_id="sample-multi-03",
+            layout="multipage",
+            seed=403,
+            currency="CAD",
+            date_style="long_dmy",
+            number_style="plain",
+            currency_display="code_prefix",
+            currency_note=False,
+            n_lines=(55, 60),
+            has_due_date=False,
+            tax_label="GST/HST",
+            tax_rate=Decimal("0.13"),
+            columns=("quantity", "description", "unit_price", "amount"),
+        ),
+    ],
 }
