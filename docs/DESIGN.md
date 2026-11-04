@@ -137,9 +137,20 @@ buttons.
 
 ## LLM model
 
-Start from `gemini-3.5-flash-lite` if the current docs confirm it supports
-structured output; otherwise recommend an alternative with reasons
-(checked in Phase 3).
+`gemini-3.5-flash-lite` (set through `GEMINI_MODEL`). Checked on 2026-11-04:
+the model page lists it as Stable with "Structured outputs: supported".
+SDK: `google-genai` (the old `google-generativeai` is deprecated), Interactions
+API `client.interactions.create` with a JSON-schema `response_format`, read
+from `output_text`, sent with `store=False`. The SDK's built-in retries are
+off; `app/extraction.py` owns retries. The docs do not publish free-tier
+limits (they point to Google AI Studio), so pacing is configurable
+(`GEMINI_MIN_INTERVAL_SECONDS`, default 6 s).
+
+Provider error codes: `LLM_RATE_LIMITED` (429), `LLM_UNAVAILABLE` (5xx,
+connection), `LLM_TIMEOUT` (timeouts, 408, 504), `LLM_AUTH_FAILED` (401, 403),
+`LLM_BAD_REQUEST` (other 4xx), `LLM_NOT_CONFIGURED`, `LLM_OUTPUT_INCOMPLETE`,
+`LLM_ERROR`, and `SCHEMA_VALIDATION_FAILED` after one retry. PDF rejections
+add `INVALID_PDF` to the upload codes.
 
 ## Changelog
 
@@ -149,3 +160,7 @@ structured output; otherwise recommend an alternative with reasons
   documents; layout-by-layout generator review; counts next to percentages;
   small groups as case studies; README notes same-generator limitation;
   starting model `gemini-3.5-flash-lite` pending docs check.
+- Phase 3: `gemini-3.5-flash-lite` confirmed (structured outputs supported).
+  Schema failure after one retry is a `failed` extraction with
+  `SCHEMA_VALIDATION_FAILED`. Added `INVALID_PDF`. Manual runs are blocked on
+  the test set unless `--allow-test-set` is given (Phase 7).
