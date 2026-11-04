@@ -41,6 +41,7 @@ class GeminiProvider:
         from google.genai import types
 
         self.model = model
+        self._api_key = api_key  # kept only to redact it from error messages
         self.max_output_tokens = max_output_tokens
         self.thinking_level = thinking_level
         self.pacer = Pacer(min_interval_seconds)
@@ -71,7 +72,7 @@ class GeminiProvider:
                 store=False,
             )
         except Exception as error:  # SDK error classes are mapped by status code
-            raise map_provider_error(error) from error
+            raise map_provider_error(error, secrets=(self._api_key,)) from error
 
         status = getattr(interaction, "status", None)
         if status not in (None, "completed"):
@@ -124,10 +125,34 @@ def _retry_after(error: Exception) -> float | None:
     return float(match.group(1)) if match else None
 
 
-def map_provider_error(error: Exception) -> LLMError:
+_API_KEY = re.compile(r"AIza[0-9A-Za-z_\-]{20,}")
+_KEY_PARAM = re.compile(r"(key=)[^&\s\"']+", re.IGNORECASE)
+REDACTED = "[REDACTED]"
+
+
+def redact(text: str, secrets: tuple[str, ...] = ()) -> str:
+    """Remove API keys from text that will be printed or stored."""
+    for secret in secrets:
+        if secret:
+            text = text.replace(secret, REDACTED)
+    text = _API_KEY.sub(REDACTED, text)
+    return _KEY_PARAM.sub(rf"\1{REDACTED}", text)
+
+
+def _full_detail(error: Exception) -> str:
+    """The provider's complete message (no truncation), plus the body if it adds anything."""
+    message = str(error).strip()
+    body = getattr(error, "body", None)
+    body_text = body if isinstance(body, str) else (repr(body) if body else "")
+    if body_text and body_text.strip() not in message:
+        message = f"{message} | body: {body_text.strip()}" if message else body_text.strip()
+    return message
+
+
+def map_provider_error(error: Exception, secrets: tuple[str, ...] = ()) -> LLMError:
     name = type(error).__name__
     status = _status_code(error)
-    detail = str(error)[:300]
+    detail = redact(_full_detail(error), secrets)
     if isinstance(error, httpx.TimeoutException) or "Timeout" in name or status in (408, 504):
         return LLMError(LLMErrorCode.TIMEOUT, f"Request timed out. {detail}".strip())
     if status == 429:
@@ -138,7 +163,8 @@ def map_provider_error(error: Exception) -> LLMError:
         )
     if status in (401, 403):
         return LLMError(
-            LLMErrorCode.AUTH_FAILED, f"Authentication failed ({status}); check GEMINI_API_KEY."
+            LLMErrorCode.AUTH_FAILED,
+            f"Authentication failed ({status}); check GEMINI_API_KEY. {detail}".strip(),
         )
     if status is not None and 500 <= status < 600:
         return LLMError(

@@ -11,6 +11,7 @@ from app.config import Settings
 from app.llm import FakeProvider, LLMError, LLMErrorCode
 from app.pdf_text import PdfRejected
 from app.pipeline import run_pipeline
+from app.prompt import PROMPT_VERSION
 from app.testset_guard import TEST_SET_DIR, TestSetGuardError, guard_test_set, is_test_set_file
 from tests.pdf_factory import image_only_pdf, text_pdf
 
@@ -36,7 +37,7 @@ def test_consistent_extraction_has_status_extracted(tmp_path):
     result = run_pipeline(text_pdf(tmp_path / "a.pdf"), provider, SETTINGS)
     assert result.status == "extracted" and result.flags == []
     assert str(result.invoice.total) == "1234.50"
-    assert result.prompt_version == "extraction_v1" and len(result.prompt_hash) == 64
+    assert result.prompt_version == PROMPT_VERSION and len(result.prompt_hash) == 64
     assert "[pdf page 1 of 1]" in provider.calls[0]["user"]
 
 

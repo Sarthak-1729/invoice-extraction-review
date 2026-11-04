@@ -7,7 +7,7 @@ import httpx
 import pytest
 
 from app.llm import LLMError, LLMErrorCode
-from app.llm.gemini import GeminiProvider, map_provider_error, parse_retry_after
+from app.llm.gemini import REDACTED, GeminiProvider, map_provider_error, parse_retry_after
 from app.llm.pacing import Pacer
 from app.prompt import load_prompt
 
@@ -66,9 +66,45 @@ def test_retryable_codes():
     assert not map_provider_error(FakeStatusError(400)).retryable
 
 
-def test_auth_error_message_does_not_echo_details():
-    mapped = map_provider_error(FakeStatusError(401, body="key=AIza-secret"))
-    assert "secret" not in mapped.message
+FAKE_KEY = "AIza" + "x" * 35  # shaped like a Gemini key; not a real one
+
+
+def test_full_provider_message_is_kept():
+    long_message = "The specified schema produces a constraint that has too many states. " * 20
+    error = FakeStatusError(400)
+    error.args = (long_message,)
+    mapped = map_provider_error(error)
+    assert long_message.strip() in mapped.message  # no truncation
+
+
+def test_body_is_appended_when_it_adds_detail():
+    mapped = map_provider_error(FakeStatusError(400, body='{"error": {"code": "invalid_request"}}'))
+    assert "invalid_request" in mapped.message
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        f"bad key {FAKE_KEY}",
+        "https://example.test/v1/models?key=abc123def&alt=json",
+        "configured key: my-custom-secret-value",
+    ],
+)
+def test_keys_are_redacted_from_messages(text):
+    error = FakeStatusError(401, body=text)
+    mapped = map_provider_error(error, secrets=("my-custom-secret-value",))
+    for secret in (FAKE_KEY, "abc123def", "my-custom-secret-value"):
+        assert secret not in mapped.message
+    assert REDACTED in mapped.message
+
+
+def test_provider_redacts_its_own_key():
+    provider, _ = _provider(
+        error=FakeStatusError(400, body="echo: test-key-not-real"), min_interval_seconds=0
+    )
+    with pytest.raises(LLMError) as info:
+        provider.generate("s", "u", {})
+    assert "test-key-not-real" not in info.value.message
 
 
 def test_parse_retry_after_http_date():

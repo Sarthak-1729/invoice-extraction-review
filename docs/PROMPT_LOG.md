@@ -30,4 +30,28 @@ settings and date. "Not run" means no result exists yet.
     computing totals, tax or due dates.
   - Hand-written flat response schema (`["string", "null"]` per field, no
     `anyOf`, `additionalProperties: false`, at most 500 line items).
-- Dev-set result: not run.
+- Dev-set result: dev-01 failed before extraction with `LLM_BAD_REQUEST`
+  (400): "The specified schema produces a constraint that has too many
+  states for serving." Key and model were accepted; the schema was rejected.
+  No other dev documents were run on v1. Replaced by `extraction_v2`.
+
+## extraction_v2 (schema change, not quality tuning)
+
+- Date: 2026-11-04
+- Hash: `83601bc5d5b7a9922f7d3196a4b29a1399ea3334944a27b5102c5d9b08ab34ea`
+- Model and settings: as v1.
+- Change: removed `"maxItems": 500` from `line_items` in `schema.json`.
+  `system.txt` and `user.txt` are byte-identical to v1.
+- Reason: the Gemini structured-output docs (re-read 2026-11-04) say the API
+  compiles the schema into a state machine with limits on states, and that
+  `minItems`/`maxItems` "duplicate the item schema for each counted
+  position". `maxItems: 500` therefore copied the line-item object 500
+  times. It was the only such keyword in the schema (no `enum`, `pattern`,
+  `minLength`/`maxLength`, `minItems` or descriptions were used). Property
+  names were kept; shortening them is the next step if the schema is still
+  rejected.
+- Limits moved out of the schema are still enforced by Pydantic on the output
+  (`RawExtraction`: at most 500 line items, values at most 500 characters).
+  `tests/test_prompt.py` fails if any state-heavy keyword returns.
+- Dev-set result: pending. dev-01 has not been rerun yet; the result goes
+  here when it is.

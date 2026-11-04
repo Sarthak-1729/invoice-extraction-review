@@ -118,3 +118,71 @@ def test_user_template_needs_exactly_one_placeholder(tmp_path, monkeypatch):
             load_prompt("broken")
     finally:
         load_prompt.cache_clear()
+
+
+# Gemini compiles the schema into a state machine; these keywords multiply its
+# states (maxItems: 500 copied the line-item schema 500 times and the API
+# rejected extraction_v1 with "too many states"). Limits live in Pydantic.
+FORBIDDEN_SCHEMA_KEYWORDS = {
+    "maxLength",
+    "minLength",
+    "maxItems",
+    "minItems",
+    "pattern",
+    "enum",
+    "anyOf",
+    "oneOf",
+    "allOf",
+    "$ref",
+    "$defs",
+    "format",
+    "minimum",
+    "maximum",
+}
+
+
+def _keys(node):
+    if isinstance(node, dict):
+        for key, value in node.items():
+            yield key
+            yield from _keys(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _keys(value)
+
+
+def test_schema_has_no_state_heavy_keywords():
+    used = set(_keys(load_prompt().schema)) & FORBIDDEN_SCHEMA_KEYWORDS
+    assert not used, f"remove {sorted(used)} from schema.json; validate in Pydantic instead"
+
+
+def test_schema_descriptions_are_short():
+    # "description" is also a line-item property name, so only string values count.
+    descriptions = [
+        value
+        for key, value in _walk(load_prompt().schema)
+        if key == "description" and isinstance(value, str)
+    ]
+    assert all(len(text.split()) <= 6 for text in descriptions)
+
+
+def _walk(node):
+    if isinstance(node, dict):
+        for key, value in node.items():
+            yield key, value
+            yield from _walk(value)
+    elif isinstance(node, list):
+        for value in node:
+            yield from _walk(value)
+
+
+def test_limits_removed_from_schema_are_still_enforced_by_pydantic():
+    from pydantic import ValidationError
+
+    from app.schemas.invoice import MAX_LINE_ITEMS, MAX_TEXT_LENGTH, RawExtraction
+
+    with pytest.raises(ValidationError):
+        RawExtraction.model_validate({"line_items": [{}] * (MAX_LINE_ITEMS + 1)})
+    with pytest.raises(ValidationError):
+        RawExtraction.model_validate({"total": "9" * (MAX_TEXT_LENGTH + 1)})
+    RawExtraction.model_validate({"line_items": [{}] * MAX_LINE_ITEMS})
