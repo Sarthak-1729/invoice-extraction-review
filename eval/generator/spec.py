@@ -54,6 +54,9 @@ class DocConfig:
     # Line-item column order for the multipage layout (others use a fixed order).
     # Names: "sku", "description", "quantity", "unit_price", "amount".
     columns: tuple[str, ...] | None = None
+    # Deliberately long descriptions that wrap inside their table cell
+    # (classic_us and multipage only), so the text layer splits them.
+    wrap_descriptions: bool = False
     arithmetic_error: ArithmeticErrorKind | None = None
     injection: bool = False
 
@@ -179,6 +182,11 @@ def build_spec(config: DocConfig) -> InvoiceSpec:
 
     vendor = names.company(rng, config.region)
     lines = _lines(rng, config, places)
+    if config.wrap_descriptions:
+        if config.layout not in ("classic_us", "multipage"):
+            raise ValueError(f"wrap_descriptions is not supported by layout {config.layout}")
+        for line in lines[::2]:
+            line.description = f"{line.description}, {rng.choice(names.DETAILS)}"
     delta = Decimal(rng.choice([9, 10, 90, 100])) * (Decimal(100) if places == 0 else 1)
 
     if config.arithmetic_error == "line":
@@ -205,6 +213,8 @@ def build_spec(config: DocConfig) -> InvoiceSpec:
             and config.columns.index("amount") < config.columns.index("quantity"),
             "amount_before_qty",
         ),
+        (config.columns is not None and config.columns[0] == "quantity", "qty_first"),
+        (config.wrap_descriptions, "wrapped_descriptions"),
         (config.injection, "injection"),
         (config.arithmetic_error is not None, f"arith_error:{config.arithmetic_error}"),
     ]:

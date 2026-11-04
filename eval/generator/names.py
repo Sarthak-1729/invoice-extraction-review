@@ -41,6 +41,15 @@ SERVICES = [
 ]  # fmt: skip
 
 
+# Long product details, used only for the deliberate "wrapped description" feature.
+DETAILS = [
+    "matte black finish, wall-mount bracket included, two-year limited warranty",
+    "replacement part for annual maintenance contract, delivered to loading dock B",
+    "bulk order discount already applied, shipped in recyclable packaging",
+    "configured and labelled on site, includes cabling and installation hardware",
+]
+
+
 def company(rng: random.Random, region: str, client: bool = False, avoid: str = "") -> str:
     stem = rng.choice([s for s in STEMS if not avoid.startswith(s)])
     suffix = rng.choice(CLIENT_SUFFIXES if client else VENDOR_SUFFIXES[region])

@@ -12,7 +12,7 @@ from eval.generator.layouts import LAYOUTS
 from eval.generator.samples import SAMPLES
 from eval.generator.spec import DocConfig, build_spec
 from eval.generator.truth import truth_dict, write_truth
-from eval.generator.verify import missing_values, pdf_text
+from eval.generator.verify import check_text_layer, pdf_text
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -23,19 +23,20 @@ def render_document(config: DocConfig, pdf_path: Path, truth_path: Path) -> dict
     pdf_path.parent.mkdir(parents=True, exist_ok=True)
     truth_path.parent.mkdir(parents=True, exist_ok=True)
     LAYOUTS[config.layout](spec, pdf_path)
-    write_truth(spec, truth_path)
 
-    truth = truth_dict(spec)
-    missing = missing_values(pdf_path, truth)
-    if missing:
+    check = check_text_layer(pdf_path, truth_dict(spec))
+    if check.missing:
         raise SystemExit(
-            f"{config.doc_id}: printed values missing from PDF text:\n  " + "\n  ".join(missing)
+            f"{config.doc_id}: printed values missing from PDF text:\n  "
+            + "\n  ".join(check.missing)
         )
+    write_truth(truth_dict(spec, check.wrapped_line_items), truth_path)
     _, pages = pdf_text(pdf_path)
     return {
         "doc_id": config.doc_id,
         "pages": pages,
         "lines": len(spec.lines),
+        "wrapped_line_items": check.wrapped_line_items,
         "features": spec.features,
     }
 

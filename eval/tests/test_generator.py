@@ -1,5 +1,6 @@
 """Generator tests. Run from the repo root: python -m pytest eval/tests"""
 
+import dataclasses
 import hashlib
 from datetime import date
 from decimal import Decimal
@@ -12,8 +13,10 @@ from app.validation.flags import FlagCode
 from app.validation.formats import parse_amount
 from eval.generator.formatting import format_date, format_money, format_number
 from eval.generator.generate import render_document
+from eval.generator.layouts import LAYOUTS
 from eval.generator.samples import SAMPLES
 from eval.generator.spec import build_spec
+from eval.generator.splits import SPLITS
 from eval.generator.truth import truth_dict
 
 ARITHMETIC_CODES = {
@@ -101,6 +104,28 @@ def test_perfect_extraction_normalizes_to_truth(config):
         assert arithmetic
 
 
+def test_split_definitions_are_sound():
+    dev, test = SPLITS["dev"], SPLITS["test"]
+    assert (len(dev), len(test)) == (10, 24)
+    all_configs = dev + test
+    assert len({c.doc_id for c in all_configs}) == len(all_configs)
+    assert not {c.seed for c in dev} & {c.seed for c in test}
+    assert {c.layout for c in test} == set(LAYOUTS)
+    # Agreed counts for the deliberate wrapped-description feature.
+    assert sum(c.wrap_descriptions for c in dev) == 1
+    assert sum(c.wrap_descriptions for c in test) == 2
+    # Multipage docs state their columns explicitly, so features are recorded.
+    assert all(c.columns for c in all_configs if c.layout == "multipage")
+    for config in all_configs:
+        build_spec(config)  # every config is valid
+
+
+def test_wrapping_rejected_for_unsupported_layout():
+    config = dataclasses.replace(SAMPLES["european"][0], wrap_descriptions=True)
+    with pytest.raises(ValueError):
+        build_spec(config)
+
+
 def test_spec_is_deterministic():
     config = SAMPLES["classic_us"][0]
     assert truth_dict(build_spec(config)) == truth_dict(build_spec(config))
@@ -117,3 +142,5 @@ def test_rendered_pdf_is_verified_and_byte_stable(config, tmp_path):
 
     assert digest("a.pdf") == digest("b.pdf")
     assert digest("a.json") == digest("b.json")
+    # Wrapped lines are reported only for, and always for, the wrap feature.
+    assert bool(first["wrapped_line_items"]) == config.wrap_descriptions

@@ -84,9 +84,10 @@ def render(spec: InvoiceSpec, path: Path) -> None:
 
     # Line items
     rows = [[label["description"], label["quantity"], label["unit_price"], label["amount"]]]
+    wrap = spec.config.wrap_descriptions
     rows += [
-        [line.description, spec.quantity(line.quantity), spec.unit_price(line.unit_price),
-         spec.money(line.amount)]
+        [para(line.description, body) if wrap else line.description,
+         spec.quantity(line.quantity), spec.unit_price(line.unit_price), spec.money(line.amount)]
         for line in spec.lines
     ]  # fmt: skip
     table = Table(
@@ -101,6 +102,7 @@ def render(spec: InvoiceSpec, path: Path) -> None:
                 ("FONT", (0, 1), (-1, -1), "Helvetica", 9.5),
                 ("ALIGN", (1, 0), (-1, -1), "RIGHT"),
                 ("GRID", (0, 0), (-1, -1), 0.5, RULE),
+                *([("VALIGN", (0, 0), (-1, -1), "TOP")] if wrap else []),
                 ("TOPPADDING", (0, 0), (-1, -1), 4),
                 ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
             ]

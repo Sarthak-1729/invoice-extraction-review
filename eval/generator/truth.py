@@ -21,7 +21,10 @@ def _field(value: Any, printed: str | None) -> dict[str, Any]:
     return {"value": None if value is None else str(value), "printed": printed}
 
 
-def truth_dict(spec: InvoiceSpec) -> dict[str, Any]:
+def truth_dict(spec: InvoiceSpec, wrapped_line_items: list[int] | None = None) -> dict[str, Any]:
+    """``wrapped_line_items``: indices whose description the PDF text layer splits
+    (only for the deliberate wrapped_descriptions feature; filled after rendering)."""
+
     def money(value: Decimal | None) -> dict[str, Any]:
         return _field(value, None if value is None else spec.money(value))
 
@@ -57,10 +60,11 @@ def truth_dict(spec: InvoiceSpec) -> dict[str, Any]:
             }
             for line in spec.lines
         ],
+        "wrapped_line_items": wrapped_line_items or [],
         "generator_config": config,
     }
 
 
-def write_truth(spec: InvoiceSpec, path: Path) -> None:
-    text = json.dumps(truth_dict(spec), indent=2, ensure_ascii=False) + "\n"
+def write_truth(truth: dict[str, Any], path: Path) -> None:
+    text = json.dumps(truth, indent=2, ensure_ascii=False) + "\n"
     path.write_text(text, encoding="utf-8", newline="\n")

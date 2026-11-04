@@ -37,6 +37,13 @@ SAMPLES: dict[str, list[DocConfig]] = {
             arithmetic_error="total",
             injection=True,
         ),
+        # Deliberate wrapped descriptions (cells split across text lines).
+        DocConfig(
+            doc_id="sample-classic-04",
+            layout="classic_us",
+            seed=104,
+            wrap_descriptions=True,
+        ),
     ],
     "european": [
         # Germany-style: EUR, DD.MM.YYYY, 1.234,56 €, VAT 19%, only € shown.
@@ -183,6 +190,14 @@ SAMPLES: dict[str, list[DocConfig]] = {
             tax_label="GST/HST",
             tax_rate=Decimal("0.13"),
             columns=("quantity", "description", "unit_price", "amount"),
+        ),
+        # Deliberate wrapped descriptions in a long monospace table.
+        DocConfig(
+            doc_id="sample-multi-04",
+            layout="multipage",
+            seed=404,
+            n_lines=(35, 40),
+            wrap_descriptions=True,
         ),
     ],
 }
