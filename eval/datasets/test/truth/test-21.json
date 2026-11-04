@@ -1,0 +1,1094 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-21",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:CAD",
+    "date:long_dmy",
+    "numbers:plain",
+    "no_due_date",
+    "qty_first"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260778",
+      "printed": "260778"
+    },
+    "vendor_name": {
+      "value": "Irongale Trading Co.",
+      "printed": "Irongale Trading Co."
+    },
+    "bill_to_name": {
+      "value": "Halcyra Robotics",
+      "printed": "Halcyra Robotics"
+    },
+    "invoice_date": {
+      "value": "2026-07-30",
+      "printed": "30 July 2026"
+    },
+    "due_date": {
+      "value": null,
+      "printed": null
+    },
+    "currency": {
+      "value": "CAD",
+      "printed": "CAD"
+    },
+    "subtotal": {
+      "value": "179391.24",
+      "printed": "CAD 179391.24"
+    },
+    "tax": {
+      "value": "23320.86",
+      "printed": "CAD 23320.86"
+    },
+    "total": {
+      "value": "202712.10",
+      "printed": "CAD 202712.10"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Standing desk frame #1567",
+        "printed": "Standing desk frame #1567"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "33.18",
+        "printed": "CAD 33.18"
+      },
+      "amount": {
+        "value": "597.24",
+        "printed": "CAD 597.24"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #8762",
+        "printed": "Laser toner cartridge #8762"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "183.00",
+        "printed": "CAD 183.00"
+      },
+      "amount": {
+        "value": "3294.00",
+        "printed": "CAD 3294.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #2044",
+        "printed": "Label printer tape #2044"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "20.01",
+        "printed": "CAD 20.01"
+      },
+      "amount": {
+        "value": "480.24",
+        "printed": "CAD 480.24"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #5422",
+        "printed": "Whiteboard markers (pack of 12) #5422"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "384.87",
+        "printed": "CAD 384.87"
+      },
+      "amount": {
+        "value": "6927.66",
+        "printed": "CAD 6927.66"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #8782",
+        "printed": "A4 copy paper (box of 5 reams) #8782"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "275.34",
+        "printed": "CAD 275.34"
+      },
+      "amount": {
+        "value": "6608.16",
+        "printed": "CAD 6608.16"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #3642",
+        "printed": "Ergonomic office chair #3642"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "75.49",
+        "printed": "CAD 75.49"
+      },
+      "amount": {
+        "value": "452.94",
+        "printed": "CAD 452.94"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #1869",
+        "printed": "Wireless keyboard #1869"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "7.81",
+        "printed": "CAD 7.81"
+      },
+      "amount": {
+        "value": "15.62",
+        "printed": "CAD 15.62"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #2700",
+        "printed": "Acoustic wall panel #2700"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "225.10",
+        "printed": "CAD 225.10"
+      },
+      "amount": {
+        "value": "3151.40",
+        "printed": "CAD 3151.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #9975",
+        "printed": "Standing desk frame #9975"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "396.87",
+        "printed": "CAD 396.87"
+      },
+      "amount": {
+        "value": "793.74",
+        "printed": "CAD 793.74"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #1835",
+        "printed": "A4 copy paper (box of 5 reams) #1835"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "336.88",
+        "printed": "CAD 336.88"
+      },
+      "amount": {
+        "value": "4379.44",
+        "printed": "CAD 4379.44"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #8655",
+        "printed": "Network switch, 8-port #8655"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "236.18",
+        "printed": "CAD 236.18"
+      },
+      "amount": {
+        "value": "3778.88",
+        "printed": "CAD 3778.88"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #4269",
+        "printed": "Ergonomic office chair #4269"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "159.18",
+        "printed": "CAD 159.18"
+      },
+      "amount": {
+        "value": "2865.24",
+        "printed": "CAD 2865.24"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #8223",
+        "printed": "Label printer tape #8223"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "395.59",
+        "printed": "CAD 395.59"
+      },
+      "amount": {
+        "value": "3560.31",
+        "printed": "CAD 3560.31"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #5589",
+        "printed": "Standing desk frame #5589"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "180.52",
+        "printed": "CAD 180.52"
+      },
+      "amount": {
+        "value": "3068.84",
+        "printed": "CAD 3068.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #6522",
+        "printed": "Network switch, 8-port #6522"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "121.17",
+        "printed": "CAD 121.17"
+      },
+      "amount": {
+        "value": "1332.87",
+        "printed": "CAD 1332.87"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #7108",
+        "printed": "Standing desk frame #7108"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "389.15",
+        "printed": "CAD 389.15"
+      },
+      "amount": {
+        "value": "5448.10",
+        "printed": "CAD 5448.10"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #7479",
+        "printed": "Cable management kit #7479"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "350.38",
+        "printed": "CAD 350.38"
+      },
+      "amount": {
+        "value": "4204.56",
+        "printed": "CAD 4204.56"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #2845",
+        "printed": "Acoustic wall panel #2845"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "113.44",
+        "printed": "CAD 113.44"
+      },
+      "amount": {
+        "value": "1474.72",
+        "printed": "CAD 1474.72"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #4982",
+        "printed": "USB-C docking station #4982"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "213.52",
+        "printed": "CAD 213.52"
+      },
+      "amount": {
+        "value": "3843.36",
+        "printed": "CAD 3843.36"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #8251",
+        "printed": "Laser toner cartridge #8251"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "112.97",
+        "printed": "CAD 112.97"
+      },
+      "amount": {
+        "value": "338.91",
+        "printed": "CAD 338.91"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #2896",
+        "printed": "Laser toner cartridge #2896"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "21.52",
+        "printed": "CAD 21.52"
+      },
+      "amount": {
+        "value": "172.16",
+        "printed": "CAD 172.16"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #9885",
+        "printed": "Standing desk frame #9885"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "325.05",
+        "printed": "CAD 325.05"
+      },
+      "amount": {
+        "value": "6501.00",
+        "printed": "CAD 6501.00"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #8595",
+        "printed": "USB-C docking station #8595"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "100.78",
+        "printed": "CAD 100.78"
+      },
+      "amount": {
+        "value": "1713.26",
+        "printed": "CAD 1713.26"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #5633",
+        "printed": "Laser toner cartridge #5633"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "304.69",
+        "printed": "CAD 304.69"
+      },
+      "amount": {
+        "value": "5789.11",
+        "printed": "CAD 5789.11"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #5591",
+        "printed": "Wireless keyboard #5591"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "149.97",
+        "printed": "CAD 149.97"
+      },
+      "amount": {
+        "value": "3299.34",
+        "printed": "CAD 3299.34"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #1335",
+        "printed": "LED desk lamp #1335"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "424.02",
+        "printed": "CAD 424.02"
+      },
+      "amount": {
+        "value": "4664.22",
+        "printed": "CAD 4664.22"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #4750",
+        "printed": "Network switch, 8-port #4750"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "367.01",
+        "printed": "CAD 367.01"
+      },
+      "amount": {
+        "value": "6606.18",
+        "printed": "CAD 6606.18"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #3788",
+        "printed": "USB-C docking station #3788"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "35.48",
+        "printed": "CAD 35.48"
+      },
+      "amount": {
+        "value": "212.88",
+        "printed": "CAD 212.88"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #5046",
+        "printed": "Webcam 1080p #5046"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "335.98",
+        "printed": "CAD 335.98"
+      },
+      "amount": {
+        "value": "3695.78",
+        "printed": "CAD 3695.78"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #7991",
+        "printed": "Monitor arm #7991"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "188.11",
+        "printed": "CAD 188.11"
+      },
+      "amount": {
+        "value": "1128.66",
+        "printed": "CAD 1128.66"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #7030",
+        "printed": "Label printer tape #7030"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "236.13",
+        "printed": "CAD 236.13"
+      },
+      "amount": {
+        "value": "1416.78",
+        "printed": "CAD 1416.78"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #5267",
+        "printed": "Acoustic wall panel #5267"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "12.43",
+        "printed": "CAD 12.43"
+      },
+      "amount": {
+        "value": "87.01",
+        "printed": "CAD 87.01"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #5497",
+        "printed": "LED desk lamp #5497"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "184.51",
+        "printed": "CAD 184.51"
+      },
+      "amount": {
+        "value": "2214.12",
+        "printed": "CAD 2214.12"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #2401",
+        "printed": "Ergonomic office chair #2401"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "134.24",
+        "printed": "CAD 134.24"
+      },
+      "amount": {
+        "value": "268.48",
+        "printed": "CAD 268.48"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #8389",
+        "printed": "Wireless keyboard #8389"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "376.88",
+        "printed": "CAD 376.88"
+      },
+      "amount": {
+        "value": "5276.32",
+        "printed": "CAD 5276.32"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #4605",
+        "printed": "Acoustic wall panel #4605"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "201.42",
+        "printed": "CAD 201.42"
+      },
+      "amount": {
+        "value": "604.26",
+        "printed": "CAD 604.26"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #3255",
+        "printed": "Label printer tape #3255"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "271.81",
+        "printed": "CAD 271.81"
+      },
+      "amount": {
+        "value": "1630.86",
+        "printed": "CAD 1630.86"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #8028",
+        "printed": "Standing desk frame #8028"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "318.46",
+        "printed": "CAD 318.46"
+      },
+      "amount": {
+        "value": "5413.82",
+        "printed": "CAD 5413.82"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #5408",
+        "printed": "Monitor arm #5408"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "149.39",
+        "printed": "CAD 149.39"
+      },
+      "amount": {
+        "value": "298.78",
+        "printed": "CAD 298.78"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #3906",
+        "printed": "Monitor arm #3906"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "429.79",
+        "printed": "CAD 429.79"
+      },
+      "amount": {
+        "value": "10744.75",
+        "printed": "CAD 10744.75"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #7993",
+        "printed": "Standing desk frame #7993"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "77.64",
+        "printed": "CAD 77.64"
+      },
+      "amount": {
+        "value": "854.04",
+        "printed": "CAD 854.04"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #8795",
+        "printed": "Wireless keyboard #8795"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "103.69",
+        "printed": "CAD 103.69"
+      },
+      "amount": {
+        "value": "1555.35",
+        "printed": "CAD 1555.35"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #2768",
+        "printed": "A4 copy paper (box of 5 reams) #2768"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "220.26",
+        "printed": "CAD 220.26"
+      },
+      "amount": {
+        "value": "1982.34",
+        "printed": "CAD 1982.34"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #1179",
+        "printed": "Whiteboard markers (pack of 12) #1179"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "270.48",
+        "printed": "CAD 270.48"
+      },
+      "amount": {
+        "value": "1081.92",
+        "printed": "CAD 1081.92"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #5822",
+        "printed": "Laser toner cartridge #5822"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "150.93",
+        "printed": "CAD 150.93"
+      },
+      "amount": {
+        "value": "1358.37",
+        "printed": "CAD 1358.37"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #2833",
+        "printed": "Whiteboard markers (pack of 12) #2833"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "389.12",
+        "printed": "CAD 389.12"
+      },
+      "amount": {
+        "value": "8560.64",
+        "printed": "CAD 8560.64"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #9289",
+        "printed": "Ergonomic office chair #9289"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "426.56",
+        "printed": "CAD 426.56"
+      },
+      "amount": {
+        "value": "9810.88",
+        "printed": "CAD 9810.88"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #8093",
+        "printed": "Ergonomic office chair #8093"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "30.53",
+        "printed": "CAD 30.53"
+      },
+      "amount": {
+        "value": "519.01",
+        "printed": "CAD 519.01"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #2568",
+        "printed": "Whiteboard markers (pack of 12) #2568"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "198.79",
+        "printed": "CAD 198.79"
+      },
+      "amount": {
+        "value": "4373.38",
+        "printed": "CAD 4373.38"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #2648",
+        "printed": "Acoustic wall panel #2648"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "327.17",
+        "printed": "CAD 327.17"
+      },
+      "amount": {
+        "value": "4907.55",
+        "printed": "CAD 4907.55"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #7493",
+        "printed": "Wireless keyboard #7493"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "297.81",
+        "printed": "CAD 297.81"
+      },
+      "amount": {
+        "value": "2978.10",
+        "printed": "CAD 2978.10"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #6977",
+        "printed": "Wireless keyboard #6977"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "305.09",
+        "printed": "CAD 305.09"
+      },
+      "amount": {
+        "value": "3966.17",
+        "printed": "CAD 3966.17"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #3240",
+        "printed": "USB-C docking station #3240"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "284.69",
+        "printed": "CAD 284.69"
+      },
+      "amount": {
+        "value": "2846.90",
+        "printed": "CAD 2846.90"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #2898",
+        "printed": "Ergonomic office chair #2898"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "438.34",
+        "printed": "CAD 438.34"
+      },
+      "amount": {
+        "value": "10081.82",
+        "printed": "CAD 10081.82"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #6603",
+        "printed": "LED desk lamp #6603"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "353.13",
+        "printed": "CAD 353.13"
+      },
+      "amount": {
+        "value": "6003.21",
+        "printed": "CAD 6003.21"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #6562",
+        "printed": "Acoustic wall panel #6562"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "12.12",
+        "printed": "CAD 12.12"
+      },
+      "amount": {
+        "value": "157.56",
+        "printed": "CAD 157.56"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-21",
+    "layout": "multipage",
+    "seed": 2021,
+    "region": "US",
+    "currency": "CAD",
+    "date_style": "long_dmy",
+    "number_style": "plain",
+    "currency_display": "code_prefix",
+    "currency_note": false,
+    "n_lines": [
+      55,
+      60
+    ],
+    "services": false,
+    "tax_label": "GST/HST",
+    "tax_rate": "0.13",
+    "has_due_date": false,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": [
+      "quantity",
+      "description",
+      "unit_price",
+      "amount"
+    ],
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

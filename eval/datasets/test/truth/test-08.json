@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-08",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:iso",
+    "numbers:space",
+    "no_due_date",
+    "services",
+    "odd_labels",
+    "arith_error:subtotal"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "A-29657",
+      "printed": "A-29657"
+    },
+    "vendor_name": {
+      "value": "Zantheon GmbH",
+      "printed": "Zantheon GmbH"
+    },
+    "bill_to_name": {
+      "value": "Halcyra Architects",
+      "printed": "Halcyra Architects"
+    },
+    "invoice_date": {
+      "value": "2026-03-19",
+      "printed": "2026-03-19"
+    },
+    "due_date": {
+      "value": null,
+      "printed": null
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "EUR"
+    },
+    "subtotal": {
+      "value": "1255.50",
+      "printed": "1 255,50 EUR"
+    },
+    "tax": {
+      "value": "261.56",
+      "printed": "261,56 EUR"
+    },
+    "total": {
+      "value": "1517.06",
+      "printed": "1 517,06 EUR"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Photography session",
+        "printed": "Photography session"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1,5"
+      },
+      "unit_price": {
+        "value": "129.00",
+        "printed": "129,00 EUR"
+      },
+      "amount": {
+        "value": "193.50",
+        "printed": "193,50 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Translation services",
+        "printed": "Translation services"
+      },
+      "quantity": {
+        "value": "7.5",
+        "printed": "7,5"
+      },
+      "unit_price": {
+        "value": "104.00",
+        "printed": "104,00 EUR"
+      },
+      "amount": {
+        "value": "780.00",
+        "printed": "780,00 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Copywriting",
+        "printed": "Copywriting"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "136.00",
+        "printed": "136,00 EUR"
+      },
+      "amount": {
+        "value": "272.00",
+        "printed": "272,00 EUR"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-08",
+    "layout": "european",
+    "seed": 2008,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "iso",
+    "number_style": "space",
+    "currency_display": "code_suffix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "VAT",
+    "tax_rate": "0.21",
+    "has_due_date": false,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "invoice_number": "Ref no.",
+      "total": "Amount payable"
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "subtotal",
+    "injection": false
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-05",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:USD",
+    "date:iso",
+    "numbers:us",
+    "no_bill_to"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "2026/508",
+      "printed": "2026/508"
+    },
+    "vendor_name": {
+      "value": "Quillmere Industrial Inc.",
+      "printed": "Quillmere Industrial Inc."
+    },
+    "bill_to_name": {
+      "value": null,
+      "printed": null
+    },
+    "invoice_date": {
+      "value": "2026-08-23",
+      "printed": "2026-08-23"
+    },
+    "due_date": {
+      "value": "2026-09-06",
+      "printed": "2026-09-06"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "USD"
+    },
+    "subtotal": {
+      "value": "5995.65",
+      "printed": "USD 5,995.65"
+    },
+    "tax": {
+      "value": "359.74",
+      "printed": "USD 359.74"
+    },
+    "total": {
+      "value": "6355.39",
+      "printed": "USD 6,355.39"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "295.25",
+        "printed": "USD 295.25"
+      },
+      "amount": {
+        "value": "2362.00",
+        "printed": "USD 2,362.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "265.31",
+        "printed": "USD 265.31"
+      },
+      "amount": {
+        "value": "2918.41",
+        "printed": "USD 2,918.41"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "173.96",
+        "printed": "USD 173.96"
+      },
+      "amount": {
+        "value": "695.84",
+        "printed": "USD 695.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "4.85",
+        "printed": "USD 4.85"
+      },
+      "amount": {
+        "value": "19.40",
+        "printed": "USD 19.40"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-05",
+    "layout": "classic_us",
+    "seed": 2005,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "iso",
+    "number_style": "us",
+    "currency_display": "code_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "Sales Tax",
+    "tax_rate": "0.06",
+    "has_due_date": true,
+    "has_bill_to": false,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

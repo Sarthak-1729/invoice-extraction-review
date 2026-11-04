@@ -1,0 +1,847 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-20",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:EUR",
+    "date:dotted",
+    "numbers:eu",
+    "odd_labels",
+    "sku_column",
+    "amount_before_qty",
+    "arith_error:line"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "VF728601",
+      "printed": "VF728601"
+    },
+    "vendor_name": {
+      "value": "Ambervault S.A.R.L.",
+      "printed": "Ambervault S.A.R.L."
+    },
+    "bill_to_name": {
+      "value": "Vantorel Architects",
+      "printed": "Vantorel Architects"
+    },
+    "invoice_date": {
+      "value": "2026-04-04",
+      "printed": "04.04.2026"
+    },
+    "due_date": {
+      "value": "2026-05-19",
+      "printed": "19.05.2026"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "EUR"
+    },
+    "subtotal": {
+      "value": "148565.15",
+      "printed": "148.565,15 €"
+    },
+    "tax": {
+      "value": "29713.03",
+      "printed": "29.713,03 €"
+    },
+    "total": {
+      "value": "178278.18",
+      "printed": "178.278,18 €"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #7870",
+        "printed": "Whiteboard markers (pack of 12) #7870"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "302.64",
+        "printed": "302,64 €"
+      },
+      "amount": {
+        "value": "5447.52",
+        "printed": "5.447,52 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #3595",
+        "printed": "Network switch, 8-port #3595"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "70.95",
+        "printed": "70,95 €"
+      },
+      "amount": {
+        "value": "1631.85",
+        "printed": "1.631,85 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #2501",
+        "printed": "Label printer tape #2501"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "413.37",
+        "printed": "413,37 €"
+      },
+      "amount": {
+        "value": "5787.18",
+        "printed": "5.787,18 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #4933",
+        "printed": "Laser toner cartridge #4933"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "324.78",
+        "printed": "324,78 €"
+      },
+      "amount": {
+        "value": "2598.24",
+        "printed": "2.598,24 €"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #7713",
+        "printed": "USB-C docking station #7713"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "445.81",
+        "printed": "445,81 €"
+      },
+      "amount": {
+        "value": "4903.91",
+        "printed": "4.903,91 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #4363",
+        "printed": "Standing desk frame #4363"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "55.65",
+        "printed": "55,65 €"
+      },
+      "amount": {
+        "value": "834.75",
+        "printed": "834,75 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #3439",
+        "printed": "Label printer tape #3439"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "208.64",
+        "printed": "208,64 €"
+      },
+      "amount": {
+        "value": "1460.48",
+        "printed": "1.460,48 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #8411",
+        "printed": "Laser toner cartridge #8411"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "21.88",
+        "printed": "21,88 €"
+      },
+      "amount": {
+        "value": "262.56",
+        "printed": "262,56 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #3649",
+        "printed": "Ergonomic office chair #3649"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "315.68",
+        "printed": "315,68 €"
+      },
+      "amount": {
+        "value": "5366.56",
+        "printed": "5.366,56 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #9805",
+        "printed": "Laser toner cartridge #9805"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "415.40",
+        "printed": "415,40 €"
+      },
+      "amount": {
+        "value": "8308.00",
+        "printed": "8.308,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #8791",
+        "printed": "Acoustic wall panel #8791"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "392.46",
+        "printed": "392,46 €"
+      },
+      "amount": {
+        "value": "7849.20",
+        "printed": "7.849,20 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #1669",
+        "printed": "Cable management kit #1669"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "351.22",
+        "printed": "351,22 €"
+      },
+      "amount": {
+        "value": "7375.62",
+        "printed": "7.375,62 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #1808",
+        "printed": "Laser toner cartridge #1808"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "266.11",
+        "printed": "266,11 €"
+      },
+      "amount": {
+        "value": "6652.75",
+        "printed": "6.652,75 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6651",
+        "printed": "Webcam 1080p #6651"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "434.53",
+        "printed": "434,53 €"
+      },
+      "amount": {
+        "value": "5648.89",
+        "printed": "5.648,89 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #4555",
+        "printed": "Webcam 1080p #4555"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "438.88",
+        "printed": "438,88 €"
+      },
+      "amount": {
+        "value": "3949.92",
+        "printed": "3.949,92 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #9714",
+        "printed": "Ergonomic office chair #9714"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "421.35",
+        "printed": "421,35 €"
+      },
+      "amount": {
+        "value": "9691.05",
+        "printed": "9.691,05 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #2532",
+        "printed": "Acoustic wall panel #2532"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "209.77",
+        "printed": "209,77 €"
+      },
+      "amount": {
+        "value": "629.31",
+        "printed": "629,31 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #5308",
+        "printed": "Label printer tape #5308"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "316.80",
+        "printed": "316,80 €"
+      },
+      "amount": {
+        "value": "1267.20",
+        "printed": "1.267,20 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #3546",
+        "printed": "Cable management kit #3546"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "261.81",
+        "printed": "261,81 €"
+      },
+      "amount": {
+        "value": "5236.20",
+        "printed": "5.236,20 €"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #9832",
+        "printed": "LED desk lamp #9832"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "242.61",
+        "printed": "242,61 €"
+      },
+      "amount": {
+        "value": "4366.98",
+        "printed": "4.366,98 €"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #8600",
+        "printed": "A4 copy paper (box of 5 reams) #8600"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "396.08",
+        "printed": "396,08 €"
+      },
+      "amount": {
+        "value": "3168.64",
+        "printed": "3.168,64 €"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #6032",
+        "printed": "USB-C docking station #6032"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "20.66",
+        "printed": "20,66 €"
+      },
+      "amount": {
+        "value": "495.84",
+        "printed": "495,84 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #8533",
+        "printed": "Network switch, 8-port #8533"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "438.33",
+        "printed": "438,33 €"
+      },
+      "amount": {
+        "value": "5698.29",
+        "printed": "5.698,29 €"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #9444",
+        "printed": "USB-C docking station #9444"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "184.89",
+        "printed": "184,89 €"
+      },
+      "amount": {
+        "value": "739.56",
+        "printed": "739,56 €"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #9559",
+        "printed": "LED desk lamp #9559"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "219.73",
+        "printed": "219,73 €"
+      },
+      "amount": {
+        "value": "3735.41",
+        "printed": "3.735,41 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #4941",
+        "printed": "Label printer tape #4941"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "295.25",
+        "printed": "295,25 €"
+      },
+      "amount": {
+        "value": "5905.00",
+        "printed": "5.905,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #5023",
+        "printed": "Acoustic wall panel #5023"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "62.00",
+        "printed": "62,00 €"
+      },
+      "amount": {
+        "value": "744.00",
+        "printed": "744,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #5821",
+        "printed": "Label printer tape #5821"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "86.92",
+        "printed": "86,92 €"
+      },
+      "amount": {
+        "value": "1477.64",
+        "printed": "1.477,64 €"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #3099",
+        "printed": "A4 copy paper (box of 5 reams) #3099"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "272.89",
+        "printed": "272,89 €"
+      },
+      "amount": {
+        "value": "6549.36",
+        "printed": "6.549,36 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #7929",
+        "printed": "Acoustic wall panel #7929"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "11.72",
+        "printed": "11,72 €"
+      },
+      "amount": {
+        "value": "11.72",
+        "printed": "11,72 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #5754",
+        "printed": "Monitor arm #5754"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "95.19",
+        "printed": "95,19 €"
+      },
+      "amount": {
+        "value": "1523.04",
+        "printed": "1.523,04 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #8361",
+        "printed": "Wireless keyboard #8361"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "258.54",
+        "printed": "258,54 €"
+      },
+      "amount": {
+        "value": "4653.72",
+        "printed": "4.653,72 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6722",
+        "printed": "Webcam 1080p #6722"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "47.27",
+        "printed": "47,27 €"
+      },
+      "amount": {
+        "value": "47.27",
+        "printed": "47,27 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #2628",
+        "printed": "Standing desk frame #2628"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "68.77",
+        "printed": "68,77 €"
+      },
+      "amount": {
+        "value": "481.39",
+        "printed": "481,39 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #4848",
+        "printed": "Ergonomic office chair #4848"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "331.45",
+        "printed": "331,45 €"
+      },
+      "amount": {
+        "value": "2983.05",
+        "printed": "2.983,05 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #4927",
+        "printed": "Label printer tape #4927"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "300.31",
+        "printed": "300,31 €"
+      },
+      "amount": {
+        "value": "5105.27",
+        "printed": "5.105,27 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #9876",
+        "printed": "Network switch, 8-port #9876"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "111.74",
+        "printed": "111,74 €"
+      },
+      "amount": {
+        "value": "1005.66",
+        "printed": "1.005,66 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #9205",
+        "printed": "Cable management kit #9205"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "281.12",
+        "printed": "281,12 €"
+      },
+      "amount": {
+        "value": "7028.00",
+        "printed": "7.028,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #1738",
+        "printed": "Standing desk frame #1738"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "5.45",
+        "printed": "5,45 €"
+      },
+      "amount": {
+        "value": "43.60",
+        "printed": "43,60 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #2602",
+        "printed": "Network switch, 8-port #2602"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "231.54",
+        "printed": "231,54 €"
+      },
+      "amount": {
+        "value": "3473.10",
+        "printed": "3.473,10 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #1948",
+        "printed": "Wireless keyboard #1948"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "412.42",
+        "printed": "412,42 €"
+      },
+      "amount": {
+        "value": "1237.26",
+        "printed": "1.237,26 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #4986",
+        "printed": "Whiteboard markers (pack of 12) #4986"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "162.64",
+        "printed": "162,64 €"
+      },
+      "amount": {
+        "value": "3190.16",
+        "printed": "3.190,16 €"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-20",
+    "layout": "multipage",
+    "seed": 2020,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "dotted",
+    "number_style": "eu",
+    "currency_display": "symbol_suffix",
+    "currency_note": true,
+    "n_lines": [
+      35,
+      45
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.20",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "total": "Balance due"
+    },
+    "columns": [
+      "sku",
+      "description",
+      "amount",
+      "quantity",
+      "unit_price"
+    ],
+    "wrap_descriptions": false,
+    "arithmetic_error": "line",
+    "injection": false
+  }
+}

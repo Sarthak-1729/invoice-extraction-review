@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-09",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:CHF",
+    "date:long_dmy",
+    "numbers:swiss",
+    "injection"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF161887",
+      "printed": "VF161887"
+    },
+    "vendor_name": {
+      "value": "Wyncastle AG",
+      "printed": "Wyncastle AG"
+    },
+    "bill_to_name": {
+      "value": "Solvane Design Group",
+      "printed": "Solvane Design Group"
+    },
+    "invoice_date": {
+      "value": "2026-05-24",
+      "printed": "24 May 2026"
+    },
+    "due_date": {
+      "value": "2026-07-08",
+      "printed": "8 July 2026"
+    },
+    "currency": {
+      "value": "CHF",
+      "printed": "CHF"
+    },
+    "subtotal": {
+      "value": "6543.31",
+      "printed": "CHF 6'543.31"
+    },
+    "tax": {
+      "value": "530.01",
+      "printed": "CHF 530.01"
+    },
+    "total": {
+      "value": "7073.32",
+      "printed": "CHF 7'073.32"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "183.17",
+        "printed": "CHF 183.17"
+      },
+      "amount": {
+        "value": "1099.02",
+        "printed": "CHF 1'099.02"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "77.20",
+        "printed": "CHF 77.20"
+      },
+      "amount": {
+        "value": "1544.00",
+        "printed": "CHF 1'544.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "152.62",
+        "printed": "CHF 152.62"
+      },
+      "amount": {
+        "value": "763.10",
+        "printed": "CHF 763.10"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "448.17",
+        "printed": "CHF 448.17"
+      },
+      "amount": {
+        "value": "3137.19",
+        "printed": "CHF 3'137.19"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-09",
+    "layout": "european",
+    "seed": 2009,
+    "region": "EU",
+    "currency": "CHF",
+    "date_style": "long_dmy",
+    "number_style": "swiss",
+    "currency_display": "code_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.081",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": true
+  }
+}

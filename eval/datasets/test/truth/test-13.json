@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-13",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:INR",
+    "date:short_dmy",
+    "numbers:indian"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260873",
+      "printed": "260873"
+    },
+    "vendor_name": {
+      "value": "Zantheon Traders Pvt. Ltd.",
+      "printed": "Zantheon Traders Pvt. Ltd."
+    },
+    "bill_to_name": {
+      "value": "Druvelle Robotics",
+      "printed": "Druvelle Robotics"
+    },
+    "invoice_date": {
+      "value": "2026-08-10",
+      "printed": "10-Aug-2026"
+    },
+    "due_date": {
+      "value": "2026-08-24",
+      "printed": "24-Aug-2026"
+    },
+    "currency": {
+      "value": "INR",
+      "printed": "Rs."
+    },
+    "subtotal": {
+      "value": "1230152.00",
+      "printed": "Rs. 12,30,152.00"
+    },
+    "tax": {
+      "value": "221427.36",
+      "printed": "Rs. 2,21,427.36"
+    },
+    "total": {
+      "value": "1451579.36",
+      "printed": "Rs. 14,51,579.36"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "3151.20",
+        "printed": "Rs. 3,151.20"
+      },
+      "amount": {
+        "value": "69326.40",
+        "printed": "Rs. 69,326.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "20885.60",
+        "printed": "Rs. 20,885.60"
+      },
+      "amount": {
+        "value": "83542.40",
+        "printed": "Rs. 83,542.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "4488.00",
+        "printed": "Rs. 4,488.00"
+      },
+      "amount": {
+        "value": "49368.00",
+        "printed": "Rs. 49,368.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "13008.00",
+        "printed": "Rs. 13,008.00"
+      },
+      "amount": {
+        "value": "325200.00",
+        "printed": "Rs. 3,25,200.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "24672.00",
+        "printed": "Rs. 24,672.00"
+      },
+      "amount": {
+        "value": "567456.00",
+        "printed": "Rs. 5,67,456.00"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "7514.40",
+        "printed": "Rs. 7,514.40"
+      },
+      "amount": {
+        "value": "135259.20",
+        "printed": "Rs. 1,35,259.20"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-13",
+    "layout": "modern",
+    "seed": 2013,
+    "region": "IN",
+    "currency": "INR",
+    "date_style": "short_dmy",
+    "number_style": "indian",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "GST",
+    "tax_rate": "0.18",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

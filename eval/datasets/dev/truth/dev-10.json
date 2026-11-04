@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-10",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:GBP",
+    "date:eu_slash",
+    "numbers:us",
+    "qty_first"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-2437",
+      "printed": "INV-2026-2437"
+    },
+    "vendor_name": {
+      "value": "Quillmere & Partners Ltd",
+      "printed": "Quillmere & Partners Ltd"
+    },
+    "bill_to_name": {
+      "value": "Orlavant Analytics",
+      "printed": "Orlavant Analytics"
+    },
+    "invoice_date": {
+      "value": "2026-05-11",
+      "printed": "11/05/2026"
+    },
+    "due_date": {
+      "value": "2026-06-25",
+      "printed": "25/06/2026"
+    },
+    "currency": {
+      "value": "GBP",
+      "printed": "GBP"
+    },
+    "subtotal": {
+      "value": "154884.50",
+      "printed": "£154,884.50"
+    },
+    "tax": {
+      "value": "30976.90",
+      "printed": "£30,976.90"
+    },
+    "total": {
+      "value": "185861.40",
+      "printed": "£185,861.40"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Monitor arm #3692",
+        "printed": "Monitor arm #3692"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "444.37",
+        "printed": "£444.37"
+      },
+      "amount": {
+        "value": "2666.22",
+        "printed": "£2,666.22"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #8155",
+        "printed": "Wireless keyboard #8155"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "60.34",
+        "printed": "£60.34"
+      },
+      "amount": {
+        "value": "1508.50",
+        "printed": "£1,508.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #4347",
+        "printed": "Webcam 1080p #4347"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "347.22",
+        "printed": "£347.22"
+      },
+      "amount": {
+        "value": "6944.40",
+        "printed": "£6,944.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #9354",
+        "printed": "Ergonomic office chair #9354"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "372.85",
+        "printed": "£372.85"
+      },
+      "amount": {
+        "value": "6711.30",
+        "printed": "£6,711.30"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #9280",
+        "printed": "Standing desk frame #9280"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "15.28",
+        "printed": "£15.28"
+      },
+      "amount": {
+        "value": "320.88",
+        "printed": "£320.88"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #5406",
+        "printed": "Whiteboard markers (pack of 12) #5406"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "298.51",
+        "printed": "£298.51"
+      },
+      "amount": {
+        "value": "6865.73",
+        "printed": "£6,865.73"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #3394",
+        "printed": "Label printer tape #3394"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "17.73",
+        "printed": "£17.73"
+      },
+      "amount": {
+        "value": "141.84",
+        "printed": "£141.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #8824",
+        "printed": "Monitor arm #8824"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "160.80",
+        "printed": "£160.80"
+      },
+      "amount": {
+        "value": "321.60",
+        "printed": "£321.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #7035",
+        "printed": "Label printer tape #7035"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "171.16",
+        "printed": "£171.16"
+      },
+      "amount": {
+        "value": "1198.12",
+        "printed": "£1,198.12"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #2251",
+        "printed": "Network switch, 8-port #2251"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "265.42",
+        "printed": "£265.42"
+      },
+      "amount": {
+        "value": "5573.82",
+        "printed": "£5,573.82"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #9643",
+        "printed": "LED desk lamp #9643"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "410.46",
+        "printed": "£410.46"
+      },
+      "amount": {
+        "value": "4515.06",
+        "printed": "£4,515.06"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #5676",
+        "printed": "Network switch, 8-port #5676"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "143.59",
+        "printed": "£143.59"
+      },
+      "amount": {
+        "value": "2584.62",
+        "printed": "£2,584.62"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #3429",
+        "printed": "Acoustic wall panel #3429"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "176.75",
+        "printed": "£176.75"
+      },
+      "amount": {
+        "value": "1590.75",
+        "printed": "£1,590.75"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #9279",
+        "printed": "Wireless keyboard #9279"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "143.50",
+        "printed": "£143.50"
+      },
+      "amount": {
+        "value": "2296.00",
+        "printed": "£2,296.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #1416",
+        "printed": "Wireless keyboard #1416"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "86.85",
+        "printed": "£86.85"
+      },
+      "amount": {
+        "value": "86.85",
+        "printed": "£86.85"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #8099",
+        "printed": "USB-C docking station #8099"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "36.43",
+        "printed": "£36.43"
+      },
+      "amount": {
+        "value": "546.45",
+        "printed": "£546.45"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #1274",
+        "printed": "Ergonomic office chair #1274"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "322.23",
+        "printed": "£322.23"
+      },
+      "amount": {
+        "value": "6766.83",
+        "printed": "£6,766.83"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #1459",
+        "printed": "Webcam 1080p #1459"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "127.09",
+        "printed": "£127.09"
+      },
+      "amount": {
+        "value": "2668.89",
+        "printed": "£2,668.89"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #9869",
+        "printed": "Ergonomic office chair #9869"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "114.32",
+        "printed": "£114.32"
+      },
+      "amount": {
+        "value": "1600.48",
+        "printed": "£1,600.48"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #1862",
+        "printed": "LED desk lamp #1862"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "159.66",
+        "printed": "£159.66"
+      },
+      "amount": {
+        "value": "159.66",
+        "printed": "£159.66"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #4205",
+        "printed": "A4 copy paper (box of 5 reams) #4205"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "316.58",
+        "printed": "£316.58"
+      },
+      "amount": {
+        "value": "6648.18",
+        "printed": "£6,648.18"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #2031",
+        "printed": "USB-C docking station #2031"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "91.69",
+        "printed": "£91.69"
+      },
+      "amount": {
+        "value": "1742.11",
+        "printed": "£1,742.11"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #5698",
+        "printed": "USB-C docking station #5698"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "95.82",
+        "printed": "£95.82"
+      },
+      "amount": {
+        "value": "1916.40",
+        "printed": "£1,916.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #5865",
+        "printed": "Label printer tape #5865"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "387.82",
+        "printed": "£387.82"
+      },
+      "amount": {
+        "value": "3102.56",
+        "printed": "£3,102.56"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #9669",
+        "printed": "USB-C docking station #9669"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "149.06",
+        "printed": "£149.06"
+      },
+      "amount": {
+        "value": "2683.08",
+        "printed": "£2,683.08"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #4343",
+        "printed": "Cable management kit #4343"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "157.80",
+        "printed": "£157.80"
+      },
+      "amount": {
+        "value": "473.40",
+        "printed": "£473.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #3295",
+        "printed": "Whiteboard markers (pack of 12) #3295"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "342.13",
+        "printed": "£342.13"
+      },
+      "amount": {
+        "value": "7868.99",
+        "printed": "£7,868.99"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #2458",
+        "printed": "Whiteboard markers (pack of 12) #2458"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "276.31",
+        "printed": "£276.31"
+      },
+      "amount": {
+        "value": "6355.13",
+        "printed": "£6,355.13"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #8874",
+        "printed": "Standing desk frame #8874"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "386.29",
+        "printed": "£386.29"
+      },
+      "amount": {
+        "value": "4249.19",
+        "printed": "£4,249.19"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #7237",
+        "printed": "Laser toner cartridge #7237"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "367.83",
+        "printed": "£367.83"
+      },
+      "amount": {
+        "value": "3678.30",
+        "printed": "£3,678.30"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #7109",
+        "printed": "LED desk lamp #7109"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "423.16",
+        "printed": "£423.16"
+      },
+      "amount": {
+        "value": "9309.52",
+        "printed": "£9,309.52"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #2232",
+        "printed": "Wireless keyboard #2232"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "253.14",
+        "printed": "£253.14"
+      },
+      "amount": {
+        "value": "3797.10",
+        "printed": "£3,797.10"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #4593",
+        "printed": "Label printer tape #4593"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "90.61",
+        "printed": "£90.61"
+      },
+      "amount": {
+        "value": "2265.25",
+        "printed": "£2,265.25"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #8233",
+        "printed": "Acoustic wall panel #8233"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "265.20",
+        "printed": "£265.20"
+      },
+      "amount": {
+        "value": "4773.60",
+        "printed": "£4,773.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #5538",
+        "printed": "Webcam 1080p #5538"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "323.72",
+        "printed": "£323.72"
+      },
+      "amount": {
+        "value": "7769.28",
+        "printed": "£7,769.28"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #2781",
+        "printed": "LED desk lamp #2781"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "11.49",
+        "printed": "£11.49"
+      },
+      "amount": {
+        "value": "183.84",
+        "printed": "£183.84"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #7286",
+        "printed": "LED desk lamp #7286"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "449.29",
+        "printed": "£449.29"
+      },
+      "amount": {
+        "value": "4942.19",
+        "printed": "£4,942.19"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #9542",
+        "printed": "Label printer tape #9542"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "394.89",
+        "printed": "£394.89"
+      },
+      "amount": {
+        "value": "5133.57",
+        "printed": "£5,133.57"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #6476",
+        "printed": "Ergonomic office chair #6476"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "317.84",
+        "printed": "£317.84"
+      },
+      "amount": {
+        "value": "7310.32",
+        "printed": "£7,310.32"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #4400",
+        "printed": "Cable management kit #4400"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "447.71",
+        "printed": "£447.71"
+      },
+      "amount": {
+        "value": "1343.13",
+        "printed": "£1,343.13"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #1822",
+        "printed": "USB-C docking station #1822"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "177.45",
+        "printed": "£177.45"
+      },
+      "amount": {
+        "value": "3194.10",
+        "printed": "£3,194.10"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #8952",
+        "printed": "Ergonomic office chair #8952"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "215.35",
+        "printed": "£215.35"
+      },
+      "amount": {
+        "value": "861.40",
+        "printed": "£861.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #8237",
+        "printed": "Webcam 1080p #8237"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "240.52",
+        "printed": "£240.52"
+      },
+      "amount": {
+        "value": "481.04",
+        "printed": "£481.04"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #1589",
+        "printed": "Whiteboard markers (pack of 12) #1589"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "250.56",
+        "printed": "£250.56"
+      },
+      "amount": {
+        "value": "5512.32",
+        "printed": "£5,512.32"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #2755",
+        "printed": "A4 copy paper (box of 5 reams) #2755"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "59.25",
+        "printed": "£59.25"
+      },
+      "amount": {
+        "value": "177.75",
+        "printed": "£177.75"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #1000",
+        "printed": "Network switch, 8-port #1000"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "269.65",
+        "printed": "£269.65"
+      },
+      "amount": {
+        "value": "4044.75",
+        "printed": "£4,044.75"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-10",
+    "layout": "multipage",
+    "seed": 1010,
+    "region": "UK",
+    "currency": "GBP",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      40,
+      50
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.20",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": [
+      "quantity",
+      "description",
+      "unit_price",
+      "amount"
+    ],
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

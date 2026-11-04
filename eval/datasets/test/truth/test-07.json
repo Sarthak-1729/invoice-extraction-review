@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-07",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:dotted",
+    "numbers:eu"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260437",
+      "printed": "260437"
+    },
+    "vendor_name": {
+      "value": "Quillmere S.A.R.L.",
+      "printed": "Quillmere S.A.R.L."
+    },
+    "bill_to_name": {
+      "value": "Thistlecrane Clinic",
+      "printed": "Thistlecrane Clinic"
+    },
+    "invoice_date": {
+      "value": "2026-04-18",
+      "printed": "18.04.2026"
+    },
+    "due_date": {
+      "value": "2026-06-02",
+      "printed": "02.06.2026"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "€"
+    },
+    "subtotal": {
+      "value": "29240.53",
+      "printed": "29.240,53 €"
+    },
+    "tax": {
+      "value": "5555.70",
+      "printed": "5.555,70 €"
+    },
+    "total": {
+      "value": "34796.23",
+      "printed": "34.796,23 €"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "280.48",
+        "printed": "280,48 €"
+      },
+      "amount": {
+        "value": "4487.68",
+        "printed": "4.487,68 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "384.61",
+        "printed": "384,61 €"
+      },
+      "amount": {
+        "value": "3846.10",
+        "printed": "3.846,10 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "9.03",
+        "printed": "9,03 €"
+      },
+      "amount": {
+        "value": "90.30",
+        "printed": "90,30 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "177.39",
+        "printed": "177,39 €"
+      },
+      "amount": {
+        "value": "532.17",
+        "printed": "532,17 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "443.24",
+        "printed": "443,24 €"
+      },
+      "amount": {
+        "value": "9751.28",
+        "printed": "9.751,28 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "438.28",
+        "printed": "438,28 €"
+      },
+      "amount": {
+        "value": "7889.04",
+        "printed": "7.889,04 €"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "240.36",
+        "printed": "240,36 €"
+      },
+      "amount": {
+        "value": "2643.96",
+        "printed": "2.643,96 €"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-07",
+    "layout": "european",
+    "seed": 2007,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "dotted",
+    "number_style": "eu",
+    "currency_display": "symbol_suffix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.19",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

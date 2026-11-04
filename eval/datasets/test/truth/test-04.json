@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-04",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:CAD",
+    "date:us_slash",
+    "numbers:us",
+    "wrapped_descriptions"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "A-92214",
+      "printed": "A-92214"
+    },
+    "vendor_name": {
+      "value": "Vantorel Works LLC",
+      "printed": "Vantorel Works LLC"
+    },
+    "bill_to_name": {
+      "value": "Quillmere Bakery",
+      "printed": "Quillmere Bakery"
+    },
+    "invoice_date": {
+      "value": "2026-09-30",
+      "printed": "09/30/2026"
+    },
+    "due_date": {
+      "value": "2026-10-14",
+      "printed": "10/14/2026"
+    },
+    "currency": {
+      "value": "CAD",
+      "printed": "CAD"
+    },
+    "subtotal": {
+      "value": "12500.53",
+      "printed": "C$12,500.53"
+    },
+    "tax": {
+      "value": "1625.07",
+      "printed": "C$1,625.07"
+    },
+    "total": {
+      "value": "14125.60",
+      "printed": "C$14,125.60"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Ergonomic office chair, configured and labelled on site, includes cabling and installation hardware",
+        "printed": "Ergonomic office chair, configured and labelled on site, includes cabling and installation hardware"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "293.14",
+        "printed": "C$293.14"
+      },
+      "amount": {
+        "value": "1465.70",
+        "printed": "C$1,465.70"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "91.10",
+        "printed": "C$91.10"
+      },
+      "amount": {
+        "value": "546.60",
+        "printed": "C$546.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape, replacement part for annual maintenance contract, delivered to loading dock B",
+        "printed": "Label printer tape, replacement part for annual maintenance contract, delivered to loading dock B"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "26.29",
+        "printed": "C$26.29"
+      },
+      "amount": {
+        "value": "446.93",
+        "printed": "C$446.93"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "361.16",
+        "printed": "C$361.16"
+      },
+      "amount": {
+        "value": "4695.08",
+        "printed": "C$4,695.08"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Acoustic wall panel, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "243.01",
+        "printed": "C$243.01"
+      },
+      "amount": {
+        "value": "5346.22",
+        "printed": "C$5,346.22"
+      }
+    }
+  ],
+  "wrapped_line_items": [
+    0,
+    2,
+    4
+  ],
+  "generator_config": {
+    "doc_id": "test-04",
+    "layout": "classic_us",
+    "seed": 2004,
+    "region": "US",
+    "currency": "CAD",
+    "date_style": "us_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "GST/HST",
+    "tax_rate": "0.13",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": true,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

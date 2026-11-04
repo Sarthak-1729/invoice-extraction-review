@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-07",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:INR",
+    "date:short_dmy",
+    "numbers:indian"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260147",
+      "printed": "260147"
+    },
+    "vendor_name": {
+      "value": "Brisketta Traders Pvt. Ltd.",
+      "printed": "Brisketta Traders Pvt. Ltd."
+    },
+    "bill_to_name": {
+      "value": "Pellucia Design Group",
+      "printed": "Pellucia Design Group"
+    },
+    "invoice_date": {
+      "value": "2026-01-21",
+      "printed": "21-Jan-2026"
+    },
+    "due_date": {
+      "value": "2026-03-07",
+      "printed": "07-Mar-2026"
+    },
+    "currency": {
+      "value": "INR",
+      "printed": "Rs."
+    },
+    "subtotal": {
+      "value": "1509904.00",
+      "printed": "Rs. 15,09,904.00"
+    },
+    "tax": {
+      "value": "271782.72",
+      "printed": "Rs. 2,71,782.72"
+    },
+    "total": {
+      "value": "1781686.72",
+      "printed": "Rs. 17,81,686.72"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "23641.60",
+        "printed": "Rs. 23,641.60"
+      },
+      "amount": {
+        "value": "47283.20",
+        "printed": "Rs. 47,283.20"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "15096.00",
+        "printed": "Rs. 15,096.00"
+      },
+      "amount": {
+        "value": "286824.00",
+        "printed": "Rs. 2,86,824.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "32844.00",
+        "printed": "Rs. 32,844.00"
+      },
+      "amount": {
+        "value": "788256.00",
+        "printed": "Rs. 7,88,256.00"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "2028.80",
+        "printed": "Rs. 2,028.80"
+      },
+      "amount": {
+        "value": "4057.60",
+        "printed": "Rs. 4,057.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "10123.20",
+        "printed": "Rs. 10,123.20"
+      },
+      "amount": {
+        "value": "141724.80",
+        "printed": "Rs. 1,41,724.80"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "3956.00",
+        "printed": "Rs. 3,956.00"
+      },
+      "amount": {
+        "value": "31648.00",
+        "printed": "Rs. 31,648.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "35299.20",
+        "printed": "Rs. 35,299.20"
+      },
+      "amount": {
+        "value": "141196.80",
+        "printed": "Rs. 1,41,196.80"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "3281.60",
+        "printed": "Rs. 3,281.60"
+      },
+      "amount": {
+        "value": "68913.60",
+        "printed": "Rs. 68,913.60"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-07",
+    "layout": "modern",
+    "seed": 1007,
+    "region": "IN",
+    "currency": "INR",
+    "date_style": "short_dmy",
+    "number_style": "indian",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "GST",
+    "tax_rate": "0.18",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

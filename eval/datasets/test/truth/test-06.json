@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-06",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:AUD",
+    "date:eu_slash",
+    "numbers:us",
+    "odd_labels"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260750",
+      "printed": "260750"
+    },
+    "vendor_name": {
+      "value": "Crestmoor Supplies Ltd",
+      "printed": "Crestmoor Supplies Ltd"
+    },
+    "bill_to_name": {
+      "value": "Zantheon Analytics",
+      "printed": "Zantheon Analytics"
+    },
+    "invoice_date": {
+      "value": "2026-07-25",
+      "printed": "25/07/2026"
+    },
+    "due_date": {
+      "value": "2026-08-08",
+      "printed": "08/08/2026"
+    },
+    "currency": {
+      "value": "AUD",
+      "printed": "AUD"
+    },
+    "subtotal": {
+      "value": "13538.42",
+      "printed": "A$13,538.42"
+    },
+    "tax": {
+      "value": "1353.84",
+      "printed": "A$1,353.84"
+    },
+    "total": {
+      "value": "14892.26",
+      "printed": "A$14,892.26"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "293.45",
+        "printed": "A$293.45"
+      },
+      "amount": {
+        "value": "2054.15",
+        "printed": "A$2,054.15"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "127.97",
+        "printed": "A$127.97"
+      },
+      "amount": {
+        "value": "1279.70",
+        "printed": "A$1,279.70"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "370.82",
+        "printed": "A$370.82"
+      },
+      "amount": {
+        "value": "2595.74",
+        "printed": "A$2,595.74"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "290.58",
+        "printed": "A$290.58"
+      },
+      "amount": {
+        "value": "7264.50",
+        "printed": "A$7,264.50"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "49.19",
+        "printed": "A$49.19"
+      },
+      "amount": {
+        "value": "344.33",
+        "printed": "A$344.33"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-06",
+    "layout": "classic_us",
+    "seed": 2006,
+    "region": "UK",
+    "currency": "AUD",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "GST",
+    "tax_rate": "0.10",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "total": "Balance Due"
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

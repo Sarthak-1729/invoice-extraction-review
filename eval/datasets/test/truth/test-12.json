@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-12",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:CHF",
+    "date:dotted",
+    "numbers:swiss",
+    "odd_labels"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF481622",
+      "printed": "VF481622"
+    },
+    "vendor_name": {
+      "value": "Pellucia Handel GmbH",
+      "printed": "Pellucia Handel GmbH"
+    },
+    "bill_to_name": {
+      "value": "Ambervault Studio",
+      "printed": "Ambervault Studio"
+    },
+    "invoice_date": {
+      "value": "2026-02-23",
+      "printed": "23.02.2026"
+    },
+    "due_date": {
+      "value": "2026-03-25",
+      "printed": "25.03.2026"
+    },
+    "currency": {
+      "value": "CHF",
+      "printed": "CHF"
+    },
+    "subtotal": {
+      "value": "10879.89",
+      "printed": "CHF 10'879.89"
+    },
+    "tax": {
+      "value": "881.27",
+      "printed": "CHF 881.27"
+    },
+    "total": {
+      "value": "11761.16",
+      "printed": "CHF 11'761.16"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "313.05",
+        "printed": "CHF 313.05"
+      },
+      "amount": {
+        "value": "3443.55",
+        "printed": "CHF 3'443.55"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "183.91",
+        "printed": "CHF 183.91"
+      },
+      "amount": {
+        "value": "735.64",
+        "printed": "CHF 735.64"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "139.38",
+        "printed": "CHF 139.38"
+      },
+      "amount": {
+        "value": "1951.32",
+        "printed": "CHF 1'951.32"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "195.44",
+        "printed": "CHF 195.44"
+      },
+      "amount": {
+        "value": "3127.04",
+        "printed": "CHF 3'127.04"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "270.39",
+        "printed": "CHF 270.39"
+      },
+      "amount": {
+        "value": "1622.34",
+        "printed": "CHF 1'622.34"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-12",
+    "layout": "european",
+    "seed": 2012,
+    "region": "EU",
+    "currency": "CHF",
+    "date_style": "dotted",
+    "number_style": "swiss",
+    "currency_display": "code_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.081",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "subtotal": "Subtotal excl. VAT",
+      "total": "Total incl. VAT"
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

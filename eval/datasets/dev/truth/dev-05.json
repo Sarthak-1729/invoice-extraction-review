@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-05",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:iso",
+    "numbers:space",
+    "injection",
+    "arith_error:total"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "A-40428",
+      "printed": "A-40428"
+    },
+    "vendor_name": {
+      "value": "Irongale S.A.R.L.",
+      "printed": "Irongale S.A.R.L."
+    },
+    "bill_to_name": {
+      "value": "Crestmoor Architects",
+      "printed": "Crestmoor Architects"
+    },
+    "invoice_date": {
+      "value": "2026-09-09",
+      "printed": "2026-09-09"
+    },
+    "due_date": {
+      "value": "2026-10-09",
+      "printed": "2026-10-09"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "EUR"
+    },
+    "subtotal": {
+      "value": "20006.71",
+      "printed": "20 006,71 EUR"
+    },
+    "tax": {
+      "value": "4201.41",
+      "printed": "4 201,41 EUR"
+    },
+    "total": {
+      "value": "24217.12",
+      "printed": "24 217,12 EUR"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "215.26",
+        "printed": "215,26 EUR"
+      },
+      "amount": {
+        "value": "4089.94",
+        "printed": "4 089,94 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "138.79",
+        "printed": "138,79 EUR"
+      },
+      "amount": {
+        "value": "1665.48",
+        "printed": "1 665,48 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "436.09",
+        "printed": "436,09 EUR"
+      },
+      "amount": {
+        "value": "872.18",
+        "printed": "872,18 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "383.27",
+        "printed": "383,27 EUR"
+      },
+      "amount": {
+        "value": "8431.94",
+        "printed": "8 431,94 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "197.63",
+        "printed": "197,63 EUR"
+      },
+      "amount": {
+        "value": "395.26",
+        "printed": "395,26 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "39.27",
+        "printed": "39,27 EUR"
+      },
+      "amount": {
+        "value": "981.75",
+        "printed": "981,75 EUR"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "324.56",
+        "printed": "324,56 EUR"
+      },
+      "amount": {
+        "value": "3570.16",
+        "printed": "3 570,16 EUR"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-05",
+    "layout": "european",
+    "seed": 1005,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "iso",
+    "number_style": "space",
+    "currency_display": "code_suffix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.21",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "total",
+    "injection": true
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-01",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:USD",
+    "date:us_slash",
+    "numbers:us"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260142",
+      "printed": "260142"
+    },
+    "vendor_name": {
+      "value": "Corvane Supplies Inc.",
+      "printed": "Corvane Supplies Inc."
+    },
+    "bill_to_name": {
+      "value": "Orlavant Robotics",
+      "printed": "Orlavant Robotics"
+    },
+    "invoice_date": {
+      "value": "2026-01-16",
+      "printed": "01/16/2026"
+    },
+    "due_date": {
+      "value": "2026-02-15",
+      "printed": "02/15/2026"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "USD"
+    },
+    "subtotal": {
+      "value": "18658.88",
+      "printed": "$18,658.88"
+    },
+    "tax": {
+      "value": "1539.36",
+      "printed": "$1,539.36"
+    },
+    "total": {
+      "value": "20198.24",
+      "printed": "$20,198.24"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "102.43",
+        "printed": "$102.43"
+      },
+      "amount": {
+        "value": "1536.45",
+        "printed": "$1,536.45"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "423.57",
+        "printed": "$423.57"
+      },
+      "amount": {
+        "value": "1270.71",
+        "printed": "$1,270.71"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "58.98",
+        "printed": "$58.98"
+      },
+      "amount": {
+        "value": "825.72",
+        "printed": "$825.72"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "115.33",
+        "printed": "$115.33"
+      },
+      "amount": {
+        "value": "1383.96",
+        "printed": "$1,383.96"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "318.50",
+        "printed": "$318.50"
+      },
+      "amount": {
+        "value": "4459.00",
+        "printed": "$4,459.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "234.62",
+        "printed": "$234.62"
+      },
+      "amount": {
+        "value": "5161.64",
+        "printed": "$5,161.64"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "249.26",
+        "printed": "$249.26"
+      },
+      "amount": {
+        "value": "2492.60",
+        "printed": "$2,492.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "109.20",
+        "printed": "$109.20"
+      },
+      "amount": {
+        "value": "1528.80",
+        "printed": "$1,528.80"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-01",
+    "layout": "classic_us",
+    "seed": 2001,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "us_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "Sales Tax",
+    "tax_rate": "0.0825",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

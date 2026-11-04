@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-14",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:JPY",
+    "date:iso",
+    "numbers:us",
+    "odd_labels"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "A-13666",
+      "printed": "A-13666"
+    },
+    "vendor_name": {
+      "value": "Zantheon K.K.",
+      "printed": "Zantheon K.K."
+    },
+    "bill_to_name": {
+      "value": "Wyncastle Architects",
+      "printed": "Wyncastle Architects"
+    },
+    "invoice_date": {
+      "value": "2026-06-15",
+      "printed": "2026-06-15"
+    },
+    "due_date": {
+      "value": "2026-07-30",
+      "printed": "2026-07-30"
+    },
+    "currency": {
+      "value": "JPY",
+      "printed": "JPY"
+    },
+    "subtotal": {
+      "value": "2322362",
+      "printed": "¥2,322,362"
+    },
+    "tax": {
+      "value": "232236",
+      "printed": "¥232,236"
+    },
+    "total": {
+      "value": "2554598",
+      "printed": "¥2,554,598"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "26578",
+        "printed": "¥26,578"
+      },
+      "amount": {
+        "value": "531560",
+        "printed": "¥531,560"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "8523",
+        "printed": "¥8,523"
+      },
+      "amount": {
+        "value": "102276",
+        "printed": "¥102,276"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "42813",
+        "printed": "¥42,813"
+      },
+      "amount": {
+        "value": "941886",
+        "printed": "¥941,886"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "29442",
+        "printed": "¥29,442"
+      },
+      "amount": {
+        "value": "559398",
+        "printed": "¥559,398"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp",
+        "printed": "LED desk lamp"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "31207",
+        "printed": "¥31,207"
+      },
+      "amount": {
+        "value": "187242",
+        "printed": "¥187,242"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-14",
+    "layout": "modern",
+    "seed": 2014,
+    "region": "JP",
+    "currency": "JPY",
+    "date_style": "iso",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "Consumption tax",
+    "tax_rate": "0.10",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "invoice_number": "Document no."
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

@@ -1,0 +1,860 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-19",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:USD",
+    "date:us_slash",
+    "numbers:us",
+    "sku_column"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-9786",
+      "printed": "INV-2026-9786"
+    },
+    "vendor_name": {
+      "value": "Solvane Works LLC",
+      "printed": "Solvane Works LLC"
+    },
+    "bill_to_name": {
+      "value": "Quillmere Consulting",
+      "printed": "Quillmere Consulting"
+    },
+    "invoice_date": {
+      "value": "2026-03-25",
+      "printed": "03/25/2026"
+    },
+    "due_date": {
+      "value": "2026-04-08",
+      "printed": "04/08/2026"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "USD"
+    },
+    "subtotal": {
+      "value": "117451.15",
+      "printed": "$117,451.15"
+    },
+    "tax": {
+      "value": "8221.58",
+      "printed": "$8,221.58"
+    },
+    "total": {
+      "value": "125672.73",
+      "printed": "$125,672.73"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Standing desk frame #5085",
+        "printed": "Standing desk frame #5085"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "203.22",
+        "printed": "$203.22"
+      },
+      "amount": {
+        "value": "2235.42",
+        "printed": "$2,235.42"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6196",
+        "printed": "Webcam 1080p #6196"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "290.09",
+        "printed": "$290.09"
+      },
+      "amount": {
+        "value": "4351.35",
+        "printed": "$4,351.35"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #5785",
+        "printed": "Cable management kit #5785"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "171.09",
+        "printed": "$171.09"
+      },
+      "amount": {
+        "value": "1539.81",
+        "printed": "$1,539.81"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #4925",
+        "printed": "Monitor arm #4925"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "188.95",
+        "printed": "$188.95"
+      },
+      "amount": {
+        "value": "3023.20",
+        "printed": "$3,023.20"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #7866",
+        "printed": "Webcam 1080p #7866"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "27.28",
+        "printed": "$27.28"
+      },
+      "amount": {
+        "value": "272.80",
+        "printed": "$272.80"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #2170",
+        "printed": "Laser toner cartridge #2170"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "240.90",
+        "printed": "$240.90"
+      },
+      "amount": {
+        "value": "3372.60",
+        "printed": "$3,372.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6250",
+        "printed": "Webcam 1080p #6250"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "151.98",
+        "printed": "$151.98"
+      },
+      "amount": {
+        "value": "1823.76",
+        "printed": "$1,823.76"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #1514",
+        "printed": "Standing desk frame #1514"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "124.77",
+        "printed": "$124.77"
+      },
+      "amount": {
+        "value": "2994.48",
+        "printed": "$2,994.48"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #7118",
+        "printed": "Whiteboard markers (pack of 12) #7118"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "287.37",
+        "printed": "$287.37"
+      },
+      "amount": {
+        "value": "1436.85",
+        "printed": "$1,436.85"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #5437",
+        "printed": "Whiteboard markers (pack of 12) #5437"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "241.75",
+        "printed": "$241.75"
+      },
+      "amount": {
+        "value": "4109.75",
+        "printed": "$4,109.75"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #4332",
+        "printed": "Webcam 1080p #4332"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "195.79",
+        "printed": "$195.79"
+      },
+      "amount": {
+        "value": "1566.32",
+        "printed": "$1,566.32"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #8931",
+        "printed": "Acoustic wall panel #8931"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "331.01",
+        "printed": "$331.01"
+      },
+      "amount": {
+        "value": "5958.18",
+        "printed": "$5,958.18"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #2742",
+        "printed": "Label printer tape #2742"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "420.46",
+        "printed": "$420.46"
+      },
+      "amount": {
+        "value": "4625.06",
+        "printed": "$4,625.06"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #3569",
+        "printed": "Ergonomic office chair #3569"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "202.37",
+        "printed": "$202.37"
+      },
+      "amount": {
+        "value": "2023.70",
+        "printed": "$2,023.70"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #8238",
+        "printed": "A4 copy paper (box of 5 reams) #8238"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "38.38",
+        "printed": "$38.38"
+      },
+      "amount": {
+        "value": "76.76",
+        "printed": "$76.76"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #1856",
+        "printed": "Monitor arm #1856"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "369.53",
+        "printed": "$369.53"
+      },
+      "amount": {
+        "value": "5173.42",
+        "printed": "$5,173.42"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #2928",
+        "printed": "Wireless keyboard #2928"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "49.15",
+        "printed": "$49.15"
+      },
+      "amount": {
+        "value": "1032.15",
+        "printed": "$1,032.15"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #1815",
+        "printed": "LED desk lamp #1815"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "349.63",
+        "printed": "$349.63"
+      },
+      "amount": {
+        "value": "3845.93",
+        "printed": "$3,845.93"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #7453",
+        "printed": "Ergonomic office chair #7453"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "138.17",
+        "printed": "$138.17"
+      },
+      "amount": {
+        "value": "690.85",
+        "printed": "$690.85"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #8643",
+        "printed": "Whiteboard markers (pack of 12) #8643"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "343.06",
+        "printed": "$343.06"
+      },
+      "amount": {
+        "value": "2744.48",
+        "printed": "$2,744.48"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #8160",
+        "printed": "Label printer tape #8160"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "229.49",
+        "printed": "$229.49"
+      },
+      "amount": {
+        "value": "4819.29",
+        "printed": "$4,819.29"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #7561",
+        "printed": "A4 copy paper (box of 5 reams) #7561"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "155.38",
+        "printed": "$155.38"
+      },
+      "amount": {
+        "value": "1864.56",
+        "printed": "$1,864.56"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #5661",
+        "printed": "Wireless keyboard #5661"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "101.63",
+        "printed": "$101.63"
+      },
+      "amount": {
+        "value": "304.89",
+        "printed": "$304.89"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #4484",
+        "printed": "Acoustic wall panel #4484"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "82.38",
+        "printed": "$82.38"
+      },
+      "amount": {
+        "value": "1894.74",
+        "printed": "$1,894.74"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #5651",
+        "printed": "Acoustic wall panel #5651"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "265.20",
+        "printed": "$265.20"
+      },
+      "amount": {
+        "value": "4773.60",
+        "printed": "$4,773.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #2695",
+        "printed": "Cable management kit #2695"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "125.31",
+        "printed": "$125.31"
+      },
+      "amount": {
+        "value": "1879.65",
+        "printed": "$1,879.65"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #5998",
+        "printed": "Label printer tape #5998"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "444.75",
+        "printed": "$444.75"
+      },
+      "amount": {
+        "value": "1334.25",
+        "printed": "$1,334.25"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #4093",
+        "printed": "Network switch, 8-port #4093"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "171.24",
+        "printed": "$171.24"
+      },
+      "amount": {
+        "value": "4109.76",
+        "printed": "$4,109.76"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #1362",
+        "printed": "Whiteboard markers (pack of 12) #1362"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "292.08",
+        "printed": "$292.08"
+      },
+      "amount": {
+        "value": "4089.12",
+        "printed": "$4,089.12"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #5861",
+        "printed": "USB-C docking station #5861"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "28.27",
+        "printed": "$28.27"
+      },
+      "amount": {
+        "value": "593.67",
+        "printed": "$593.67"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #6536",
+        "printed": "USB-C docking station #6536"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "173.64",
+        "printed": "$173.64"
+      },
+      "amount": {
+        "value": "694.56",
+        "printed": "$694.56"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #3749",
+        "printed": "LED desk lamp #3749"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "411.81",
+        "printed": "$411.81"
+      },
+      "amount": {
+        "value": "9883.44",
+        "printed": "$9,883.44"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6130",
+        "printed": "Webcam 1080p #6130"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "306.44",
+        "printed": "$306.44"
+      },
+      "amount": {
+        "value": "3064.40",
+        "printed": "$3,064.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #3241",
+        "printed": "Ergonomic office chair #3241"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "182.07",
+        "printed": "$182.07"
+      },
+      "amount": {
+        "value": "546.21",
+        "printed": "$546.21"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #2406",
+        "printed": "Standing desk frame #2406"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "310.97",
+        "printed": "$310.97"
+      },
+      "amount": {
+        "value": "5908.43",
+        "printed": "$5,908.43"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #9294",
+        "printed": "Acoustic wall panel #9294"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "233.99",
+        "printed": "$233.99"
+      },
+      "amount": {
+        "value": "467.98",
+        "printed": "$467.98"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #7415",
+        "printed": "Monitor arm #7415"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "151.57",
+        "printed": "$151.57"
+      },
+      "amount": {
+        "value": "1667.27",
+        "printed": "$1,667.27"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #3872",
+        "printed": "Cable management kit #3872"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "445.12",
+        "printed": "$445.12"
+      },
+      "amount": {
+        "value": "4896.32",
+        "printed": "$4,896.32"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #8559",
+        "printed": "Acoustic wall panel #8559"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "129.16",
+        "printed": "$129.16"
+      },
+      "amount": {
+        "value": "904.12",
+        "printed": "$904.12"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #3962",
+        "printed": "Whiteboard markers (pack of 12) #3962"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "130.17",
+        "printed": "$130.17"
+      },
+      "amount": {
+        "value": "2993.91",
+        "printed": "$2,993.91"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #9237",
+        "printed": "Monitor arm #9237"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "59.11",
+        "printed": "$59.11"
+      },
+      "amount": {
+        "value": "945.76",
+        "printed": "$945.76"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #4945",
+        "printed": "Acoustic wall panel #4945"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "283.44",
+        "printed": "$283.44"
+      },
+      "amount": {
+        "value": "6802.56",
+        "printed": "$6,802.56"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #8024",
+        "printed": "Network switch, 8-port #8024"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "115.79",
+        "printed": "$115.79"
+      },
+      "amount": {
+        "value": "115.79",
+        "printed": "$115.79"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-19",
+    "layout": "multipage",
+    "seed": 2019,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "us_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      40,
+      48
+    ],
+    "services": false,
+    "tax_label": "Sales Tax",
+    "tax_rate": "0.07",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": [
+      "sku",
+      "description",
+      "quantity",
+      "unit_price",
+      "amount"
+    ],
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

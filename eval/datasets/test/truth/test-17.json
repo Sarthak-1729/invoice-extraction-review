@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-17",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:USD",
+    "date:long_mdy",
+    "numbers:us",
+    "no_tax",
+    "services"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "A-38748",
+      "printed": "A-38748"
+    },
+    "vendor_name": {
+      "value": "Quorvane Trading Co.",
+      "printed": "Quorvane Trading Co."
+    },
+    "bill_to_name": {
+      "value": "Wyncastle Analytics",
+      "printed": "Wyncastle Analytics"
+    },
+    "invoice_date": {
+      "value": "2026-04-16",
+      "printed": "April 16, 2026"
+    },
+    "due_date": {
+      "value": "2026-05-16",
+      "printed": "May 16, 2026"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "$"
+    },
+    "subtotal": {
+      "value": "2977.50",
+      "printed": "$2,977.50"
+    },
+    "tax": {
+      "value": null,
+      "printed": null
+    },
+    "total": {
+      "value": "2977.50",
+      "printed": "$2,977.50"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Bookkeeping services",
+        "printed": "Bookkeeping services"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "107.00",
+        "printed": "$107.00"
+      },
+      "amount": {
+        "value": "856.00",
+        "printed": "$856.00"
+      }
+    },
+    {
+      "description": {
+        "value": "On-site IT support",
+        "printed": "On-site IT support"
+      },
+      "quantity": {
+        "value": "0.5",
+        "printed": "0.5"
+      },
+      "unit_price": {
+        "value": "65.00",
+        "printed": "$65.00"
+      },
+      "amount": {
+        "value": "32.50",
+        "printed": "$32.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Server monitoring",
+        "printed": "Server monitoring"
+      },
+      "quantity": {
+        "value": "2.5",
+        "printed": "2.5"
+      },
+      "unit_price": {
+        "value": "107.00",
+        "printed": "$107.00"
+      },
+      "amount": {
+        "value": "267.50",
+        "printed": "$267.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Data migration consulting",
+        "printed": "Data migration consulting"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1.5"
+      },
+      "unit_price": {
+        "value": "94.00",
+        "printed": "$94.00"
+      },
+      "amount": {
+        "value": "141.00",
+        "printed": "$141.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Website maintenance",
+        "printed": "Website maintenance"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1.5"
+      },
+      "unit_price": {
+        "value": "115.00",
+        "printed": "$115.00"
+      },
+      "amount": {
+        "value": "172.50",
+        "printed": "$172.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Training workshop",
+        "printed": "Training workshop"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "178.00",
+        "printed": "$178.00"
+      },
+      "amount": {
+        "value": "356.00",
+        "printed": "$356.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Translation services",
+        "printed": "Translation services"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "144.00",
+        "printed": "$144.00"
+      },
+      "amount": {
+        "value": "1152.00",
+        "printed": "$1,152.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-17",
+    "layout": "modern",
+    "seed": 2017,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "long_mdy",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "Sales Tax",
+    "tax_rate": null,
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

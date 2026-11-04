@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-16",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:INR",
+    "date:long_dmy",
+    "numbers:indian",
+    "arith_error:line"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "A-84465",
+      "printed": "A-84465"
+    },
+    "vendor_name": {
+      "value": "Halcyra Enterprises",
+      "printed": "Halcyra Enterprises"
+    },
+    "bill_to_name": {
+      "value": "Wyncastle Architects",
+      "printed": "Wyncastle Architects"
+    },
+    "invoice_date": {
+      "value": "2026-08-22",
+      "printed": "22 August 2026"
+    },
+    "due_date": {
+      "value": "2026-10-06",
+      "printed": "6 October 2026"
+    },
+    "currency": {
+      "value": "INR",
+      "printed": "INR"
+    },
+    "subtotal": {
+      "value": "1474774.80",
+      "printed": "INR 14,74,774.80"
+    },
+    "tax": {
+      "value": "176972.98",
+      "printed": "INR 1,76,972.98"
+    },
+    "total": {
+      "value": "1651747.78",
+      "printed": "INR 16,51,747.78"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "8365.60",
+        "printed": "INR 8,365.60"
+      },
+      "amount": {
+        "value": "41918.00",
+        "printed": "INR 41,918.00"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "11295.20",
+        "printed": "INR 11,295.20"
+      },
+      "amount": {
+        "value": "124247.20",
+        "printed": "INR 1,24,247.20"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "11160.80",
+        "printed": "INR 11,160.80"
+      },
+      "amount": {
+        "value": "133929.60",
+        "printed": "INR 1,33,929.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "9075.20",
+        "printed": "INR 9,075.20"
+      },
+      "amount": {
+        "value": "72601.60",
+        "printed": "INR 72,601.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "23987.20",
+        "printed": "INR 23,987.20"
+      },
+      "amount": {
+        "value": "383795.20",
+        "printed": "INR 3,83,795.20"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "16743.20",
+        "printed": "INR 16,743.20"
+      },
+      "amount": {
+        "value": "385093.60",
+        "printed": "INR 3,85,093.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "33207.20",
+        "printed": "INR 33,207.20"
+      },
+      "amount": {
+        "value": "99621.60",
+        "printed": "INR 99,621.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "12976.00",
+        "printed": "INR 12,976.00"
+      },
+      "amount": {
+        "value": "233568.00",
+        "printed": "INR 2,33,568.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-16",
+    "layout": "modern",
+    "seed": 2016,
+    "region": "IN",
+    "currency": "INR",
+    "date_style": "long_dmy",
+    "number_style": "indian",
+    "currency_display": "code_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "GST",
+    "tax_rate": "0.12",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "line",
+    "injection": false
+  }
+}

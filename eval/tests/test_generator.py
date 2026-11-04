@@ -12,7 +12,7 @@ from app.validation.checks import check_invoice
 from app.validation.flags import FlagCode
 from app.validation.formats import parse_amount
 from eval.generator.formatting import format_date, format_money, format_number
-from eval.generator.generate import render_document
+from eval.generator.generate import MANIFEST, generate_split, render_document, write_manifest
 from eval.generator.layouts import LAYOUTS
 from eval.generator.samples import SAMPLES
 from eval.generator.spec import build_spec
@@ -144,3 +144,24 @@ def test_rendered_pdf_is_verified_and_byte_stable(config, tmp_path):
     assert digest("a.json") == digest("b.json")
     # Wrapped lines are reported only for, and always for, the wrap feature.
     assert bool(first["wrapped_line_items"]) == config.wrap_descriptions
+
+
+def test_manifest_lists_every_file_and_split_hash_tracks_changes(tmp_path):
+    (tmp_path / "pdf").mkdir()
+    (tmp_path / "truth").mkdir()
+    (tmp_path / "pdf" / "a.pdf").write_bytes(b"pdf")
+    (tmp_path / "truth" / "a.json").write_bytes(b"{}")
+    first = write_manifest(tmp_path)
+    lines = (tmp_path / MANIFEST).read_text(encoding="utf-8").splitlines()
+    assert [line.split("  ")[1] for line in lines] == ["pdf/a.pdf", "truth/a.json"]
+    assert lines[0].split("  ")[0] == hashlib.sha256(b"pdf").hexdigest()
+    assert write_manifest(tmp_path) == first  # the manifest never lists itself
+
+    (tmp_path / "truth" / "a.json").write_bytes(b'{"edited": true}')
+    assert write_manifest(tmp_path) != first
+
+
+def test_split_generation_refuses_to_overwrite(tmp_path):
+    (tmp_path / "dev").mkdir()
+    with pytest.raises(SystemExit):
+        generate_split("dev", tmp_path)

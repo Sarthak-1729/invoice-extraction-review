@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-04",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:dotted",
+    "numbers:eu"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF440403",
+      "printed": "VF440403"
+    },
+    "vendor_name": {
+      "value": "Saffrel AG",
+      "printed": "Saffrel AG"
+    },
+    "bill_to_name": {
+      "value": "Tarnwick Media",
+      "printed": "Tarnwick Media"
+    },
+    "invoice_date": {
+      "value": "2026-08-08",
+      "printed": "08.08.2026"
+    },
+    "due_date": {
+      "value": "2026-08-22",
+      "printed": "22.08.2026"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "€"
+    },
+    "subtotal": {
+      "value": "9826.73",
+      "printed": "9.826,73 €"
+    },
+    "tax": {
+      "value": "1867.08",
+      "printed": "1.867,08 €"
+    },
+    "total": {
+      "value": "11693.81",
+      "printed": "11.693,81 €"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "42.82",
+        "printed": "42,82 €"
+      },
+      "amount": {
+        "value": "899.22",
+        "printed": "899,22 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "101.89",
+        "printed": "101,89 €"
+      },
+      "amount": {
+        "value": "2343.47",
+        "printed": "2.343,47 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "245.21",
+        "printed": "245,21 €"
+      },
+      "amount": {
+        "value": "4904.20",
+        "printed": "4.904,20 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "334.35",
+        "printed": "334,35 €"
+      },
+      "amount": {
+        "value": "1003.05",
+        "printed": "1.003,05 €"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "7.08",
+        "printed": "7,08 €"
+      },
+      "amount": {
+        "value": "56.64",
+        "printed": "56,64 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "20.49",
+        "printed": "20,49 €"
+      },
+      "amount": {
+        "value": "102.45",
+        "printed": "102,45 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "103.54",
+        "printed": "103,54 €"
+      },
+      "amount": {
+        "value": "517.70",
+        "printed": "517,70 €"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-04",
+    "layout": "european",
+    "seed": 1004,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "dotted",
+    "number_style": "eu",
+    "currency_display": "symbol_suffix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.19",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

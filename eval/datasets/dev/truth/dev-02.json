@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-02",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:GBP",
+    "date:eu_slash",
+    "numbers:us",
+    "odd_labels",
+    "arith_error:line"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-6900",
+      "printed": "INV-2026-6900"
+    },
+    "vendor_name": {
+      "value": "Kestrove Trading Ltd",
+      "printed": "Kestrove Trading Ltd"
+    },
+    "bill_to_name": {
+      "value": "Wyncastle Logistics",
+      "printed": "Wyncastle Logistics"
+    },
+    "invoice_date": {
+      "value": "2026-09-28",
+      "printed": "28/09/2026"
+    },
+    "due_date": {
+      "value": "2026-11-12",
+      "printed": "12/11/2026"
+    },
+    "currency": {
+      "value": "GBP",
+      "printed": "GBP"
+    },
+    "subtotal": {
+      "value": "16600.96",
+      "printed": "£16,600.96"
+    },
+    "tax": {
+      "value": "3320.19",
+      "printed": "£3,320.19"
+    },
+    "total": {
+      "value": "19921.15",
+      "printed": "£19,921.15"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "385.30",
+        "printed": "£385.30"
+      },
+      "amount": {
+        "value": "8091.30",
+        "printed": "£8,091.30"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "64.05",
+        "printed": "£64.05"
+      },
+      "amount": {
+        "value": "1291.00",
+        "printed": "£1,291.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "288.34",
+        "printed": "£288.34"
+      },
+      "amount": {
+        "value": "6631.82",
+        "printed": "£6,631.82"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "34.52",
+        "printed": "£34.52"
+      },
+      "amount": {
+        "value": "586.84",
+        "printed": "£586.84"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-02",
+    "layout": "classic_us",
+    "seed": 1002,
+    "region": "UK",
+    "currency": "GBP",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.20",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "total": "Amount Due"
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "line",
+    "injection": false
+  }
+}

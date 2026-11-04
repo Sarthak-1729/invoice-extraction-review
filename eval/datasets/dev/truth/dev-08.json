@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-08",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:AUD",
+    "date:eu_slash",
+    "numbers:us",
+    "no_bill_to",
+    "no_tax",
+    "no_subtotal",
+    "services"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-2419",
+      "printed": "INV-2026-2419"
+    },
+    "vendor_name": {
+      "value": "Quorvane Supplies Ltd",
+      "printed": "Quorvane Supplies Ltd"
+    },
+    "bill_to_name": {
+      "value": null,
+      "printed": null
+    },
+    "invoice_date": {
+      "value": "2026-09-28",
+      "printed": "28/09/2026"
+    },
+    "due_date": {
+      "value": "2026-10-28",
+      "printed": "28/10/2026"
+    },
+    "currency": {
+      "value": "AUD",
+      "printed": "A$"
+    },
+    "subtotal": {
+      "value": null,
+      "printed": null
+    },
+    "tax": {
+      "value": null,
+      "printed": null
+    },
+    "total": {
+      "value": "3588.50",
+      "printed": "A$3,588.50"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "On-site IT support",
+        "printed": "On-site IT support"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "47.00",
+        "printed": "A$47.00"
+      },
+      "amount": {
+        "value": "188.00",
+        "printed": "A$188.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Website maintenance",
+        "printed": "Website maintenance"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "128.00",
+        "printed": "A$128.00"
+      },
+      "amount": {
+        "value": "1024.00",
+        "printed": "A$1,024.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Logo design revisions",
+        "printed": "Logo design revisions"
+      },
+      "quantity": {
+        "value": "2.5",
+        "printed": "2.5"
+      },
+      "unit_price": {
+        "value": "101.00",
+        "printed": "A$101.00"
+      },
+      "amount": {
+        "value": "252.50",
+        "printed": "A$252.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Photography session",
+        "printed": "Photography session"
+      },
+      "quantity": {
+        "value": "7.5",
+        "printed": "7.5"
+      },
+      "unit_price": {
+        "value": "82.00",
+        "printed": "A$82.00"
+      },
+      "amount": {
+        "value": "615.00",
+        "printed": "A$615.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Copywriting",
+        "printed": "Copywriting"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "55.00",
+        "printed": "A$55.00"
+      },
+      "amount": {
+        "value": "440.00",
+        "printed": "A$440.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Data migration consulting",
+        "printed": "Data migration consulting"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "81.00",
+        "printed": "A$81.00"
+      },
+      "amount": {
+        "value": "162.00",
+        "printed": "A$162.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Training workshop",
+        "printed": "Training workshop"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "103.00",
+        "printed": "A$103.00"
+      },
+      "amount": {
+        "value": "103.00",
+        "printed": "A$103.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Server monitoring",
+        "printed": "Server monitoring"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "134.00",
+        "printed": "A$134.00"
+      },
+      "amount": {
+        "value": "804.00",
+        "printed": "A$804.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-08",
+    "layout": "modern",
+    "seed": 1008,
+    "region": "UK",
+    "currency": "AUD",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "Sales Tax",
+    "tax_rate": null,
+    "has_due_date": true,
+    "has_bill_to": false,
+    "show_subtotal": false,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

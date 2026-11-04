@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-11",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:dotted",
+    "numbers:eu",
+    "services"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF120420",
+      "printed": "VF120420"
+    },
+    "vendor_name": {
+      "value": "Crestmoor Handel GmbH",
+      "printed": "Crestmoor Handel GmbH"
+    },
+    "bill_to_name": {
+      "value": "Zantheon Consulting",
+      "printed": "Zantheon Consulting"
+    },
+    "invoice_date": {
+      "value": "2026-09-27",
+      "printed": "27.09.2026"
+    },
+    "due_date": {
+      "value": "2026-11-11",
+      "printed": "11.11.2026"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "EUR"
+    },
+    "subtotal": {
+      "value": "1531.00",
+      "printed": "1.531,00 €"
+    },
+    "tax": {
+      "value": "107.17",
+      "printed": "107,17 €"
+    },
+    "total": {
+      "value": "1638.17",
+      "printed": "1.638,17 €"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Logo design revisions",
+        "printed": "Logo design revisions"
+      },
+      "quantity": {
+        "value": "0.5",
+        "printed": "0,5"
+      },
+      "unit_price": {
+        "value": "120.00",
+        "printed": "120,00 €"
+      },
+      "amount": {
+        "value": "60.00",
+        "printed": "60,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Data migration consulting",
+        "printed": "Data migration consulting"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "101.00",
+        "printed": "101,00 €"
+      },
+      "amount": {
+        "value": "202.00",
+        "printed": "202,00 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Website maintenance",
+        "printed": "Website maintenance"
+      },
+      "quantity": {
+        "value": "0.5",
+        "printed": "0,5"
+      },
+      "unit_price": {
+        "value": "57.00",
+        "printed": "57,00 €"
+      },
+      "amount": {
+        "value": "28.50",
+        "printed": "28,50 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Copywriting",
+        "printed": "Copywriting"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1,5"
+      },
+      "unit_price": {
+        "value": "127.00",
+        "printed": "127,00 €"
+      },
+      "amount": {
+        "value": "190.50",
+        "printed": "190,50 €"
+      }
+    },
+    {
+      "description": {
+        "value": "Translation services",
+        "printed": "Translation services"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "175.00",
+        "printed": "175,00 €"
+      },
+      "amount": {
+        "value": "1050.00",
+        "printed": "1.050,00 €"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-11",
+    "layout": "european",
+    "seed": 2011,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "dotted",
+    "number_style": "eu",
+    "currency_display": "symbol_suffix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "VAT",
+    "tax_rate": "0.07",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

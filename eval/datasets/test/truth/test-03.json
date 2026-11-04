@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-03",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:GBP",
+    "date:eu_slash",
+    "numbers:us",
+    "injection",
+    "arith_error:total"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "A-18703",
+      "printed": "A-18703"
+    },
+    "vendor_name": {
+      "value": "Irongale Trading Ltd",
+      "printed": "Irongale Trading Ltd"
+    },
+    "bill_to_name": {
+      "value": "Thistlecrane Design Group",
+      "printed": "Thistlecrane Design Group"
+    },
+    "invoice_date": {
+      "value": "2026-03-03",
+      "printed": "03/03/2026"
+    },
+    "due_date": {
+      "value": "2026-04-17",
+      "printed": "17/04/2026"
+    },
+    "currency": {
+      "value": "GBP",
+      "printed": "GBP"
+    },
+    "subtotal": {
+      "value": "15076.54",
+      "printed": "£15,076.54"
+    },
+    "tax": {
+      "value": "3015.31",
+      "printed": "£3,015.31"
+    },
+    "total": {
+      "value": "18191.85",
+      "printed": "£18,191.85"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "194.52",
+        "printed": "£194.52"
+      },
+      "amount": {
+        "value": "2139.72",
+        "printed": "£2,139.72"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame",
+        "printed": "Standing desk frame"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "220.07",
+        "printed": "£220.07"
+      },
+      "amount": {
+        "value": "660.21",
+        "printed": "£660.21"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "407.04",
+        "printed": "£407.04"
+      },
+      "amount": {
+        "value": "5291.52",
+        "printed": "£5,291.52"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair",
+        "printed": "Ergonomic office chair"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "335.54",
+        "printed": "£335.54"
+      },
+      "amount": {
+        "value": "2013.24",
+        "printed": "£2,013.24"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "382.45",
+        "printed": "£382.45"
+      },
+      "amount": {
+        "value": "4971.85",
+        "printed": "£4,971.85"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-03",
+    "layout": "classic_us",
+    "seed": 2003,
+    "region": "UK",
+    "currency": "GBP",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.20",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "total",
+    "injection": true
+  }
+}

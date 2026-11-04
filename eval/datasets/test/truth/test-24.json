@@ -1,0 +1,770 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-24",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:JPY",
+    "date:iso",
+    "numbers:us",
+    "sku_column"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF209363",
+      "printed": "VF209363"
+    },
+    "vendor_name": {
+      "value": "Saffrel Trading K.K.",
+      "printed": "Saffrel Trading K.K."
+    },
+    "bill_to_name": {
+      "value": "Orlavant Clinic",
+      "printed": "Orlavant Clinic"
+    },
+    "invoice_date": {
+      "value": "2026-09-02",
+      "printed": "2026-09-02"
+    },
+    "due_date": {
+      "value": "2026-09-16",
+      "printed": "2026-09-16"
+    },
+    "currency": {
+      "value": "JPY",
+      "printed": "JPY"
+    },
+    "subtotal": {
+      "value": "9532519",
+      "printed": "¥9,532,519"
+    },
+    "tax": {
+      "value": "953252",
+      "printed": "¥953,252"
+    },
+    "total": {
+      "value": "10485771",
+      "printed": "¥10,485,771"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Acoustic wall panel #7718",
+        "printed": "Acoustic wall panel #7718"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "22402",
+        "printed": "¥22,402"
+      },
+      "amount": {
+        "value": "448040",
+        "printed": "¥448,040"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #5345",
+        "printed": "Cable management kit #5345"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "30771",
+        "printed": "¥30,771"
+      },
+      "amount": {
+        "value": "338481",
+        "printed": "¥338,481"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #5016",
+        "printed": "Network switch, 8-port #5016"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "8951",
+        "printed": "¥8,951"
+      },
+      "amount": {
+        "value": "53706",
+        "printed": "¥53,706"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #9164",
+        "printed": "Standing desk frame #9164"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "13860",
+        "printed": "¥13,860"
+      },
+      "amount": {
+        "value": "152460",
+        "printed": "¥152,460"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #7813",
+        "printed": "Whiteboard markers (pack of 12) #7813"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "4589",
+        "printed": "¥4,589"
+      },
+      "amount": {
+        "value": "87191",
+        "printed": "¥87,191"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #4573",
+        "printed": "Network switch, 8-port #4573"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "11686",
+        "printed": "¥11,686"
+      },
+      "amount": {
+        "value": "46744",
+        "printed": "¥46,744"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #9910",
+        "printed": "A4 copy paper (box of 5 reams) #9910"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "10173",
+        "printed": "¥10,173"
+      },
+      "amount": {
+        "value": "10173",
+        "printed": "¥10,173"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #6410",
+        "printed": "Acoustic wall panel #6410"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "15745",
+        "printed": "¥15,745"
+      },
+      "amount": {
+        "value": "236175",
+        "printed": "¥236,175"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #2223",
+        "printed": "Network switch, 8-port #2223"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "15277",
+        "printed": "¥15,277"
+      },
+      "amount": {
+        "value": "183324",
+        "printed": "¥183,324"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #4381",
+        "printed": "Acoustic wall panel #4381"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "13121",
+        "printed": "¥13,121"
+      },
+      "amount": {
+        "value": "39363",
+        "printed": "¥39,363"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #8676",
+        "printed": "Acoustic wall panel #8676"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "15981",
+        "printed": "¥15,981"
+      },
+      "amount": {
+        "value": "159810",
+        "printed": "¥159,810"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #3430",
+        "printed": "Acoustic wall panel #3430"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "30522",
+        "printed": "¥30,522"
+      },
+      "amount": {
+        "value": "702006",
+        "printed": "¥702,006"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #4483",
+        "printed": "Network switch, 8-port #4483"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "17576",
+        "printed": "¥17,576"
+      },
+      "amount": {
+        "value": "351520",
+        "printed": "¥351,520"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #7748",
+        "printed": "Webcam 1080p #7748"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "34621",
+        "printed": "¥34,621"
+      },
+      "amount": {
+        "value": "553936",
+        "printed": "¥553,936"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #6725",
+        "printed": "LED desk lamp #6725"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "43807",
+        "printed": "¥43,807"
+      },
+      "amount": {
+        "value": "613298",
+        "printed": "¥613,298"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #7825",
+        "printed": "Standing desk frame #7825"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "13468",
+        "printed": "¥13,468"
+      },
+      "amount": {
+        "value": "188552",
+        "printed": "¥188,552"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #3034",
+        "printed": "Laser toner cartridge #3034"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "20050",
+        "printed": "¥20,050"
+      },
+      "amount": {
+        "value": "60150",
+        "printed": "¥60,150"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #3276",
+        "printed": "Acoustic wall panel #3276"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "18546",
+        "printed": "¥18,546"
+      },
+      "amount": {
+        "value": "185460",
+        "printed": "¥185,460"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #6359",
+        "printed": "Cable management kit #6359"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "37297",
+        "printed": "¥37,297"
+      },
+      "amount": {
+        "value": "186485",
+        "printed": "¥186,485"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #6420",
+        "printed": "Monitor arm #6420"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "16685",
+        "printed": "¥16,685"
+      },
+      "amount": {
+        "value": "367070",
+        "printed": "¥367,070"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #4295",
+        "printed": "Whiteboard markers (pack of 12) #4295"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "6893",
+        "printed": "¥6,893"
+      },
+      "amount": {
+        "value": "117181",
+        "printed": "¥117,181"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #7992",
+        "printed": "Whiteboard markers (pack of 12) #7992"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "14631",
+        "printed": "¥14,631"
+      },
+      "amount": {
+        "value": "234096",
+        "printed": "¥234,096"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #6184",
+        "printed": "Monitor arm #6184"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "25767",
+        "printed": "¥25,767"
+      },
+      "amount": {
+        "value": "180369",
+        "printed": "¥180,369"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #4507",
+        "printed": "Label printer tape #4507"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "34068",
+        "printed": "¥34,068"
+      },
+      "amount": {
+        "value": "204408",
+        "printed": "¥204,408"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #7667",
+        "printed": "Webcam 1080p #7667"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "21268",
+        "printed": "¥21,268"
+      },
+      "amount": {
+        "value": "170144",
+        "printed": "¥170,144"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #4350",
+        "printed": "USB-C docking station #4350"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "3289",
+        "printed": "¥3,289"
+      },
+      "amount": {
+        "value": "39468",
+        "printed": "¥39,468"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #4689",
+        "printed": "LED desk lamp #4689"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "44734",
+        "printed": "¥44,734"
+      },
+      "amount": {
+        "value": "849946",
+        "printed": "¥849,946"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #1318",
+        "printed": "Cable management kit #1318"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "25004",
+        "printed": "¥25,004"
+      },
+      "amount": {
+        "value": "450072",
+        "printed": "¥450,072"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #5241",
+        "printed": "Webcam 1080p #5241"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "41812",
+        "printed": "¥41,812"
+      },
+      "amount": {
+        "value": "1003488",
+        "printed": "¥1,003,488"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #9284",
+        "printed": "Webcam 1080p #9284"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "8069",
+        "printed": "¥8,069"
+      },
+      "amount": {
+        "value": "24207",
+        "printed": "¥24,207"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #7898",
+        "printed": "Whiteboard markers (pack of 12) #7898"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "3954",
+        "printed": "¥3,954"
+      },
+      "amount": {
+        "value": "31632",
+        "printed": "¥31,632"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #2835",
+        "printed": "Label printer tape #2835"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "8523",
+        "printed": "¥8,523"
+      },
+      "amount": {
+        "value": "144891",
+        "printed": "¥144,891"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #4778",
+        "printed": "Whiteboard markers (pack of 12) #4778"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "41914",
+        "printed": "¥41,914"
+      },
+      "amount": {
+        "value": "293398",
+        "printed": "¥293,398"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #8606",
+        "printed": "USB-C docking station #8606"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "6058",
+        "printed": "¥6,058"
+      },
+      "amount": {
+        "value": "121160",
+        "printed": "¥121,160"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #3229",
+        "printed": "Whiteboard markers (pack of 12) #3229"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "11687",
+        "printed": "¥11,687"
+      },
+      "amount": {
+        "value": "198679",
+        "printed": "¥198,679"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #7042",
+        "printed": "USB-C docking station #7042"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "32284",
+        "printed": "¥32,284"
+      },
+      "amount": {
+        "value": "258272",
+        "printed": "¥258,272"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #3316",
+        "printed": "Laser toner cartridge #3316"
+      },
+      "quantity": {
+        "value": "19",
+        "printed": "19"
+      },
+      "unit_price": {
+        "value": "11118",
+        "printed": "¥11,118"
+      },
+      "amount": {
+        "value": "211242",
+        "printed": "¥211,242"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #7345",
+        "printed": "A4 copy paper (box of 5 reams) #7345"
+      },
+      "quantity": {
+        "value": "6",
+        "printed": "6"
+      },
+      "unit_price": {
+        "value": "5987",
+        "printed": "¥5,987"
+      },
+      "amount": {
+        "value": "35922",
+        "printed": "¥35,922"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-24",
+    "layout": "multipage",
+    "seed": 2024,
+    "region": "JP",
+    "currency": "JPY",
+    "date_style": "iso",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      35,
+      45
+    ],
+    "services": false,
+    "tax_label": "Consumption tax",
+    "tax_rate": "0.10",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": [
+      "sku",
+      "description",
+      "quantity",
+      "unit_price",
+      "amount"
+    ],
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

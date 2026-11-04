@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-15",
+  "layout": "modern",
+  "features": [
+    "layout:modern",
+    "currency:AUD",
+    "date:eu_slash",
+    "numbers:us",
+    "no_bill_to",
+    "no_tax",
+    "no_subtotal",
+    "services"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "260225",
+      "printed": "260225"
+    },
+    "vendor_name": {
+      "value": "Crestmoor Supplies Ltd",
+      "printed": "Crestmoor Supplies Ltd"
+    },
+    "bill_to_name": {
+      "value": null,
+      "printed": null
+    },
+    "invoice_date": {
+      "value": "2026-02-13",
+      "printed": "13/02/2026"
+    },
+    "due_date": {
+      "value": "2026-03-30",
+      "printed": "30/03/2026"
+    },
+    "currency": {
+      "value": "AUD",
+      "printed": "A$"
+    },
+    "subtotal": {
+      "value": null,
+      "printed": null
+    },
+    "tax": {
+      "value": null,
+      "printed": null
+    },
+    "total": {
+      "value": "1156.50",
+      "printed": "A$1,156.50"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "On-site IT support",
+        "printed": "On-site IT support"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1.5"
+      },
+      "unit_price": {
+        "value": "155.00",
+        "printed": "A$155.00"
+      },
+      "amount": {
+        "value": "232.50",
+        "printed": "A$232.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Training workshop",
+        "printed": "Training workshop"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "53.00",
+        "printed": "A$53.00"
+      },
+      "amount": {
+        "value": "212.00",
+        "printed": "A$212.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Photography session",
+        "printed": "Photography session"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "74.00",
+        "printed": "A$74.00"
+      },
+      "amount": {
+        "value": "592.00",
+        "printed": "A$592.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Server monitoring",
+        "printed": "Server monitoring"
+      },
+      "quantity": {
+        "value": "2.5",
+        "printed": "2.5"
+      },
+      "unit_price": {
+        "value": "48.00",
+        "printed": "A$48.00"
+      },
+      "amount": {
+        "value": "120.00",
+        "printed": "A$120.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-15",
+    "layout": "modern",
+    "seed": 2015,
+    "region": "UK",
+    "currency": "AUD",
+    "date_style": "eu_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "Sales Tax",
+    "tax_rate": null,
+    "has_due_date": true,
+    "has_bill_to": false,
+    "show_subtotal": false,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

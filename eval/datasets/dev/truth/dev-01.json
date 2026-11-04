@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-01",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:USD",
+    "date:us_slash",
+    "numbers:us"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-9239",
+      "printed": "INV-2026-9239"
+    },
+    "vendor_name": {
+      "value": "Quillmere Labs LLC",
+      "printed": "Quillmere Labs LLC"
+    },
+    "bill_to_name": {
+      "value": "Druvelle Architects",
+      "printed": "Druvelle Architects"
+    },
+    "invoice_date": {
+      "value": "2026-02-04",
+      "printed": "02/04/2026"
+    },
+    "due_date": {
+      "value": "2026-02-18",
+      "printed": "02/18/2026"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "USD"
+    },
+    "subtotal": {
+      "value": "32602.95",
+      "printed": "$32,602.95"
+    },
+    "tax": {
+      "value": "2689.74",
+      "printed": "$2,689.74"
+    },
+    "total": {
+      "value": "35292.69",
+      "printed": "$35,292.69"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "377.93",
+        "printed": "$377.93"
+      },
+      "amount": {
+        "value": "9448.25",
+        "printed": "$9,448.25"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "401.32",
+        "printed": "$401.32"
+      },
+      "amount": {
+        "value": "2809.24",
+        "printed": "$2,809.24"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm",
+        "printed": "Monitor arm"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "23.07",
+        "printed": "$23.07"
+      },
+      "amount": {
+        "value": "46.14",
+        "printed": "$46.14"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "24",
+        "printed": "24"
+      },
+      "unit_price": {
+        "value": "326.16",
+        "printed": "$326.16"
+      },
+      "amount": {
+        "value": "7827.84",
+        "printed": "$7,827.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "432.76",
+        "printed": "$432.76"
+      },
+      "amount": {
+        "value": "9953.48",
+        "printed": "$9,953.48"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel",
+        "printed": "Acoustic wall panel"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "125.90",
+        "printed": "$125.90"
+      },
+      "amount": {
+        "value": "2518.00",
+        "printed": "$2,518.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-01",
+    "layout": "classic_us",
+    "seed": 1001,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "us_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "Sales Tax",
+    "tax_rate": "0.0825",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

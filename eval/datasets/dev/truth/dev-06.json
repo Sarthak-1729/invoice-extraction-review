@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-06",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:CHF",
+    "date:long_dmy",
+    "numbers:swiss",
+    "odd_labels",
+    "arith_error:subtotal"
+  ],
+  "arithmetic_consistent": false,
+  "fields": {
+    "invoice_number": {
+      "value": "VF173880",
+      "printed": "VF173880"
+    },
+    "vendor_name": {
+      "value": "Fenwarden S.A.R.L.",
+      "printed": "Fenwarden S.A.R.L."
+    },
+    "bill_to_name": {
+      "value": "Corvane Logistics",
+      "printed": "Corvane Logistics"
+    },
+    "invoice_date": {
+      "value": "2026-07-01",
+      "printed": "1 July 2026"
+    },
+    "due_date": {
+      "value": "2026-07-15",
+      "printed": "15 July 2026"
+    },
+    "currency": {
+      "value": "CHF",
+      "printed": "CHF"
+    },
+    "subtotal": {
+      "value": "7090.06",
+      "printed": "CHF 7'090.06"
+    },
+    "tax": {
+      "value": "573.48",
+      "printed": "CHF 573.48"
+    },
+    "total": {
+      "value": "7663.54",
+      "printed": "CHF 7'663.54"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "3.45",
+        "printed": "CHF 3.45"
+      },
+      "amount": {
+        "value": "75.90",
+        "printed": "CHF 75.90"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "140.44",
+        "printed": "CHF 140.44"
+      },
+      "amount": {
+        "value": "3511.00",
+        "printed": "CHF 3'511.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12)",
+        "printed": "Whiteboard markers (pack of 12)"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "205.48",
+        "printed": "CHF 205.48"
+      },
+      "amount": {
+        "value": "3493.16",
+        "printed": "CHF 3'493.16"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-06",
+    "layout": "european",
+    "seed": 1006,
+    "region": "EU",
+    "currency": "CHF",
+    "date_style": "long_dmy",
+    "number_style": "swiss",
+    "currency_display": "code_prefix",
+    "currency_note": true,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.081",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "invoice_number": "Ref no."
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": "subtotal",
+    "injection": false
+  }
+}

@@ -1,0 +1,884 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-09",
+  "layout": "multipage",
+  "features": [
+    "layout:multipage",
+    "currency:USD",
+    "date:us_slash",
+    "numbers:us",
+    "sku_column",
+    "wrapped_descriptions"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-7821",
+      "printed": "INV-2026-7821"
+    },
+    "vendor_name": {
+      "value": "Solvane Supplies Inc.",
+      "printed": "Solvane Supplies Inc."
+    },
+    "bill_to_name": {
+      "value": "Crestmoor Architects",
+      "printed": "Crestmoor Architects"
+    },
+    "invoice_date": {
+      "value": "2026-04-07",
+      "printed": "04/07/2026"
+    },
+    "due_date": {
+      "value": "2026-04-21",
+      "printed": "04/21/2026"
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "USD"
+    },
+    "subtotal": {
+      "value": "119638.50",
+      "printed": "$119,638.50"
+    },
+    "tax": {
+      "value": "8374.70",
+      "printed": "$8,374.70"
+    },
+    "total": {
+      "value": "128013.20",
+      "printed": "$128,013.20"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Laser toner cartridge #3743, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Laser toner cartridge #3743, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "121.24",
+        "printed": "$121.24"
+      },
+      "amount": {
+        "value": "2788.52",
+        "printed": "$2,788.52"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #4901",
+        "printed": "Network switch, 8-port #4901"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "215.75",
+        "printed": "$215.75"
+      },
+      "amount": {
+        "value": "2804.75",
+        "printed": "$2,804.75"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #5504, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "USB-C docking station #5504, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "403.10",
+        "printed": "$403.10"
+      },
+      "amount": {
+        "value": "10077.50",
+        "printed": "$10,077.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #1517",
+        "printed": "Ergonomic office chair #1517"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "268.16",
+        "printed": "$268.16"
+      },
+      "amount": {
+        "value": "5363.20",
+        "printed": "$5,363.20"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #4215, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "USB-C docking station #4215, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "152.37",
+        "printed": "$152.37"
+      },
+      "amount": {
+        "value": "1218.96",
+        "printed": "$1,218.96"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #2277",
+        "printed": "Label printer tape #2277"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "212.85",
+        "printed": "$212.85"
+      },
+      "amount": {
+        "value": "1915.65",
+        "printed": "$1,915.65"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #9064, replacement part for annual maintenance contract, delivered to loading dock B",
+        "printed": "Standing desk frame #9064, replacement part for annual maintenance contract, delivered to loading dock B"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "45.71",
+        "printed": "$45.71"
+      },
+      "amount": {
+        "value": "411.39",
+        "printed": "$411.39"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #9365",
+        "printed": "Wireless keyboard #9365"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "351.54",
+        "printed": "$351.54"
+      },
+      "amount": {
+        "value": "1757.70",
+        "printed": "$1,757.70"
+      }
+    },
+    {
+      "description": {
+        "value": "Acoustic wall panel #2600, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Acoustic wall panel #2600, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "323.43",
+        "printed": "$323.43"
+      },
+      "amount": {
+        "value": "646.86",
+        "printed": "$646.86"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape #6533",
+        "printed": "Label printer tape #6533"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "39.20",
+        "printed": "$39.20"
+      },
+      "amount": {
+        "value": "78.40",
+        "printed": "$78.40"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #1244, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Laser toner cartridge #1244, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "55.69",
+        "printed": "$55.69"
+      },
+      "amount": {
+        "value": "891.04",
+        "printed": "$891.04"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #3201",
+        "printed": "Network switch, 8-port #3201"
+      },
+      "quantity": {
+        "value": "15",
+        "printed": "15"
+      },
+      "unit_price": {
+        "value": "359.81",
+        "printed": "$359.81"
+      },
+      "amount": {
+        "value": "5397.15",
+        "printed": "$5,397.15"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #6795, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Webcam 1080p #6795, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "37.38",
+        "printed": "$37.38"
+      },
+      "amount": {
+        "value": "672.84",
+        "printed": "$672.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #3261",
+        "printed": "Standing desk frame #3261"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "294.22",
+        "printed": "$294.22"
+      },
+      "amount": {
+        "value": "5295.96",
+        "printed": "$5,295.96"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #8489, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Wireless keyboard #8489, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "16",
+        "printed": "16"
+      },
+      "unit_price": {
+        "value": "435.72",
+        "printed": "$435.72"
+      },
+      "amount": {
+        "value": "6971.52",
+        "printed": "$6,971.52"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #4547",
+        "printed": "Webcam 1080p #4547"
+      },
+      "quantity": {
+        "value": "10",
+        "printed": "10"
+      },
+      "unit_price": {
+        "value": "27.67",
+        "printed": "$27.67"
+      },
+      "amount": {
+        "value": "276.70",
+        "printed": "$276.70"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #1257, replacement part for annual maintenance contract, delivered to loading dock B",
+        "printed": "Monitor arm #1257, replacement part for annual maintenance contract, delivered to loading dock B"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "216.01",
+        "printed": "$216.01"
+      },
+      "amount": {
+        "value": "4968.23",
+        "printed": "$4,968.23"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #3813",
+        "printed": "Cable management kit #3813"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "376.06",
+        "printed": "$376.06"
+      },
+      "amount": {
+        "value": "8649.38",
+        "printed": "$8,649.38"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #8507, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Laser toner cartridge #8507, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "366.61",
+        "printed": "$366.61"
+      },
+      "amount": {
+        "value": "733.22",
+        "printed": "$733.22"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #5988",
+        "printed": "A4 copy paper (box of 5 reams) #5988"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "311.31",
+        "printed": "$311.31"
+      },
+      "amount": {
+        "value": "6848.82",
+        "printed": "$6,848.82"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #4529, configured and labelled on site, includes cabling and installation hardware",
+        "printed": "A4 copy paper (box of 5 reams) #4529, configured and labelled on site, includes cabling and installation hardware"
+      },
+      "quantity": {
+        "value": "7",
+        "printed": "7"
+      },
+      "unit_price": {
+        "value": "422.49",
+        "printed": "$422.49"
+      },
+      "amount": {
+        "value": "2957.43",
+        "printed": "$2,957.43"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #7111",
+        "printed": "Monitor arm #7111"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "337.34",
+        "printed": "$337.34"
+      },
+      "amount": {
+        "value": "6746.80",
+        "printed": "$6,746.80"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #6554, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Whiteboard markers (pack of 12) #6554, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "23",
+        "printed": "23"
+      },
+      "unit_price": {
+        "value": "27.13",
+        "printed": "$27.13"
+      },
+      "amount": {
+        "value": "623.99",
+        "printed": "$623.99"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #8273",
+        "printed": "LED desk lamp #8273"
+      },
+      "quantity": {
+        "value": "11",
+        "printed": "11"
+      },
+      "unit_price": {
+        "value": "252.32",
+        "printed": "$252.32"
+      },
+      "amount": {
+        "value": "2775.52",
+        "printed": "$2,775.52"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #5363, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Network switch, 8-port #5363, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "315.72",
+        "printed": "$315.72"
+      },
+      "amount": {
+        "value": "5682.96",
+        "printed": "$5,682.96"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #4132",
+        "printed": "Whiteboard markers (pack of 12) #4132"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "145.51",
+        "printed": "$145.51"
+      },
+      "amount": {
+        "value": "291.02",
+        "printed": "$291.02"
+      }
+    },
+    {
+      "description": {
+        "value": "Standing desk frame #3278, replacement part for annual maintenance contract, delivered to loading dock B",
+        "printed": "Standing desk frame #3278, replacement part for annual maintenance contract, delivered to loading dock B"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "399.76",
+        "printed": "$399.76"
+      },
+      "amount": {
+        "value": "3198.08",
+        "printed": "$3,198.08"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #9941",
+        "printed": "Wireless keyboard #9941"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "350.84",
+        "printed": "$350.84"
+      },
+      "amount": {
+        "value": "350.84",
+        "printed": "$350.84"
+      }
+    },
+    {
+      "description": {
+        "value": "Whiteboard markers (pack of 12) #6133, configured and labelled on site, includes cabling and installation hardware",
+        "printed": "Whiteboard markers (pack of 12) #6133, configured and labelled on site, includes cabling and installation hardware"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "58.77",
+        "printed": "$58.77"
+      },
+      "amount": {
+        "value": "293.85",
+        "printed": "$293.85"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p #2083",
+        "printed": "Webcam 1080p #2083"
+      },
+      "quantity": {
+        "value": "25",
+        "printed": "25"
+      },
+      "unit_price": {
+        "value": "378.94",
+        "printed": "$378.94"
+      },
+      "amount": {
+        "value": "9473.50",
+        "printed": "$9,473.50"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #5016, configured and labelled on site, includes cabling and installation hardware",
+        "printed": "LED desk lamp #5016, configured and labelled on site, includes cabling and installation hardware"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "147.41",
+        "printed": "$147.41"
+      },
+      "amount": {
+        "value": "442.23",
+        "printed": "$442.23"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge #7963",
+        "printed": "Laser toner cartridge #7963"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "417.14",
+        "printed": "$417.14"
+      },
+      "amount": {
+        "value": "3337.12",
+        "printed": "$3,337.12"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #5870, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Cable management kit #5870, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "25.84",
+        "printed": "$25.84"
+      },
+      "amount": {
+        "value": "568.48",
+        "printed": "$568.48"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station #4100",
+        "printed": "USB-C docking station #4100"
+      },
+      "quantity": {
+        "value": "17",
+        "printed": "17"
+      },
+      "unit_price": {
+        "value": "62.11",
+        "printed": "$62.11"
+      },
+      "amount": {
+        "value": "1055.87",
+        "printed": "$1,055.87"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #5481, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Network switch, 8-port #5481, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "14",
+        "printed": "14"
+      },
+      "unit_price": {
+        "value": "253.21",
+        "printed": "$253.21"
+      },
+      "amount": {
+        "value": "3544.94",
+        "printed": "$3,544.94"
+      }
+    },
+    {
+      "description": {
+        "value": "Ergonomic office chair #9692",
+        "printed": "Ergonomic office chair #9692"
+      },
+      "quantity": {
+        "value": "3",
+        "printed": "3"
+      },
+      "unit_price": {
+        "value": "80.76",
+        "printed": "$80.76"
+      },
+      "amount": {
+        "value": "242.28",
+        "printed": "$242.28"
+      }
+    },
+    {
+      "description": {
+        "value": "Network switch, 8-port #7046, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Network switch, 8-port #7046, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "53.42",
+        "printed": "$53.42"
+      },
+      "amount": {
+        "value": "1068.40",
+        "printed": "$1,068.40"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #3335",
+        "printed": "A4 copy paper (box of 5 reams) #3335"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "296.45",
+        "printed": "$296.45"
+      },
+      "amount": {
+        "value": "1482.25",
+        "printed": "$1,482.25"
+      }
+    },
+    {
+      "description": {
+        "value": "Monitor arm #9899, bulk order discount already applied, shipped in recyclable packaging",
+        "printed": "Monitor arm #9899, bulk order discount already applied, shipped in recyclable packaging"
+      },
+      "quantity": {
+        "value": "18",
+        "printed": "18"
+      },
+      "unit_price": {
+        "value": "153.56",
+        "printed": "$153.56"
+      },
+      "amount": {
+        "value": "2764.08",
+        "printed": "$2,764.08"
+      }
+    },
+    {
+      "description": {
+        "value": "LED desk lamp #7887",
+        "printed": "LED desk lamp #7887"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "363.79",
+        "printed": "$363.79"
+      },
+      "amount": {
+        "value": "363.79",
+        "printed": "$363.79"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams) #6291, replacement part for annual maintenance contract, delivered to loading dock B",
+        "printed": "A4 copy paper (box of 5 reams) #6291, replacement part for annual maintenance contract, delivered to loading dock B"
+      },
+      "quantity": {
+        "value": "12",
+        "printed": "12"
+      },
+      "unit_price": {
+        "value": "220.47",
+        "printed": "$220.47"
+      },
+      "amount": {
+        "value": "2645.64",
+        "printed": "$2,645.64"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit #8554",
+        "printed": "Cable management kit #8554"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "415.65",
+        "printed": "$415.65"
+      },
+      "amount": {
+        "value": "1662.60",
+        "printed": "$1,662.60"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard #3526, matte black finish, wall-mount bracket included, two-year limited warranty",
+        "printed": "Wireless keyboard #3526, matte black finish, wall-mount bracket included, two-year limited warranty"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "14.24",
+        "printed": "$14.24"
+      },
+      "amount": {
+        "value": "299.04",
+        "printed": "$299.04"
+      }
+    }
+  ],
+  "wrapped_line_items": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42
+  ],
+  "generator_config": {
+    "doc_id": "dev-09",
+    "layout": "multipage",
+    "seed": 1009,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "us_slash",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": true,
+    "n_lines": [
+      35,
+      45
+    ],
+    "services": false,
+    "tax_label": "Sales Tax",
+    "tax_rate": "0.07",
+    "has_due_date": true,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": [
+      "sku",
+      "description",
+      "quantity",
+      "unit_price",
+      "amount"
+    ],
+    "wrap_descriptions": true,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

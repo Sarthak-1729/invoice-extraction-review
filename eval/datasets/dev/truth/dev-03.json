@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "doc_id": "dev-03",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:USD",
+    "date:long_mdy",
+    "numbers:us",
+    "no_due_date",
+    "no_tax",
+    "services"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "INV-2026-8860",
+      "printed": "INV-2026-8860"
+    },
+    "vendor_name": {
+      "value": "Pellucia Works LLC",
+      "printed": "Pellucia Works LLC"
+    },
+    "bill_to_name": {
+      "value": "Velloran Logistics",
+      "printed": "Velloran Logistics"
+    },
+    "invoice_date": {
+      "value": "2026-09-16",
+      "printed": "September 16, 2026"
+    },
+    "due_date": {
+      "value": null,
+      "printed": null
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "$"
+    },
+    "subtotal": {
+      "value": "3677.00",
+      "printed": "$3,677.00"
+    },
+    "tax": {
+      "value": null,
+      "printed": null
+    },
+    "total": {
+      "value": "3677.00",
+      "printed": "$3,677.00"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Server monitoring",
+        "printed": "Server monitoring"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "160.00",
+        "printed": "$160.00"
+      },
+      "amount": {
+        "value": "1280.00",
+        "printed": "$1,280.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Translation services",
+        "printed": "Translation services"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "67.00",
+        "printed": "$67.00"
+      },
+      "amount": {
+        "value": "536.00",
+        "printed": "$536.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Training workshop",
+        "printed": "Training workshop"
+      },
+      "quantity": {
+        "value": "2.5",
+        "printed": "2.5"
+      },
+      "unit_price": {
+        "value": "131.00",
+        "printed": "$131.00"
+      },
+      "amount": {
+        "value": "327.50",
+        "printed": "$327.50"
+      }
+    },
+    {
+      "description": {
+        "value": "Bookkeeping services",
+        "printed": "Bookkeeping services"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "53.00",
+        "printed": "$53.00"
+      },
+      "amount": {
+        "value": "424.00",
+        "printed": "$424.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Website maintenance",
+        "printed": "Website maintenance"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "60.00",
+        "printed": "$60.00"
+      },
+      "amount": {
+        "value": "120.00",
+        "printed": "$120.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Logo design revisions",
+        "printed": "Logo design revisions"
+      },
+      "quantity": {
+        "value": "4",
+        "printed": "4"
+      },
+      "unit_price": {
+        "value": "103.00",
+        "printed": "$103.00"
+      },
+      "amount": {
+        "value": "412.00",
+        "printed": "$412.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Copywriting",
+        "printed": "Copywriting"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "45.00",
+        "printed": "$45.00"
+      },
+      "amount": {
+        "value": "360.00",
+        "printed": "$360.00"
+      }
+    },
+    {
+      "description": {
+        "value": "On-site IT support",
+        "printed": "On-site IT support"
+      },
+      "quantity": {
+        "value": "1.5",
+        "printed": "1.5"
+      },
+      "unit_price": {
+        "value": "145.00",
+        "printed": "$145.00"
+      },
+      "amount": {
+        "value": "217.50",
+        "printed": "$217.50"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "dev-03",
+    "layout": "classic_us",
+    "seed": 1003,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "long_mdy",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "Sales Tax",
+    "tax_rate": null,
+    "has_due_date": false,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

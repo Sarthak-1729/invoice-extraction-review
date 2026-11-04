@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-02",
+  "layout": "classic_us",
+  "features": [
+    "layout:classic_us",
+    "currency:USD",
+    "date:long_mdy",
+    "numbers:us",
+    "no_due_date",
+    "no_tax",
+    "services",
+    "odd_labels"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "A-56620",
+      "printed": "A-56620"
+    },
+    "vendor_name": {
+      "value": "Quorvane Labs LLC",
+      "printed": "Quorvane Labs LLC"
+    },
+    "bill_to_name": {
+      "value": "Kestrove Clinic",
+      "printed": "Kestrove Clinic"
+    },
+    "invoice_date": {
+      "value": "2026-01-05",
+      "printed": "January 5, 2026"
+    },
+    "due_date": {
+      "value": null,
+      "printed": null
+    },
+    "currency": {
+      "value": "USD",
+      "printed": "$"
+    },
+    "subtotal": {
+      "value": "1155.00",
+      "printed": "$1,155.00"
+    },
+    "tax": {
+      "value": null,
+      "printed": null
+    },
+    "total": {
+      "value": "1155.00",
+      "printed": "$1,155.00"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Data migration consulting",
+        "printed": "Data migration consulting"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "113.00",
+        "printed": "$113.00"
+      },
+      "amount": {
+        "value": "113.00",
+        "printed": "$113.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Translation services",
+        "printed": "Translation services"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "123.00",
+        "printed": "$123.00"
+      },
+      "amount": {
+        "value": "984.00",
+        "printed": "$984.00"
+      }
+    },
+    {
+      "description": {
+        "value": "Website maintenance",
+        "printed": "Website maintenance"
+      },
+      "quantity": {
+        "value": "1",
+        "printed": "1"
+      },
+      "unit_price": {
+        "value": "58.00",
+        "printed": "$58.00"
+      },
+      "amount": {
+        "value": "58.00",
+        "printed": "$58.00"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-02",
+    "layout": "classic_us",
+    "seed": 2002,
+    "region": "US",
+    "currency": "USD",
+    "date_style": "long_mdy",
+    "number_style": "us",
+    "currency_display": "symbol_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": true,
+    "tax_label": "Sales Tax",
+    "tax_rate": null,
+    "has_due_date": false,
+    "has_bill_to": true,
+    "show_subtotal": true,
+    "labels": {
+      "invoice_number": "Invoice No.",
+      "total": "Amount Due"
+    },
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}

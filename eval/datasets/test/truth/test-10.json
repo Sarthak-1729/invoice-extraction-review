@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "doc_id": "test-10",
+  "layout": "european",
+  "features": [
+    "layout:european",
+    "currency:EUR",
+    "date:short_dmy",
+    "numbers:eu",
+    "no_bill_to"
+  ],
+  "arithmetic_consistent": true,
+  "fields": {
+    "invoice_number": {
+      "value": "VF347416",
+      "printed": "VF347416"
+    },
+    "vendor_name": {
+      "value": "Ambervault Handel GmbH",
+      "printed": "Ambervault Handel GmbH"
+    },
+    "bill_to_name": {
+      "value": null,
+      "printed": null
+    },
+    "invoice_date": {
+      "value": "2026-03-17",
+      "printed": "17-Mar-2026"
+    },
+    "due_date": {
+      "value": "2026-04-16",
+      "printed": "16-Apr-2026"
+    },
+    "currency": {
+      "value": "EUR",
+      "printed": "EUR"
+    },
+    "subtotal": {
+      "value": "31160.69",
+      "printed": "EUR 31.160,69"
+    },
+    "tax": {
+      "value": "6232.14",
+      "printed": "EUR 6.232,14"
+    },
+    "total": {
+      "value": "37392.83",
+      "printed": "EUR 37.392,83"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Network switch, 8-port",
+        "printed": "Network switch, 8-port"
+      },
+      "quantity": {
+        "value": "20",
+        "printed": "20"
+      },
+      "unit_price": {
+        "value": "352.82",
+        "printed": "EUR 352,82"
+      },
+      "amount": {
+        "value": "7056.40",
+        "printed": "EUR 7.056,40"
+      }
+    },
+    {
+      "description": {
+        "value": "Laser toner cartridge",
+        "printed": "Laser toner cartridge"
+      },
+      "quantity": {
+        "value": "13",
+        "printed": "13"
+      },
+      "unit_price": {
+        "value": "328.15",
+        "printed": "EUR 328,15"
+      },
+      "amount": {
+        "value": "4265.95",
+        "printed": "EUR 4.265,95"
+      }
+    },
+    {
+      "description": {
+        "value": "Cable management kit",
+        "printed": "Cable management kit"
+      },
+      "quantity": {
+        "value": "5",
+        "printed": "5"
+      },
+      "unit_price": {
+        "value": "409.60",
+        "printed": "EUR 409,60"
+      },
+      "amount": {
+        "value": "2048.00",
+        "printed": "EUR 2.048,00"
+      }
+    },
+    {
+      "description": {
+        "value": "A4 copy paper (box of 5 reams)",
+        "printed": "A4 copy paper (box of 5 reams)"
+      },
+      "quantity": {
+        "value": "22",
+        "printed": "22"
+      },
+      "unit_price": {
+        "value": "328.05",
+        "printed": "EUR 328,05"
+      },
+      "amount": {
+        "value": "7217.10",
+        "printed": "EUR 7.217,10"
+      }
+    },
+    {
+      "description": {
+        "value": "USB-C docking station",
+        "printed": "USB-C docking station"
+      },
+      "quantity": {
+        "value": "9",
+        "printed": "9"
+      },
+      "unit_price": {
+        "value": "162.29",
+        "printed": "EUR 162,29"
+      },
+      "amount": {
+        "value": "1460.61",
+        "printed": "EUR 1.460,61"
+      }
+    },
+    {
+      "description": {
+        "value": "Label printer tape",
+        "printed": "Label printer tape"
+      },
+      "quantity": {
+        "value": "8",
+        "printed": "8"
+      },
+      "unit_price": {
+        "value": "377.76",
+        "printed": "EUR 377,76"
+      },
+      "amount": {
+        "value": "3022.08",
+        "printed": "EUR 3.022,08"
+      }
+    },
+    {
+      "description": {
+        "value": "Webcam 1080p",
+        "printed": "Webcam 1080p"
+      },
+      "quantity": {
+        "value": "2",
+        "printed": "2"
+      },
+      "unit_price": {
+        "value": "200.09",
+        "printed": "EUR 200,09"
+      },
+      "amount": {
+        "value": "400.18",
+        "printed": "EUR 400,18"
+      }
+    },
+    {
+      "description": {
+        "value": "Wireless keyboard",
+        "printed": "Wireless keyboard"
+      },
+      "quantity": {
+        "value": "21",
+        "printed": "21"
+      },
+      "unit_price": {
+        "value": "270.97",
+        "printed": "EUR 270,97"
+      },
+      "amount": {
+        "value": "5690.37",
+        "printed": "EUR 5.690,37"
+      }
+    }
+  ],
+  "wrapped_line_items": [],
+  "generator_config": {
+    "doc_id": "test-10",
+    "layout": "european",
+    "seed": 2010,
+    "region": "EU",
+    "currency": "EUR",
+    "date_style": "short_dmy",
+    "number_style": "eu",
+    "currency_display": "code_prefix",
+    "currency_note": false,
+    "n_lines": [
+      3,
+      8
+    ],
+    "services": false,
+    "tax_label": "VAT",
+    "tax_rate": "0.20",
+    "has_due_date": true,
+    "has_bill_to": false,
+    "show_subtotal": true,
+    "labels": {},
+    "columns": null,
+    "wrap_descriptions": false,
+    "arithmetic_error": null,
+    "injection": false
+  }
+}
