@@ -53,5 +53,20 @@ settings and date. "Not run" means no result exists yet.
 - Limits moved out of the schema are still enforced by Pydantic on the output
   (`RawExtraction`: at most 500 line items, values at most 500 characters).
   `tests/test_prompt.py` fails if any state-heavy keyword returns.
-- Dev-set result: pending. dev-01 has not been rerun yet; the result goes
-  here when it is.
+- Dev-set result (manual check, 1 document; not a dev-set rate):
+  - Run: 2026-11-05, `gemini-3.5-flash-lite`, prompt hash
+    `83601bc5d5b7a9922f7d3196a4b29a1399ea3334944a27b5102c5d9b08ab34ea`,
+    `python -m app.extract` on dev-01 (classic_us, USD, us_slash dates,
+    6 lines, arithmetically consistent).
+  - Status `extracted`, no flags. That is the expected outcome: the document
+    is consistent, and `02/18/2026` fixes month-first order, so the
+    `02/04/2026` invoice date is not ambiguous.
+  - Compared with `eval/datasets/dev/truth/dev-01.json` using the
+    METRICS.md v1 rules, field by field: raw string vs printed string
+    (layer 1) 33 of 33 fields equal; normalized value vs truth value
+    (layer 2) 33 of 33 fields equal (9 header fields, 6 lines x 4 fields).
+    All 6 lines present, in order, none extra.
+  - Attempts: the first request returned `LLM_UNAVAILABLE` (503) with a
+    retry delay of 30 s; the retry after 30 s succeeded. First observation
+    that the API sends a retry delay on 503.
+  - Usage: 962 input tokens, 326 output tokens, 0 thought tokens.
