@@ -18,5 +18,10 @@ correct and approve the result before exporting it.
   arithmetic is always internally consistent, which is what the metrics rely on.
 - **Text-based PDFs only.** Scanned PDFs (no text layer) are rejected; there is
   no OCR.
+- **Grounding catches invented values, not misplaced ones.** The grounding
+  check confirms that an extracted value occurs in the PDF text. A value
+  copied from the wrong place still passes: for example an item code from a
+  SKU column copied into the description (seen on a dev document) is in the
+  text, so it is not flagged.
 - **Fonts.** The generator uses the built-in Helvetica/Courier fonts, which have
   no `₹` glyph, so INR amounts are printed with `Rs.`.

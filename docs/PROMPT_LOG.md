@@ -104,3 +104,77 @@ settings and date. "Not run" means no result exists yet.
   - Summary: 3 of 4 documents extracted; on those 3, 107 of 107 fields equal
     the truth at both layers (case-study counts, not rates). 3 of the 4 runs
     hit at least one 503; 2 recovered on retry.
+- First full dev run, `python -m app.dev_check` (2026-11-17, git commit
+  `39bc8bd`, clean tree, `gemini-3.5-flash-lite`, thinking level model
+  default, prompt hash `83601bc5...34ea`). **Tuning-set results on the 10 dev
+  documents, never test results.** Results:
+  `data/dev_check/gemini__gemini-3.5-flash-lite__extraction_v2__83601bc5d5b7/`
+  (git-ignored). Analysis from the saved result files only.
+
+  | Doc | Status | Layer 1 | Layer 2 | Lines matched / truth (extra) | Flags | Tokens in / out |
+  |---|---|---|---|---|---|---|
+  | dev-01 | extracted | 33/33 | 33/33 | 6/6 (0) | none | 962 / 486 |
+  | dev-02 | needs_review | 25/25 | 25/25 | 4/4 (0) | LINE_AMOUNT_MISMATCH (expected) | 917 / 397 |
+  | dev-03 | needs_review | 23/41 | 40/41 | 8/8 (0) | CURRENCY_AMBIGUOUS | 942 / 551 |
+  | dev-04 | extracted | 37/37 | 37/37 | 7/7 (0) | none | 1141 / 550 |
+  | dev-05 | needs_review | 37/37 | 37/37 | 7/7 (0) | TOTAL_MISMATCH (expected) | 1214 / 570 |
+  | dev-06 | needs_review | 12/21 | 21/21 | 3/3 (0) | SUBTOTAL_MISMATCH (expected) | 1061 / 317 |
+  | dev-07 | extracted | 22/41 | 41/41 | 8/8 (0) | none | 1088 / 649 |
+  | dev-08 | extracted | 41/41 | 41/41 | 8/8 (0) | none | 937 / 585 |
+  | dev-09 | extracted | 138/181 | 138/181 | 43/43 (0) | none | 2817 / 3364 |
+  | dev-10 | extracted | 193/193 | 193/193 | 46/46 (0) | none | 2157 / 3066 |
+
+  - All 10 documents succeeded on the first attempt: 0 infrastructure
+    failures, 0 model failures. All three expected arithmetic flags fired;
+    no unexpected flags.
+  - Totals: layer 1 561 of 650 fields; layer 2 606 of 650 (1 ambiguous);
+    140 of 140 lines matched, 0 extra.
+  - Layer 1 misses outside dev-09 (46 fields): the model dropped the
+    attached currency marker from amounts: `$` on dev-03 (18), `CHF` on
+    dev-06 (9), `Rs.` on dev-07 (19). All 46 are correct at layer 2.
+  - dev-03 currency is `ambiguous` (`$`-only document): correct behavior.
+  - dev-09: all 43 descriptions are wrong (layer 1 and 2) because each
+    contains the line's item code from the SKU column: prefixed on the 21
+    unwrapped lines, inserted at the wrap point on the 22 wrapped lines. All
+    138 other dev-09 fields are correct. All 43 codes occur in the PDF text
+    layer, in the same order, one per line, so they were copied, not
+    invented. The SKU column header is printed as "Item", so the text layer
+    reads `Item Description Qty Unit Price Amount`.
+  - dev-10 (no SKU column) has no codes in its text layer or its output.
+  - Split configs (not test results): 4 test documents have a SKU column
+    (test-19, test-20, test-22, test-24), against 1 dev document (dev-09).
+
+## Pre-registered acceptance criteria (written 2026-11-17, before any change)
+
+Each candidate is one change, judged on one full `dev_check` run of all 10
+dev documents against the v2 run above. One run each; a regression is not
+explained away by rerunning only the new version. If any document ends with
+an infrastructure failure, it is retried per METRICS 2a before judging; if it
+never succeeds, the candidate is not judged. The test set is not used.
+
+### Candidate 1: item codes are not part of the description (extraction_v3)
+
+Must improve (dev-09):
+- descriptions containing an item code: from 43 of 43 to 0 of 43;
+- dev-09 layer 2: at least 178 of 181 (at least 40 of 43 descriptions
+  correct), and the other 138 fields still all correct;
+- still 43 of 43 lines matched, 0 extra.
+
+No other dev document may regress. For each of dev-01 to dev-08 and dev-10:
+- layer 1 and layer 2 counts are at least the v2 counts in the table above;
+- lines matched not fewer, extra lines not more;
+- the same status and the same set of flag codes.
+
+If accepted, the result is still reported as tuned on 1 dev document with a
+SKU column (4 test documents have one); the SKU documents in the test set are
+reported as a case study.
+
+### Candidate 2: copy amounts with their attached currency marker (not implemented)
+
+Judged only after candidate 1 is decided, against whichever prompt is current.
+Must improve: layer 1 on the 46 amount fields of dev-03, dev-06 and dev-07
+that dropped the marker (target: all 46). No dev document may regress on
+layer 2, lines, status or flags, and no document's layer 1 may fall: in
+particular dev-01, dev-02, dev-04, dev-05, dev-08, dev-09 and dev-10, whose
+amounts are already copied exactly, must not gain markers that are not
+printed next to the amount.
