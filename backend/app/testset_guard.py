@@ -26,6 +26,10 @@ def _manifest_hashes(test_dir: Path) -> frozenset[str]:
     return frozenset(line.split("  ", 1)[0] for line in lines if line.strip())
 
 
+def is_test_set_sha256(digest: str, test_dir: Path = TEST_SET_DIR) -> bool:
+    return digest in _manifest_hashes(test_dir.resolve())
+
+
 def is_test_set_file(path: Path, test_dir: Path = TEST_SET_DIR) -> bool:
     resolved = path.resolve()
     if resolved.is_relative_to(test_dir.resolve()):

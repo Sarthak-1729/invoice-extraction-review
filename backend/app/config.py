@@ -33,6 +33,9 @@ class Settings(BaseSettings):
 
     max_upload_mb: int = Field(default=10, gt=0)
     max_pages: int = Field(default=20, gt=0)
+    # Uploads whose SHA-256 is in the frozen test manifest are refused unless
+    # this is true. Off by default; only the Phase 7 evaluation turns it on.
+    allow_test_set_uploads: bool = False
 
 
 @lru_cache
