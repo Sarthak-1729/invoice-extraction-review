@@ -212,3 +212,12 @@ def test_current_prompt_hash_is_logged():
     prompt = load_prompt()
     assert f"## {prompt.version}" in log
     assert prompt.sha256 in log, "log every prompt change in docs/PROMPT_LOG.md"
+
+
+def test_default_prompt_is_v2():
+    """v3 failed its acceptance criteria (PROMPT_LOG.md); candidates are tried
+    with an explicit version and only become the default once accepted."""
+    assert prompt_module.PROMPT_VERSION == "extraction_v2"
+    assert (
+        load_prompt().sha256 == "83601bc5d5b7a9922f7d3196a4b29a1399ea3334944a27b5102c5d9b08ab34ea"
+    )

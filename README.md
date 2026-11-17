@@ -23,5 +23,10 @@ correct and approve the result before exporting it.
   copied from the wrong place still passes: for example an item code from a
   SKU column copied into the description (seen on a dev document) is in the
   text, so it is not flagged.
+- **Single runs vary.** The model's output is not fully repeatable: on one dev
+  document the currency symbols on amounts were dropped in one run and kept
+  in the next, with no relevant prompt change. Reported numbers therefore
+  come from one specified run (model, prompt hash, git commit and date are
+  recorded with every result), not from the best of several runs.
 - **Fonts.** The generator uses the built-in Helvetica/Courier fonts, which have
   no `₹` glyph, so INR amounts are printed with `Rs.`.

@@ -179,7 +179,7 @@ particular dev-01, dev-02, dev-04, dev-05, dev-08, dev-09 and dev-10, whose
 amounts are already copied exactly, must not gain markers that are not
 printed next to the amount.
 
-## extraction_v3 (prompt tuning on dev)
+## extraction_v3 (prompt tuning on dev): FAILED, not used
 
 - Date: 2026-11-17
 - Hash: `2b62b7814afc6e0eaaa362604a4095ef68e0efd950304e27b8c9f8e4803b812d`
@@ -191,4 +191,63 @@ printed next to the amount.
 - Reason: dev-09 (v2 dev run above), where every description included the
   item code from the SKU column. Candidate 1 of the pre-registered criteria;
   tuned on 1 dev document. No test-set document was opened or run.
-- Dev-set result: pending. Judge with the candidate 1 criteria above.
+- Dev-set result: **rejected** under the pre-registered candidate 1 criteria.
+  Tuning-set results, never test results. One `dev_check` run of all 10 dev
+  documents (2026-11-17, git commit `10db3fd`, clean tree, all first attempt,
+  no failures). Results:
+  `data/dev_check/gemini__gemini-3.5-flash-lite__extraction_v3__2b62b7814afc/`
+  (kept, not deleted). Analysis from the saved files only.
+
+  | Doc | v2 layer 1 | v3 layer 1 | v2 layer 2 | v3 layer 2 | Lines (v3) | Status and flags |
+  |---|---|---|---|---|---|---|
+  | dev-01 | 33/33 | 33/33 | 33/33 | 33/33 | 6/6 | same |
+  | dev-02 | 25/25 | 25/25 | 25/25 | 25/25 | 4/4 | same |
+  | dev-03 | 23/41 | 41/41 | 40/41 | 40/41 | 8/8 | same |
+  | dev-04 | 37/37 | 37/37 | 37/37 | 37/37 | 7/7 | same |
+  | dev-05 | 37/37 | 37/37 | 37/37 | 37/37 | 7/7 | same |
+  | dev-06 | 12/21 | 12/21 | 21/21 | 21/21 | 3/3 | same |
+  | dev-07 | 22/41 | 22/41 | 41/41 | 41/41 | 8/8 | same |
+  | dev-08 | 41/41 | 41/41 | 41/41 | 41/41 | 8/8 | same |
+  | dev-09 | 138/181 | 181/181 | 138/181 | 181/181 | 43/43 | same |
+  | dev-10 | 193/193 | **147/193** | 193/193 | **147/193** | 46/46 | same |
+
+  - dev-09 criterion: **passed**. 181 of 181 at both layers, 43 of 43 lines,
+    0 item codes in descriptions, all 43 `#NNNN` references kept.
+  - No-regression criterion: **failed** on dev-10 (193 to 147 of 193). All 46
+    differences are descriptions, each exactly the truth with its trailing
+    ` #NNNN` reference removed. The reference is part of the description
+    cell: the text layer reads for example `6 Monitor arm #3692 £444.37
+    £2,666.22`, and all 46 truth descriptions end in `#NNNN`. dev-10 has no
+    code column, so the model treated the reference itself as an "item code".
+  - dev-03 layer 1 rose from 23 to 41 of 41 (the `$` signs were kept on the
+    amounts this time). The change does not mention amounts or currency, so
+    this is treated as run-to-run variation, not an effect of v3. With one run
+    per version an indirect effect cannot be ruled out; it does not affect the
+    decision.
+  - Decision: v3 is not used. `extraction_v2` is the active prompt again
+    (`PROMPT_VERSION`; a test pins it). The v3 files and hash are kept for the
+    record.
+
+## Pre-registered acceptance criteria for candidate v4 (written 2026-11-17, before v4 exists)
+
+Candidate v4 targets the SKU problem again (dev-09) without v3's failure. It
+is judged on one `dev_check` run of all 10 dev documents against the v2 run.
+**One run, no reruns.** Infrastructure failures are handled per METRICS 2a;
+if a document never succeeds, v4 is not judged.
+
+Must pass all of:
+- dev-09: layer 2 at least 178 of 181, 0 item codes in descriptions, 43 of
+  43 lines matched, 0 extra lines.
+- Every other dev document (dev-01 to dev-08, dev-10): layer 1 and layer 2 at
+  least the v2 counts, lines matched not fewer, extra lines not more, the
+  same status and the same set of flag codes.
+- Exclusion: on dev-03, dev-06 and dev-07, layer 1 fields whose raw value
+  equals the printed value with its attached currency marker removed are
+  excluded from both the v2 and the v4 counts, because that behavior varied
+  between runs with no relevant prompt change (v2 vs v3 on dev-03). Layer 2
+  is compared without exclusions.
+
+Stopping rule: if v4 fails, `extraction_v2` stays the active prompt, no
+further SKU candidates are tried, and the SKU weakness is reported as a known
+limitation (README), with the test documents that have a SKU column (test-19,
+test-20, test-22, test-24) reported as a case study.
