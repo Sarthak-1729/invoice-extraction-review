@@ -13,7 +13,7 @@ from app.pdf_text import PdfRejected
 from app.pipeline import run_pipeline
 from app.prompt import PROMPT_VERSION
 from app.testset_guard import TEST_SET_DIR, TestSetGuardError, guard_test_set, is_test_set_file
-from tests.pdf_factory import image_only_pdf, text_pdf
+from tests.pdf_factory import image_only_pdf, invoice_pdf, text_pdf
 
 CONSISTENT = {
     "invoice_number": "INV-1042",
@@ -34,17 +34,28 @@ SETTINGS = Settings(_env_file=None, llm_provider="fake")
 
 def test_consistent_extraction_has_status_extracted(tmp_path):
     provider = FakeProvider([json.dumps(CONSISTENT)])
-    result = run_pipeline(text_pdf(tmp_path / "a.pdf"), provider, SETTINGS)
+    result = run_pipeline(invoice_pdf(tmp_path / "a.pdf"), provider, SETTINGS)
     assert result.status == "extracted" and result.flags == []
     assert str(result.invoice.total) == "1234.50"
     assert result.prompt_version == PROMPT_VERSION and len(result.prompt_hash) == 64
     assert "[pdf page 1 of 1]" in provider.calls[0]["user"]
 
 
+def test_invented_value_is_flagged_as_not_in_document(tmp_path):
+    invented = CONSISTENT | {"vendor_name": "Evil Corp"}
+    result = run_pipeline(
+        invoice_pdf(tmp_path / "a.pdf"), FakeProvider([json.dumps(invented)]), SETTINGS
+    )
+    assert result.status == "needs_review"
+    assert [(f.field_path, f.code) for f in result.flags] == [
+        ("vendor_name", "VALUE_NOT_IN_DOCUMENT")
+    ]
+
+
 def test_arithmetic_problem_needs_review(tmp_path):
     wrong_total = CONSISTENT | {"total": "1,300.00 USD"}
     result = run_pipeline(
-        text_pdf(tmp_path / "a.pdf"), FakeProvider([json.dumps(wrong_total)]), SETTINGS
+        invoice_pdf(tmp_path / "a.pdf"), FakeProvider([json.dumps(wrong_total)]), SETTINGS
     )
     assert result.status == "needs_review"
     assert "TOTAL_MISMATCH" in {flag.code for flag in result.flags}
@@ -52,7 +63,7 @@ def test_arithmetic_problem_needs_review(tmp_path):
 
 def test_provider_failure_gives_failed_status_with_code(tmp_path):
     provider = FakeProvider([LLMError(LLMErrorCode.AUTH_FAILED, "bad key")])
-    result = run_pipeline(text_pdf(tmp_path / "a.pdf"), provider, SETTINGS)
+    result = run_pipeline(invoice_pdf(tmp_path / "a.pdf"), provider, SETTINGS)
     assert result.status == "failed" and result.error_code == LLMErrorCode.AUTH_FAILED
     assert result.to_dict()["error"] == {"code": "LLM_AUTH_FAILED", "message": "bad key"}
 
@@ -123,7 +134,7 @@ def test_cli_refuses_the_test_set_without_the_flag(capsys):
 
 def test_cli_prints_raw_normalized_and_flags(tmp_path, capsys, monkeypatch):
     monkeypatch.setattr(extract, "get_provider", lambda s: FakeProvider([json.dumps(CONSISTENT)]))
-    code = extract.main([str(text_pdf(tmp_path / "a.pdf")), "--provider", "fake"])
+    code = extract.main([str(invoice_pdf(tmp_path / "a.pdf")), "--provider", "fake"])
     output = json.loads(capsys.readouterr().out)
     assert code == 0
     assert output["status"] == "extracted"

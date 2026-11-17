@@ -90,7 +90,7 @@ def run_pipeline(
     if extraction.raw is None:
         return result
 
-    checked = check_invoice(extraction.raw)
+    checked = check_invoice(extraction.raw, document_text=pdf.text)
     result.invoice, result.flags = checked.invoice, checked.flags
     result.status = "needs_review" if checked.flags else "extracted"
     return result

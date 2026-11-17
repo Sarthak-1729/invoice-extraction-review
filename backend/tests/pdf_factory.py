@@ -7,6 +7,19 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
 LINE = "Invoice No: INV-1042  Date: 2026-03-25  Total: 1,234.50 USD"
+# A small invoice whose printed values match tests.test_pipeline.CONSISTENT.
+INVOICE_LINES = [
+    "Acme Ltd                                   INVOICE",
+    "Invoice No: INV-1042      Date: 2026-03-25      Currency: USD",
+    "Description        Qty    Unit price    Amount",
+    "Widget             1      1,234.50      1,234.50",
+    "Subtotal: 1,234.50",
+    "Total: 1,234.50 USD",
+]
+
+
+def invoice_pdf(path: Path) -> Path:
+    return text_pdf(path, lines=INVOICE_LINES)
 
 
 def text_pdf(path: Path, pages: int = 1, lines: list[str] | None = None) -> Path:
