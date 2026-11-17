@@ -376,3 +376,13 @@ def test_cors_allows_the_configured_dev_origin_only(client):
     assert simple.headers["access-control-allow-origin"] == origin
     other = client.get("/api/health", headers={"Origin": "http://evil.example"})
     assert "access-control-allow-origin" not in other.headers
+
+
+def test_times_carry_a_utc_offset_after_a_database_round_trip(client):
+    doc = upload(client, DEV / "pdf" / "dev-01.pdf").json()
+    client.post(f"/api/documents/{doc['id']}/approve")
+    again = client.get(f"/api/documents/{doc['id']}").json()  # fresh session: naive in SQLite
+    for key in ("created_at", "updated_at", "approved_at"):
+        assert again[key].endswith("+00:00"), key
+    exported = client.get("/api/export?format=json").json()["documents"][0]
+    assert exported["approved_at"].endswith("+00:00")

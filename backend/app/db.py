@@ -29,6 +29,14 @@ def utcnow() -> datetime:
     return datetime.now(UTC)
 
 
+def iso_utc(value: datetime | None) -> str | None:
+    """ISO 8601 with an explicit UTC offset. SQLite stores no time zone, so
+    values read back are naive; they were written in UTC by ``utcnow``."""
+    if value is None:
+        return None
+    return (value if value.tzinfo else value.replace(tzinfo=UTC)).isoformat()
+
+
 class Base(DeclarativeBase):
     pass
 

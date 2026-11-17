@@ -16,7 +16,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.config import Settings
-from app.db import STATUSES, Document
+from app.db import STATUSES, Document, iso_utc
 from app.export import export_csv, export_record
 from app.llm import LLMError
 from app.llm.base import LLMProvider
@@ -86,7 +86,7 @@ def _found(repo: DocumentRepository, document_id: str) -> Document:
 
 
 def _time(value) -> str | None:
-    return value.isoformat() if value else None
+    return iso_utc(value)
 
 
 def summary(document: Document) -> dict[str, Any]:

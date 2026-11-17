@@ -10,7 +10,7 @@ import io
 import re
 from typing import Any
 
-from app.db import Document
+from app.db import Document, iso_utc
 
 HEADER_FIELDS = (
     "invoice_number",
@@ -40,7 +40,7 @@ def export_record(document: Document) -> dict[str, Any]:
     return {
         "document_id": document.id,
         "file_name": document.display_name,
-        "approved_at": document.approved_at.isoformat() if document.approved_at else None,
+        "approved_at": iso_utc(document.approved_at),
         "acknowledged_open_flags": document.acknowledged_open_flags,
         **{name: normalized.get(name) for name in HEADER_FIELDS},
         "line_items": [
