@@ -199,15 +199,15 @@ def test_candidate_prompt_runs_only_when_named(tmp_path):
     model = ScriptedModel()
     _, default_dir, _ = run(tmp_path, model, only=["dev-01"])
     assert default_dir.name.endswith(load_prompt().sha256[:12])
-    assert "extraction_v2" in default_dir.name
+    assert load_prompt().version in default_dir.name
 
     candidate = ScriptedModel()
-    _, candidate_dir, _ = run(tmp_path, candidate, only=["dev-01"], prompt_version="extraction_v4")
-    assert "extraction_v4" in candidate_dir.name and candidate_dir != default_dir
-    assert load_prompt("extraction_v4").system in candidate.calls[0]["system"]
+    _, candidate_dir, _ = run(tmp_path, candidate, only=["dev-01"], prompt_version="extraction_v2")
+    assert "extraction_v2" in candidate_dir.name and candidate_dir != default_dir
+    assert load_prompt("extraction_v2").system in candidate.calls[0]["system"]
     record = json.loads((candidate_dir / "dev-01.json").read_text(encoding="utf-8"))
-    assert record["prompt_version"] == "extraction_v4"
-    assert record["result"]["prompt_hash"] == load_prompt("extraction_v4").sha256
+    assert record["prompt_version"] == "extraction_v2"
+    assert record["result"]["prompt_hash"] == load_prompt("extraction_v2").sha256
 
 
 @pytest.mark.parametrize("version", ["extraction_v99", "../extraction_v2", "v2"])

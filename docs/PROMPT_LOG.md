@@ -252,7 +252,7 @@ further SKU candidates are tried, and the SKU weakness is reported as a known
 limitation (README), with the test documents that have a SKU column (test-19,
 test-20, test-22, test-24) reported as a case study.
 
-## extraction_v4 (prompt tuning on dev, candidate; not active)
+## extraction_v4 (prompt tuning on dev): ACCEPTED, active prompt
 
 - Date: 2026-11-17
 - Hash: `852b70c465cb48cf452a552d3214b5206e1d9153c3ee2ac8a91ffb52174b0c2c`
@@ -271,7 +271,43 @@ test-20, test-22, test-24) reported as a case study.
   accepted, its effect on test documents may look better than it would on
   real invoices; the README limitation about the shared generator covers
   this, and the SKU documents are reported as a case study.
-- Not active: `extraction_v2` stays the default. Run it explicitly with
-  `python -m app.dev_check --prompt-version extraction_v4`.
-- Dev-set result: pending. Judge with the v4 criteria above; stopping rule
-  applies.
+- Dev-set result: **accepted** under the pre-registered v4 criteria
+  (commit `25e3bdb`). Tuning-set results, never test results. One
+  `dev_check` run of all 10 dev documents, no reruns (2026-11-17, git commit
+  `6af7f2e`, clean tree, all first attempt, no failures). Results:
+  `data/dev_check/gemini__gemini-3.5-flash-lite__extraction_v4__852b70c465cb/`.
+  Judged from the saved files only.
+
+  | Doc | v2 layer 1 | v4 layer 1 | v2 layer 2 | v4 layer 2 | Lines v2 / v4 (extra) | Status and flags | Criterion |
+  |---|---|---|---|---|---|---|---|
+  | dev-01 | 33/33 | 33/33 | 33/33 | 33/33 | 6/6, 6/6 (0) | same | pass |
+  | dev-02 | 25/25 | 25/25 | 25/25 | 25/25 | 4/4, 4/4 (0) | same | pass |
+  | dev-03 | 23/23* | 23/23* | 40/41 | 40/41 | 8/8, 8/8 (0) | same | pass |
+  | dev-04 | 37/37 | 37/37 | 37/37 | 37/37 | 7/7, 7/7 (0) | same | pass |
+  | dev-05 | 37/37 | 37/37 | 37/37 | 37/37 | 7/7, 7/7 (0) | same | pass |
+  | dev-06 | 12/12* | 12/12* | 21/21 | 21/21 | 3/3, 3/3 (0) | same | pass |
+  | dev-07 | 22/22* | 22/22* | 41/41 | 41/41 | 8/8, 8/8 (0) | same | pass |
+  | dev-08 | 41/41 | 41/41 | 41/41 | 41/41 | 8/8, 8/8 (0) | same | pass |
+  | dev-09 | 138/181 | 181/181 | 138/181 | 181/181 | 43/43, 43/43 (0) | same | pass |
+  | dev-10 | 193/193 | 193/193 | 193/193 | 193/193 | 46/46, 46/46 (0) | same | pass |
+
+  \* Layer 1 after the pre-registered exclusion of fields that differ only
+  by the attached currency marker (dev-03: 18, dev-06: 9, dev-07: 19 fields,
+  the same fields in both runs). Without the exclusion the counts are also
+  identical: dev-03 23/41, dev-06 12/21, dev-07 22/41 in both runs.
+
+  - dev-09 criterion: **pass**. Layer 2 181 of 181 (needed at least 178),
+    0 item codes in descriptions, 43 of 43 lines, 0 extra; all 43 `#NNNN`
+    references kept.
+  - No-regression criterion: **pass** for all nine other documents: layer 1
+    and layer 2 equal to v2, same lines, status and flag codes. dev-10 is
+    193 of 193 (v3 had 147).
+  - Totals: layer 2 649 of 650 fields (the 1 is dev-03's `ambiguous` `$`
+    currency, the correct outcome); layer 1 604 of 650 (the 46 misses are
+    the dropped currency markers on dev-03, dev-06 and dev-07, unchanged
+    from v2).
+  - Decision: `extraction_v4` is the active prompt (`PROMPT_VERSION`, pinned
+    by a test). This is tuned on one dev document with a SKU column; the four
+    test documents with a SKU column (test-19, test-20, test-22, test-24) are
+    reported as a case study, and the README notes that the "#1234" example
+    matches the generator's reference format.

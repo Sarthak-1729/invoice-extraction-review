@@ -18,7 +18,7 @@ from functools import cache
 from pathlib import Path
 from typing import Any
 
-PROMPT_VERSION = "extraction_v2"
+PROMPT_VERSION = "extraction_v4"
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 PLACEHOLDER = "{document_text}"
 

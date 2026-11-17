@@ -28,5 +28,11 @@ correct and approve the result before exporting it.
   in the next, with no relevant prompt change. Reported numbers therefore
   come from one specified run (model, prompt hash, git commit and date are
   recorded with every result), not from the best of several runs.
+- **Prompt example matches the generator.** The active prompt tells the model
+  to keep reference numbers "such as #1234" in descriptions, which is exactly
+  the format the generator puts in every synthetic description. It was
+  written to fix a dev document, but it also suits the test set (same
+  generator), so test-set description accuracy may be overstated compared
+  with real invoices, whose references look different.
 - **Fonts.** The generator uses the built-in Helvetica/Courier fonts, which have
   no `₹` glyph, so INR amounts are printed with `Rs.`.
