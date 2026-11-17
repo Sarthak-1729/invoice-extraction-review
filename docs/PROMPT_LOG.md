@@ -178,3 +178,17 @@ layer 2, lines, status or flags, and no document's layer 1 may fall: in
 particular dev-01, dev-02, dev-04, dev-05, dev-08, dev-09 and dev-10, whose
 amounts are already copied exactly, must not gain markers that are not
 printed next to the amount.
+
+## extraction_v3 (prompt tuning on dev)
+
+- Date: 2026-11-17
+- Hash: `2b62b7814afc6e0eaaa362604a4095ef68e0efd950304e27b8c9f8e4803b812d`
+- Model and settings: as v2.
+- Change (the only one): one sentence added to the `description` rule in
+  `system.txt`: "If the table has an item code, SKU, or part-number column,
+  that code is not part of the description: leave it out." `user.txt` and
+  `schema.json` are byte-identical to v2.
+- Reason: dev-09 (v2 dev run above), where every description included the
+  item code from the SKU column. Candidate 1 of the pre-registered criteria;
+  tuned on 1 dev document. No test-set document was opened or run.
+- Dev-set result: pending. Judge with the candidate 1 criteria above.
