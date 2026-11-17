@@ -179,3 +179,13 @@ add `INVALID_PDF` to the upload codes.
   applied to fields a reviewer corrected. Approval needs every open flag
   acknowledged. Uploads whose SHA-256 is in the test manifest are refused
   unless `ALLOW_TEST_SET_UPLOADS=true` (off by default; Phase 7 only).
+- Phase 5: review UI in `frontend/` (Vite + React, plain CSS, hash routes
+  `#/` and `#/documents/<id>`). `App` receives its `api` object as a prop.
+  Edits are saved together with one "Save changes" button (one PATCH), not
+  on every keystroke. Approving with open flags needs a confirmation
+  checkbox. Line items can be edited but not added or removed (the PATCH
+  API only addresses existing lines). Busy buttons use `aria-disabled` so
+  keyboard focus is never lost. Backend: `CORS_ORIGINS` setting (Vite dev
+  origins by default), and timestamps always carry a UTC offset (SQLite
+  drops the time zone). LLM failures stay a saved `failed` document (201),
+  not a 502, so the UI can offer Retry.

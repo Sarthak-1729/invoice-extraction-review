@@ -8,6 +8,26 @@ correct and approve the result before exporting it.
 > measured results) is written in a later phase. See [docs/DESIGN.md](docs/DESIGN.md)
 > for the design.
 
+## Run locally (development)
+
+Backend (from `backend/`, with the virtual environment set up):
+
+```
+.venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
+```
+
+Review UI (from `frontend/`, Node 20.19+ or 22.12+):
+
+```
+npm ci
+npm run dev
+```
+
+Open http://localhost:5173. The UI calls the API at `VITE_API_URL`
+(default `http://localhost:8000`; see `frontend/.env.example`). The API
+accepts browser requests from the origins in `CORS_ORIGINS` (default: the
+Vite dev server).
+
 ## Limitations
 
 - **Synthetic data only.** The dev and test sets come from the same generator
