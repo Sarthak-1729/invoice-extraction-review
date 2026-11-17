@@ -36,6 +36,9 @@ class Settings(BaseSettings):
     # Uploads whose SHA-256 is in the frozen test manifest are refused unless
     # this is true. Off by default; only the Phase 7 evaluation turns it on.
     allow_test_set_uploads: bool = False
+    # Browser origins allowed to call the API (the Vite dev server by default).
+    # In .env: CORS_ORIGINS=["http://localhost:5173"]
+    cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
 
 
 @lru_cache

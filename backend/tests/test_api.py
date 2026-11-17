@@ -358,3 +358,21 @@ def test_errors_share_one_shape(client):
     assert error(client.delete("/api/export")) == "METHOD_NOT_ALLOWED"
     assert error(client.get("/api/export", params={"format": "xml"})) == "VALIDATION_ERROR"
     assert error(client.post("/api/documents")) == "VALIDATION_ERROR"  # no file
+
+
+# --- CORS (for the Vite dev server) -------------------------------------------
+
+
+def test_cors_allows_the_configured_dev_origin_only(client):
+    origin = "http://localhost:5173"
+    preflight = client.options(
+        "/api/documents/abc/fields",
+        headers={"Origin": origin, "Access-Control-Request-Method": "PATCH"},
+    )
+    assert preflight.status_code == 200
+    assert preflight.headers["access-control-allow-origin"] == origin
+    assert "PATCH" in preflight.headers["access-control-allow-methods"]
+    simple = client.get("/api/health", headers={"Origin": origin})
+    assert simple.headers["access-control-allow-origin"] == origin
+    other = client.get("/api/health", headers={"Origin": "http://evil.example"})
+    assert "access-control-allow-origin" not in other.headers

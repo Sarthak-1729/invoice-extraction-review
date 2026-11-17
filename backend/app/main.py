@@ -11,6 +11,7 @@ from threading import Lock
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 from starlette.exceptions import HTTPException as StarletteHTTPException
@@ -57,6 +58,13 @@ class Services:
 def create_app(settings: Settings | None = None, provider: LLMProvider | None = None) -> FastAPI:
     app = FastAPI(title="Invoice Extraction with Human Review", version=__version__)
     app.state.services = Services(settings or get_settings(), provider)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=app.state.services.settings.cors_origins,
+        allow_methods=["GET", "POST", "PATCH", "DELETE"],
+        allow_headers=["Content-Type"],
+        expose_headers=["Content-Disposition"],
+    )
     app.include_router(router)
 
     @app.exception_handler(ApiError)
