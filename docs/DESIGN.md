@@ -39,6 +39,17 @@ unit_price, amount}`.
 Ambiguous values are flagged, never guessed. `03/04/2026` is resolved only
 when another date in the same document fixes the day/month order.
 
+## Storage
+
+SQLite through SQLAlchemy 2.0 (`app/db.py`, `app/repository.py`). Tables:
+`documents` (status, error code and message, raw and normalized values as
+JSON, the PDF text for re-validation, prompt version and hash), `flags`
+(recomputed on every validation) and `corrections` (append-only audit trail:
+field path, original value, corrected value, timestamp). The schema is
+created with `Base.metadata.create_all()` at startup; there is no migration
+tool yet (Alembic is the path once real data needs a schema change). The
+database file and uploaded PDFs live in git-ignored `data/` and `uploads/`.
+
 ## Flags
 
 Each flag: `{field_path, code, severity: error|warning, message}`. Field paths
@@ -164,3 +175,7 @@ add `INVALID_PDF` to the upload codes.
   Schema failure after one retry is a `failed` extraction with
   `SCHEMA_VALIDATION_FAILED`. Added `INVALID_PDF`. Manual runs are blocked on
   the test set unless `--allow-test-set` is given (Phase 7).
+- Phase 4: storage uses `create_all()` (no Alembic yet). Grounding is not
+  applied to fields a reviewer corrected. Approval needs every open flag
+  acknowledged. Uploads whose SHA-256 is in the test manifest are refused
+  unless `ALLOW_TEST_SET_UPLOADS=true` (off by default; Phase 7 only).
