@@ -172,10 +172,10 @@ def test_model_failure_is_recorded_and_not_rerun(tmp_path):
 def test_unexpected_errors_do_not_stop_the_run(tmp_path, monkeypatch):
     real = dev_check.run_pipeline
 
-    def flaky(pdf, provider, settings):
+    def flaky(pdf, *args):
         if pdf.stem == "dev-04":
             raise RuntimeError("boom")
-        return real(pdf, provider, settings)
+        return real(pdf, *args)
 
     monkeypatch.setattr(dev_check, "run_pipeline", flaky)
     code, run_dir, _ = run(tmp_path, ScriptedModel())
@@ -183,6 +183,7 @@ def test_unexpected_errors_do_not_stop_the_run(tmp_path, monkeypatch):
     record = json.loads((run_dir / "dev-04.json").read_text(encoding="utf-8"))
     assert record["result"]["error"]["code"] == "UNEXPECTED_ERROR"
     assert (run_dir / "dev-10.json").exists()
+    assert json.loads((run_dir / "dev-10.json").read_text(encoding="utf-8"))["outcome"] == "success"
 
 
 def test_cli_rejects_unknown_documents(capsys, monkeypatch):
@@ -190,3 +191,26 @@ def test_cli_rejects_unknown_documents(capsys, monkeypatch):
     code = dev_check.main(["--only", "test-01", "--provider", "fake"])
     assert code == EXIT_CONFIG
     assert "Not dev documents" in capsys.readouterr().out
+
+
+def test_candidate_prompt_runs_only_when_named(tmp_path):
+    from app.prompt import load_prompt
+
+    model = ScriptedModel()
+    _, default_dir, _ = run(tmp_path, model, only=["dev-01"])
+    assert default_dir.name.endswith(load_prompt().sha256[:12])
+    assert "extraction_v2" in default_dir.name
+
+    candidate = ScriptedModel()
+    _, candidate_dir, _ = run(tmp_path, candidate, only=["dev-01"], prompt_version="extraction_v4")
+    assert "extraction_v4" in candidate_dir.name and candidate_dir != default_dir
+    assert load_prompt("extraction_v4").system in candidate.calls[0]["system"]
+    record = json.loads((candidate_dir / "dev-01.json").read_text(encoding="utf-8"))
+    assert record["prompt_version"] == "extraction_v4"
+    assert record["result"]["prompt_hash"] == load_prompt("extraction_v4").sha256
+
+
+@pytest.mark.parametrize("version", ["extraction_v99", "../extraction_v2", "v2"])
+def test_unknown_prompt_versions_are_rejected(tmp_path, version):
+    with pytest.raises(DevCheckError):
+        run(tmp_path, ScriptedModel(), only=["dev-01"], prompt_version=version)

@@ -43,7 +43,7 @@ from app.llm import LLMError, get_provider
 from app.llm.base import LLMErrorCode, LLMProvider
 from app.pdf_text import PdfRejected, extract_text
 from app.pipeline import run_pipeline
-from app.prompt import load_prompt
+from app.prompt import PROMPT_VERSION, PROMPTS_DIR, load_prompt
 from app.testset_guard import REPO_ROOT, guard_test_set
 
 DEV_DIR = REPO_ROOT / "eval" / "datasets" / "dev"
@@ -79,8 +79,17 @@ def dev_documents(only: list[str] | None = None) -> list[Path]:
     return pdfs
 
 
-def run_dir_for(out_root: Path, provider: LLMProvider) -> Path:
-    prompt = load_prompt()
+def resolve_prompt_version(version: str | None) -> str:
+    """The active prompt by default; a candidate only when named explicitly."""
+    version = version or PROMPT_VERSION
+    if not re.fullmatch(r"extraction_v\d+", version) or not (PROMPTS_DIR / version).is_dir():
+        known = sorted(p.name for p in PROMPTS_DIR.glob("extraction_v*") if p.is_dir())
+        raise DevCheckError(f"Unknown prompt version {version!r}. Known: {known}")
+    return version
+
+
+def run_dir_for(out_root: Path, provider: LLMProvider, prompt_version: str | None = None) -> Path:
+    prompt = load_prompt(resolve_prompt_version(prompt_version))
     model = re.sub(r"[^A-Za-z0-9._-]", "_", provider.model)
     return out_root / f"{provider.name}__{model}__{prompt.version}__{prompt.sha256[:12]}"
 
@@ -94,8 +103,10 @@ def _git(*args: str) -> str | None:
         return None
 
 
-def run_metadata(provider: LLMProvider, settings: Settings) -> dict[str, Any]:
-    prompt = load_prompt()
+def run_metadata(
+    provider: LLMProvider, settings: Settings, prompt_version: str | None = None
+) -> dict[str, Any]:
+    prompt = load_prompt(resolve_prompt_version(prompt_version))
     status = _git("status", "--porcelain")
     return {
         "provider": provider.name,
@@ -148,12 +159,14 @@ def run_documents(
     only: list[str] | None = None,
     retry_infra: bool = False,
     echo: Callable[[str], None] = print,
+    prompt_version: str | None = None,
 ) -> tuple[int, Path]:
     """Run the dev documents that are not done; returns (exit code, run dir)."""
+    prompt_version = resolve_prompt_version(prompt_version)
     pdfs = dev_documents(only)
-    run_dir = run_dir_for(out_root, provider)
+    run_dir = run_dir_for(out_root, provider, prompt_version)
     run_dir.mkdir(parents=True, exist_ok=True)
-    metadata = run_metadata(provider, settings)
+    metadata = run_metadata(provider, settings, prompt_version)
 
     for pdf in pdfs:
         path = run_dir / f"{pdf.stem}.json"
@@ -165,7 +178,7 @@ def run_documents(
         echo(f"{pdf.stem}: running ({reason})")
         started = datetime.now(UTC).isoformat(timespec="seconds")
         try:
-            result = run_pipeline(pdf, provider, settings).to_dict()
+            result = run_pipeline(pdf, provider, settings, prompt_version).to_dict()
             code = (result.get("error") or {}).get("code")
             outcome = failure_class(code) or "success"
         except PdfRejected as error:
@@ -307,6 +320,11 @@ def main(argv: list[str] | None = None) -> int:
         help=f"retry documents that failed for infrastructure reasons {MAX_INFRA_RUNS} times",
     )
     parser.add_argument("--report-only", action="store_true", help="rebuild report.md only")
+    parser.add_argument(
+        "--prompt-version",
+        metavar="VERSION",
+        help=f"candidate prompt to try, e.g. extraction_v4 (default: active {PROMPT_VERSION})",
+    )
     args = parser.parse_args(argv)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -315,10 +333,14 @@ def main(argv: list[str] | None = None) -> int:
     try:
         provider = get_provider(settings)
         if args.report_only:
-            code, run_dir = EXIT_OK, run_dir_for(RESULTS_ROOT, provider)
+            code, run_dir = EXIT_OK, run_dir_for(RESULTS_ROOT, provider, args.prompt_version)
         else:
             code, run_dir = run_documents(
-                settings, provider, only=args.only, retry_infra=args.retry_infra
+                settings,
+                provider,
+                only=args.only,
+                retry_infra=args.retry_infra,
+                prompt_version=args.prompt_version,
             )
     except LLMError as error:
         print(f"{error.code}: {error.message}")

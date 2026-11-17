@@ -251,3 +251,27 @@ Stopping rule: if v4 fails, `extraction_v2` stays the active prompt, no
 further SKU candidates are tried, and the SKU weakness is reported as a known
 limitation (README), with the test documents that have a SKU column (test-19,
 test-20, test-22, test-24) reported as a case study.
+
+## extraction_v4 (prompt tuning on dev, candidate; not active)
+
+- Date: 2026-11-17
+- Hash: `852b70c465cb48cf452a552d3214b5206e1d9153c3ee2ac8a91ffb52174b0c2c`
+- Model and settings: as v2.
+- Change (the only one, against v2, not v3): two sentences added to the
+  `description` rule in `system.txt`: "If the table has a separate column for
+  an item code, SKU, or part number, the code in that column is not part of
+  the description. Text printed inside the description cell stays, including
+  reference numbers such as "#1234"." `user.txt` and `schema.json` are
+  byte-identical to v2.
+- Reason: dev-09 (item codes in descriptions) without v3's failure on dev-10
+  (references removed). The wording ties the exclusion to a separate column
+  and says what stays.
+- Known risk: the example "#1234" matches the reference format the generator
+  puts in every description, in dev and test alike (same generator). If v4 is
+  accepted, its effect on test documents may look better than it would on
+  real invoices; the README limitation about the shared generator covers
+  this, and the SKU documents are reported as a case study.
+- Not active: `extraction_v2` stays the default. Run it explicitly with
+  `python -m app.dev_check --prompt-version extraction_v4`.
+- Dev-set result: pending. Judge with the v4 criteria above; stopping rule
+  applies.

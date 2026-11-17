@@ -58,9 +58,15 @@ class PipelineResult:
         }
 
 
-def run_pipeline(pdf_path: Path, provider: LLMProvider, settings: Settings) -> PipelineResult:
+def run_pipeline(
+    pdf_path: Path,
+    provider: LLMProvider,
+    settings: Settings,
+    prompt_version: str | None = None,
+) -> PipelineResult:
+    """``prompt_version`` selects a candidate prompt; None uses the active one."""
     pdf = extract_text(pdf_path, max_pages=settings.max_pages)
-    prompt = load_prompt()
+    prompt = load_prompt(prompt_version) if prompt_version else load_prompt()
     extraction = extract_raw(
         pdf.text,
         provider,

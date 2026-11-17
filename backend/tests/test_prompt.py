@@ -221,3 +221,11 @@ def test_default_prompt_is_v2():
     assert (
         load_prompt().sha256 == "83601bc5d5b7a9922f7d3196a4b29a1399ea3334944a27b5102c5d9b08ab34ea"
     )
+
+
+@pytest.mark.parametrize("version_dir", VERSION_DIRS, ids=lambda p: p.name)
+def test_every_prompt_version_is_logged_with_its_hash(version_dir):
+    log = (REPO_ROOT / "docs" / "PROMPT_LOG.md").read_text(encoding="utf-8")
+    prompt = load_prompt(version_dir.name)
+    assert f"## {prompt.version}" in log
+    assert prompt.sha256 in log
