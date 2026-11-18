@@ -10,13 +10,24 @@ correct and approve the result before exporting it.
 
 ## Run locally (development)
 
-Backend (from `backend/`, with the virtual environment set up):
+**Python 3.11 only.** `backend/pyproject.toml` requires `>=3.11,<3.12` and
+CI uses 3.11.9 (`backend/.python-version`), so pip refuses to install into
+any other Python. On Windows, `py` may default to a newer Python, so name
+the version when you create the virtual environment (from `backend/`):
+
+```
+py -3.11 -m venv .venv
+.venv\Scripts\python.exe -m pip install -e ".[dev]"
+```
+
+Start the backend (from `backend/`):
 
 ```
 .venv\Scripts\python.exe -m uvicorn app.main:app --port 8000
 ```
 
-Review UI (from `frontend/`, Node 20.19+ or 22.12+):
+Review UI (from `frontend/`, Node 22.13+ or 24; CI uses 24.12.0 from
+`frontend/.nvmrc`):
 
 ```
 npm ci
@@ -27,6 +38,33 @@ Open http://localhost:5173. The UI calls the API at `VITE_API_URL`
 (default `http://localhost:8000`; see `frontend/.env.example`). The API
 accepts browser requests from the origins in `CORS_ORIGINS` (default: the
 Vite dev server).
+
+## Tests
+
+No test calls a real LLM or needs an API key. Backend tests use the fake
+provider with the network blocked; frontend tests inject a fake `api`
+object into `App` and block `fetch`.
+
+```
+cd backend
+.venv\Scripts\python.exe -m ruff check .
+.venv\Scripts\python.exe -m ruff format --check .
+.venv\Scripts\python.exe -m pytest --cov --cov-fail-under=96
+cd ..
+backend\.venv\Scripts\python.exe -m pytest eval
+cd frontend
+npm run lint
+npm test
+npm run build
+```
+
+CI (`.github/workflows/ci.yml`) runs the same steps on every push and pull
+request, plus a check that the frozen test-set hash has not changed.
+
+**ESLint is pinned to 9.39.5**, which ESLint has marked as no longer
+supported (npm prints a deprecation warning). It stays on 9 because
+`eslint-plugin-jsx-a11y` 6.10.2 does not yet declare support for ESLint 10;
+the accessibility lint rules matter more here than the newer ESLint.
 
 ## Limitations
 

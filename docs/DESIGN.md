@@ -189,3 +189,10 @@ add `INVALID_PDF` to the upload codes.
   origins by default), and timestamps always carry a UTC offset (SQLite
   drops the time zone). LLM failures stay a saved `failed` document (201),
   not a 502, so the UI can offer Retry.
+- Phase 6: Python pinned to 3.11 (`requires-python = ">=3.11,<3.12"`, CI
+  3.11.9). Test client dependency is `httpx2` (Starlette deprecated plain
+  `httpx` for its TestClient; `google-genai` already depends on `httpx2`).
+  Frontend tests: Vitest + React Testing Library + user-event in jsdom,
+  axe-core run directly (color contrast and the PDF frame are checked in a
+  real browser only). CI: GitHub Actions, actions pinned by commit SHA,
+  backend coverage floor 96% (measured 97.5%).
