@@ -63,6 +63,11 @@ jobs:
         working-directory: backend
         run: python -m ruff format --check .
 
+      - name: Ruff lint and format check (evaluation code)
+        run: |
+          python -m ruff check --config backend/pyproject.toml eval
+          python -m ruff format --config backend/pyproject.toml --check eval
+
       - name: Frozen test-set hash (drift guard)
         run: python -m pytest -v -p no:cacheprovider eval/tests/test_testset_frozen.py
 
