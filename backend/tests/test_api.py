@@ -386,3 +386,39 @@ def test_times_carry_a_utc_offset_after_a_database_round_trip(client):
         assert again[key].endswith("+00:00"), key
     exported = client.get("/api/export?format=json").json()["documents"][0]
     assert exported["approved_at"].endswith("+00:00")
+
+
+# --- error paths found by the coverage review (Phase 6) -----------------------
+
+
+def test_declared_size_over_the_limit_is_refused_before_reading(client, settings):
+    big = b"%PDF-" + b"0" * (2**20 + 200 * 1024)  # over 1 MB + one 64 KiB chunk
+    response = upload(client, DEV / "pdf" / "dev-01.pdf", data=big)
+    assert response.status_code == 413 and error(response) == "FILE_TOO_LARGE"
+    assert not settings.upload_dir.exists() or not any(settings.upload_dir.iterdir())
+
+
+def test_missing_stored_pdf_is_404_file_missing(client, settings):
+    doc = upload(client, DEV / "pdf" / "dev-01.pdf").json()
+    (settings.upload_dir / f"{doc['id']}.pdf").unlink()
+    response = client.get(f"/api/documents/{doc['id']}/pdf")
+    assert response.status_code == 404 and error(response) == "FILE_MISSING"
+
+
+def test_retry_of_an_unreadable_stored_pdf_is_rejected_and_stays_failed(client, model, settings):
+    model.failures["dev-01"] = LLMError(LLMErrorCode.UNAVAILABLE, "503")
+    doc = upload(client, DEV / "pdf" / "dev-01.pdf").json()
+    (settings.upload_dir / f"{doc['id']}.pdf").write_bytes(b"%PDF-1.4 broken")
+    response = client.post(f"/api/documents/{doc['id']}/retry")
+    assert response.status_code == 422 and error(response) == "INVALID_PDF"
+    assert client.get(f"/api/documents/{doc['id']}").json()["status"] == "failed"
+
+
+def test_simultaneous_duplicate_upload_is_409_and_leaves_no_file(client, settings, monkeypatch):
+    first = upload(client, DEV / "pdf" / "dev-01.pdf").json()
+    # Simulate the race: the duplicate check runs before the first row is visible.
+    monkeypatch.setattr(api.DocumentRepository, "get_by_sha256", lambda self, sha256: None)
+    second = upload(client, DEV / "pdf" / "dev-01.pdf")
+    assert second.status_code == 409 and error(second) == "DUPLICATE"
+    assert [p.name for p in settings.upload_dir.iterdir()] == [f"{first['id']}.pdf"]
+    assert len(client.get("/api/documents").json()["documents"]) == 1

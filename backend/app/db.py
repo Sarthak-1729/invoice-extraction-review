@@ -6,7 +6,6 @@ is no migration tool yet; if the schema changes once real data exists, add
 Alembic then. The SQLite file lives under the git-ignored data/ directory.
 """
 
-from collections.abc import Iterator
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -124,8 +123,3 @@ def create_schema(engine: Engine) -> None:
 
 def make_session_factory(engine: Engine) -> sessionmaker[Session]:
     return sessionmaker(engine, expire_on_commit=False)
-
-
-def session_scope(factory: sessionmaker[Session]) -> Iterator[Session]:
-    with factory() as session:
-        yield session

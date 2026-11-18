@@ -96,11 +96,6 @@ class DocumentRepository:
         self.session.commit()
         return document
 
-    def mark_failed(self, document: Document, code: str, message: str) -> Document:
-        document.status, document.error_code, document.error_message = "failed", code, message
-        self.session.commit()
-        return document
-
     def apply_changes(self, document: Document, changes: list[FieldChange]) -> Document:
         if document.status == "approved":
             raise ReviewError(409, "DOCUMENT_LOCKED", "Approved documents cannot be edited.")
