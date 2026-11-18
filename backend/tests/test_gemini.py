@@ -3,7 +3,7 @@
 from datetime import UTC, datetime
 from types import SimpleNamespace
 
-import httpx
+import httpx2
 import pytest
 
 from app.llm import LLMError, LLMErrorCode
@@ -18,7 +18,7 @@ class FakeStatusError(Exception):
     def __init__(self, status, headers=None, body=""):
         super().__init__(f"HTTP {status}")
         self.status_code = status
-        self.response = SimpleNamespace(status_code=status, headers=httpx.Headers(headers or {}))
+        self.response = SimpleNamespace(status_code=status, headers=httpx2.Headers(headers or {}))
         self.body = body
 
 
@@ -47,10 +47,13 @@ class APIConnectionError(Exception):
         (FakeStatusError(403), LLMErrorCode.AUTH_FAILED, None),
         (FakeStatusError(400), LLMErrorCode.BAD_REQUEST, None),
         (FakeStatusError(404), LLMErrorCode.BAD_REQUEST, None),
-        (httpx.ReadTimeout("slow"), LLMErrorCode.TIMEOUT, None),
+        # The SDK raises httpx2 errors (it prefers httpx2 when installed).
+        (httpx2.ReadTimeout("slow"), LLMErrorCode.TIMEOUT, None),
+        (httpx2.ConnectTimeout("slow"), LLMErrorCode.TIMEOUT, None),
         (APITimeoutError("slow"), LLMErrorCode.TIMEOUT, None),
         (APIConnectionError("dns"), LLMErrorCode.UNAVAILABLE, None),
-        (httpx.ConnectError("refused"), LLMErrorCode.UNAVAILABLE, None),
+        (httpx2.ConnectError("refused"), LLMErrorCode.UNAVAILABLE, None),
+        (httpx2.RemoteProtocolError("closed"), LLMErrorCode.UNAVAILABLE, None),
         (ValueError("odd"), LLMErrorCode.ERROR, None),
     ],
 )
@@ -196,3 +199,9 @@ def test_pacer_spaces_requests():
     now[0] += 10.0
     pacer.wait()  # 10 s later: no wait
     assert sleeps == [4.0]
+
+
+def test_plain_httpx_errors_still_map_when_httpx_is_installed():
+    httpx = pytest.importorskip("httpx")  # optional; older google-genai versions raise these
+    assert map_provider_error(httpx.ConnectError("refused")).code == LLMErrorCode.UNAVAILABLE
+    assert map_provider_error(httpx.ReadTimeout("slow")).code == LLMErrorCode.TIMEOUT

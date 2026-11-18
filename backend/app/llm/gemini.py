@@ -12,10 +12,20 @@ from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from typing import Any
 
-import httpx
+import httpx2
 
 from app.llm.base import LLMError, LLMErrorCode, LLMResponse
 from app.llm.pacing import Pacer
+
+try:  # google-genai uses httpx2 when it is installed; plain httpx is optional.
+    import httpx
+except ImportError:  # pragma: no cover - depends on the environment
+    httpx = None
+
+_HTTP_MODULES = tuple(module for module in (httpx2, httpx) if module is not None)
+# httpx2 is a fork under its own namespace: its errors are not httpx errors.
+_TIMEOUT_ERRORS = tuple(module.TimeoutException for module in _HTTP_MODULES)
+_TRANSPORT_ERRORS = tuple(module.TransportError for module in _HTTP_MODULES)
 
 _RETRY_DELAY = re.compile(r'"retryDelay"\s*:\s*"(\d+(?:\.\d+)?)s"')
 
@@ -153,7 +163,7 @@ def map_provider_error(error: Exception, secrets: tuple[str, ...] = ()) -> LLMEr
     name = type(error).__name__
     status = _status_code(error)
     detail = redact(_full_detail(error), secrets)
-    if isinstance(error, httpx.TimeoutException) or "Timeout" in name or status in (408, 504):
+    if isinstance(error, _TIMEOUT_ERRORS) or "Timeout" in name or status in (408, 504):
         return LLMError(LLMErrorCode.TIMEOUT, f"Request timed out. {detail}".strip())
     if status == 429:
         return LLMError(
@@ -174,6 +184,6 @@ def map_provider_error(error: Exception, secrets: tuple[str, ...] = ()) -> LLMEr
         )
     if status is not None and 400 <= status < 500:
         return LLMError(LLMErrorCode.BAD_REQUEST, f"Request rejected ({status}). {detail}")
-    if isinstance(error, httpx.TransportError) or "Connection" in name:
+    if isinstance(error, _TRANSPORT_ERRORS) or "Connection" in name:
         return LLMError(LLMErrorCode.UNAVAILABLE, f"Could not reach the API. {detail}")
     return LLMError(LLMErrorCode.ERROR, f"{name}: {detail}")
