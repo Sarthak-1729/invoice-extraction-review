@@ -44,12 +44,15 @@ jobs:
         working-directory: ${{ runner.temp }}
         run: |
           python - <<'PY'
+          import hashlib
           from app.prompt import PROMPT_VERSION, load_prompt
-          from app.testset_guard import TEST_SET_DIR, _manifest_hashes
+          from app.testset_guard import TEST_SET_DIR, is_test_set_sha256
           prompt = load_prompt()
           assert prompt.version == PROMPT_VERSION, prompt.version
-          assert len(_manifest_hashes(TEST_SET_DIR.resolve())) == 24, "test-set manifest not found"
-          print("prompt", prompt.version, prompt.sha256[:12], "| test-set guard sees 24 PDFs")
+          # The upload guard must find the manifest (it fails open without it).
+          pdf = (TEST_SET_DIR / "pdf" / "test-01.pdf").read_bytes()  # hashed only
+          assert is_test_set_sha256(hashlib.sha256(pdf).hexdigest()), "test-set manifest not found"
+          print("prompt", prompt.version, prompt.sha256[:12], "| test-set guard active")
           PY
 
       - name: Ruff lint
