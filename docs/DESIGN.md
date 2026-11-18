@@ -196,3 +196,14 @@ add `INVALID_PDF` to the upload codes.
   axe-core run directly (color contrast and the PDF frame are checked in a
   real browser only). CI: GitHub Actions, actions pinned by commit SHA,
   backend coverage floor 96% (measured 97.5%).
+- Phase 7 (code only, no run yet): `python -m eval.run_test` (runner),
+  `python -m eval.metrics` (results.json, error_analysis.json, error_notes.md)
+  and `python -m eval.report` (report.md from results.json only). The runner
+  needs `--allow-test-set`, a clean tree (outside `eval/results/`, where it
+  writes) or `--allow-dirty` (recorded), Gemini with `gemini-3.5-flash-lite`,
+  and a verified set hash. Runs 2 and 3 (`--next-run`) retry only
+  infrastructure failures, 30 minutes apart, with the same commit (commits
+  that touch only `eval/results/` are allowed) and settings. Group
+  membership comes from truth features; "document ambiguity" from the oracle
+  run. The hand-made set lives in `eval/handmade/` (empty) and is guarded
+  like the test set.
