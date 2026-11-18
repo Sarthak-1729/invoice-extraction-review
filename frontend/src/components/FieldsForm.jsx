@@ -72,7 +72,8 @@ function HeaderField({ document, path, value, onChange, flags, locked }) {
   return (
     <div className={flags.length ? 'field field--flagged' : 'field'}>
       <label htmlFor={id}>
-        {FIELD_LABELS[path]}
+        {/* trailing space keeps the name "Total Flagged", not "TotalFlagged" */}
+        {flags.length ? `${FIELD_LABELS[path]} ` : FIELD_LABELS[path]}
         {flags.length ? (
           <span className="flag-marker">
             <AlertIcon /> Flagged
@@ -107,7 +108,7 @@ function LineItemsTable({ document, values, onChange, flagsFor, locked }) {
   return (
     <section aria-labelledby="line-items-heading" className="line-items">
       <h3 id="line-items-heading">
-        Line items
+        {tableFlags.length ? 'Line items ' : 'Line items'}
         {tableFlags.length ? (
           <span className="flag-marker">
             <AlertIcon /> Flagged
