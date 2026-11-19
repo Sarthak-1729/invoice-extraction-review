@@ -66,10 +66,34 @@ supported (npm prints a deprecation warning). It stays on 9 because
 `eslint-plugin-jsx-a11y` 6.10.2 does not yet declare support for ESLint 10;
 the accessibility lint rules matter more here than the newer ESLint.
 
+## Results
+
+The numbers below are generated from the committed results file
+(`python -m eval.report <run folder> --readme`); none is typed by hand, and
+a test fails if they drift from it.
+
+<!-- generated:results -->
+Baseline: one run of `extraction_v4` with `gemini-3.5-flash-lite` on the frozen 24-document test set (commit `f451523`, metric definitions v1.1, 24 of 24 documents scored). It was recorded before any fix and is the headline result; nothing was tuned on the test set. Full report: [`report.md`](eval/results/test/gemini-3.5-flash-lite__extraction_v4__852b70c465cb/report.md), notes: [`baseline.md`](eval/results/test/gemini-3.5-flash-lite__extraction_v4__852b70c465cb/baseline.md).
+
+| Metric | Result |
+|---|---|
+| Field accuracy, end to end (layer 2, decided) | 94.4% (1548/1640), 4 ambiguous excluded |
+| Field accuracy, end to end (layer 2, strict) | 94.2% (1548/1644) |
+| Printed string copied exactly (layer 1) | 82.1% (1349/1644) |
+| Documents with all 9 header fields right | 87.5% (21/24) |
+| Documents fully right (header and every line) | 75.0% (18/24) |
+| Line items fully right (recall) | 74.2% (265/357) |
+| Ambiguous fields (flagged for review) | 4 (4 document, 0 induced) |
+| Errors flagged for review (flag recall) | 0.0% (0/92) |
+| Review items per document (mean) | 0.62 |
+
+Errors by field: 92 description.
+<!-- /generated:results -->
+
 ## Limitations
 
 - **Synthetic data from one generator.** The dev and test sets come from the
-  same generator (`eval/generator/`), so every reported number describes 24
+  same generator (`eval/generator/`), so every reported number describes the
   synthetic test invoices in these four layouts, not real-world invoices. The
   baseline (`eval/results/test/`) says nothing about other layouts, fonts or
   scanned documents.
@@ -80,13 +104,13 @@ the accessibility lint rules matter more here than the newer ESLint.
   no OCR.
 - **Item codes in descriptions are not detected.** The grounding check only
   confirms that an extracted value occurs in the PDF text, so a value copied
-  from the wrong place passes. Measured on the test-set baseline: 92 of 357
-  line-item descriptions came back as `<item code> <description>` (test-19:
-  43 of 43, test-20: 42 of 42, test-24: 7 of 38), and 0 of the 92 were
-  flagged. These were the only errors in the run. The two item-code tables
-  whose descriptions wrap (dev-09 and test-22) were extracted correctly; the
-  three that do not wrap were not. See
-  `eval/results/test/.../baseline.md`.
+  from the wrong place passes. This is reported as a known limitation; the
+  prompt was not tuned further (see Future work).
+  <!-- generated:item-codes -->
+  Measured on the test-set baseline: 92 of 357 line-item descriptions came back as `<item code> <description>` (test-19: 43 of 43, test-20: 42 of 42, test-24: 7 of 38), and 0 of 92 errors were flagged. Item-code tables extracted correctly: test-22 (wrapped descriptions).
+  <!-- /generated:item-codes -->
+  The dev document with an item-code table (dev-09) also wraps; the tables
+  that do not wrap failed. The causes are in the run's `baseline.md`.
 - **Single runs vary.** The model's output is not fully repeatable: on one dev
   document the currency symbols on amounts were dropped in one run and kept
   in the next, with no relevant prompt change. Reported numbers therefore
@@ -97,7 +121,23 @@ the accessibility lint rules matter more here than the newer ESLint.
   descriptions, which is exactly the format the generator puts in every
   synthetic description. It was written to fix a dev document, but it also
   suits the test set (same generator), so the measured description accuracy
-  (265 of 357 right) may be overstated compared with real invoices, whose
-  references look different.
+  may be overstated compared with real invoices, whose references look
+  different.
 - **Fonts.** The generator uses the built-in Helvetica/Courier fonts, which have
   no `₹` glyph, so INR amounts are printed with `Rs.`.
+
+## Future work
+
+- **Item-code check (planned for project version 1.1, not implemented).** A
+  deterministic post-check that flags a description starting with a token
+  from a detected item-code column. A column counts as detected only when
+  several lines (at least 3, and at least half) start with distinct tokens
+  of one shared shape that are also the first token of their text line, so a
+  single description like "A4 copy paper" is not flagged; it only adds a
+  warning and never edits a value. Conditions before any claim about it:
+  a fresh held-out set (new generator seeds, never used for tuning,
+  committed and hashed before the check is written), acceptance criteria
+  written down before the run, a before/after comparison with the current
+  prompt on that fresh set (the v4 baseline above stays as reported), and
+  the hand-made set in `eval/handmade/`. The current test set has informed
+  this idea, so it cannot be used to judge it.

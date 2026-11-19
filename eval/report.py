@@ -315,14 +315,104 @@ def build_report(res: dict[str, Any]) -> str:
     return "\n".join(out) + "\n"
 
 
+# --- README blocks ---------------------------------------------------------------
+# The README's numbers are never typed by hand: these blocks are generated from
+# results.json and pasted between markers (python -m eval.report <run> --readme).
+# eval/tests/test_readme_numbers.py fails if the README drifts from the file.
+
+README = REPO_ROOT / "README.md"
+
+
+def _lines_total(case: dict[str, Any]) -> int:
+    return int(case["lines"].split(" of ")[1].split()[0])
+
+
+def readme_blocks(res: dict[str, Any], run_path: str) -> dict[str, str]:
+    meta, fields, lines, flags = res["metadata"], res["fields"], res["lines"], res["flags"]
+    docs = res["document_accuracy"]
+    error_types = [name for name, r in res["per_field"].items() if r["errors"]]
+    errors_by_type = ", ".join(f"{res['per_field'][n]['errors']} {n}" for n in error_types)
+    amb = fields["ambiguous"]
+    results = [
+        f"Baseline: one run of `{meta['prompt_version']}` with `{meta['model']}` on the frozen "
+        f"{res['status']['documents']}-document test set (commit `{meta['git_commit'][:7]}`, "
+        f"metric definitions v{res['metrics_version']}, {coverage_sentence(res)}). It was "
+        "recorded before any fix and is the headline result; nothing was tuned on the test "
+        f"set. Full report: [`report.md`]({run_path}/report.md), notes: "
+        f"[`baseline.md`]({run_path}/baseline.md).",
+        "",
+        *_table(
+            ["Metric", "Result"],
+            [
+                [
+                    "Field accuracy, end to end (layer 2, decided)",
+                    f"{pct(fields['layer2_decided'])}, {amb['total']} ambiguous excluded",
+                ],
+                ["Field accuracy, end to end (layer 2, strict)", pct(fields["layer2_strict"])],
+                ["Printed string copied exactly (layer 1)", pct(fields["layer1"])],
+                ["Documents with all 9 header fields right", pct(docs["header_only"])],
+                ["Documents fully right (header and every line)", pct(docs["full"])],
+                ["Line items fully right (recall)", pct(lines["recall"])],
+                [
+                    "Ambiguous fields (flagged for review)",
+                    f"{amb['total']} ({amb['document_ambiguity']} document, "
+                    f"{amb['induced_ambiguity']} induced)",
+                ],
+                ["Errors flagged for review (flag recall)", pct(flags["recall"])],
+                ["Review items per document (mean)", flags["review_items_per_document"]["mean"]],
+            ],
+        ),  # fmt: skip
+        "",
+        f"Errors by field: {errors_by_type or 'none'}.",
+    ]
+    sku = next((g for g in res["groups"] if g["key"] == "sku_column"), None)
+    item_codes = ""
+    if sku:
+        wrong = [c for c in sku["cases"] if c["errors"]]
+        right = [c["doc_id"] for c in sku["cases"] if not c["errors"]]
+        detail = ", ".join(f"{c['doc_id']}: {len(c['errors'])} of {_lines_total(c)}" for c in wrong)
+        description = res["per_field"]["description"]
+        item_codes = (
+            f"Measured on the test-set baseline: {description['errors']} of "
+            f"{description['layer2_strict']['d']} line-item descriptions came back as "
+            f"`<item code> <description>` ({detail}), and {flags['flagged_error_fields']} of "
+            f"{flags['error_fields']} errors were flagged. Item-code tables extracted "
+            f"correctly: {', '.join(right) or 'none'} (wrapped descriptions)."
+        )
+    return {"results": "\n".join(results), "item-codes": item_codes}
+
+
+def replace_block(text: str, name: str, body: str) -> str:
+    """Put ``body`` between the markers, keeping the start marker's indentation
+    (so a block inside a list item stays part of that item)."""
+    start, end = f"<!-- generated:{name} -->", f"<!-- /generated:{name} -->"
+    before, rest = text.split(start, 1)
+    _, after = rest.split(end, 1)
+    newline = "\n"
+    indent = before[before.rfind(newline) + 1 :]
+    lines = [indent + line if line else line for line in body.split(newline)]
+    return f"{before}{start}{newline}" + newline.join(lines) + f"{newline}{indent}{end}{after}"
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m eval.report", description=__doc__)
     parser.add_argument("run_dir", type=Path)
+    parser.add_argument(
+        "--readme", action="store_true", help="also rewrite the generated blocks in README.md"
+    )
     args = parser.parse_args(argv)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     run_dir = args.run_dir if args.run_dir.is_absolute() else REPO_ROOT / args.run_dir
     results = json.loads((run_dir / "results.json").read_text(encoding="utf-8"))
+    if args.readme:
+        text = README.read_text(encoding="utf-8")
+        run_path = run_dir.relative_to(REPO_ROOT).as_posix()
+        for name, body in readme_blocks(results, run_path).items():
+            text = replace_block(text, name, body)
+        README.write_text(text, encoding="utf-8", newline="\n")
+        print(f"updated the generated blocks in {README.name}")
+        return 0
     report = build_report(results)
     (run_dir / "report.md").write_text(report, encoding="utf-8")
     print(report)
