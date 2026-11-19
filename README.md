@@ -1,5 +1,7 @@
 # Invoice Extraction with Human Review
 
+[![CI](https://github.com/Sarthak-1729/invoice-extraction-review/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Sarthak-1729/invoice-extraction-review/actions/workflows/ci.yml)
+
 Upload text-based PDF invoices, extract structured fields with an LLM, validate
 them with Pydantic, flag risky fields with deterministic checks, and let a
 person review, correct and approve the result before exporting it.
