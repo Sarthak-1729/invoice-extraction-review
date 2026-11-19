@@ -1,0 +1,3429 @@
+{
+  "metadata": {
+    "set": "test",
+    "set_sha256": "5584672000bc2df17eacdbc4e8c7f442e0f214ce1182f1f47b8fa8e55f005681",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "extraction_v4",
+    "prompt_hash": "852b70c465cb48cf452a552d3214b5206e1d9153c3ee2ac8a91ffb52174b0c2c",
+    "settings": {
+      "gemini_thinking_level": null,
+      "gemini_max_output_tokens": 16384,
+      "gemini_timeout_seconds": 120.0,
+      "gemini_min_interval_seconds": 6.0,
+      "llm_transient_retries": 3,
+      "llm_max_backoff_seconds": 60.0,
+      "max_pages": 20
+    },
+    "metrics_version": "1.1",
+    "git_commit": "f451523bbb2d664dd7262c60828ba3016d605018",
+    "git_dirty": false,
+    "dirty_files": [],
+    "created": "2026-11-18T12:45:36+00:00"
+  },
+  "runs": [
+    {
+      "run_number": 1,
+      "documents": [
+        "test-01",
+        "test-02",
+        "test-03",
+        "test-04",
+        "test-05",
+        "test-06",
+        "test-07",
+        "test-08",
+        "test-09",
+        "test-10",
+        "test-11",
+        "test-12",
+        "test-13",
+        "test-14",
+        "test-15",
+        "test-16",
+        "test-17",
+        "test-18",
+        "test-19",
+        "test-20",
+        "test-21",
+        "test-22",
+        "test-23",
+        "test-24"
+      ],
+      "sessions": [
+        {
+          "started": "2026-11-18T12:45:36+00:00",
+          "ended": "2026-11-18T12:51:20+00:00",
+          "stopped": null,
+          "git_commit": "f451523bbb2d664dd7262c60828ba3016d605018"
+        }
+      ],
+      "ended": "2026-11-18T12:51:20+00:00"
+    }
+  ],
+  "computed": "2026-11-18T12:51:30+00:00",
+  "metrics_version": "1.1",
+  "status": {
+    "complete": true,
+    "documents": 24,
+    "scored": 24,
+    "successes": 24,
+    "model_failures": [],
+    "never_succeeded_infrastructure": [],
+    "pending_infrastructure_retry": [],
+    "not_attempted": []
+  },
+  "fields": {
+    "field_instances": 1644,
+    "layer1": {
+      "n": 1349,
+      "d": 1644,
+      "pct": 82.1
+    },
+    "layer2_strict": {
+      "n": 1548,
+      "d": 1644,
+      "pct": 94.2
+    },
+    "layer2_decided": {
+      "n": 1548,
+      "d": 1640,
+      "pct": 94.4
+    },
+    "outcomes": {
+      "correct": 1537,
+      "correct_absent": 11,
+      "wrong": 92,
+      "missing": 0,
+      "hallucinated": 0,
+      "ambiguous": 4
+    },
+    "errors": 92,
+    "ambiguous": {
+      "total": 4,
+      "document_ambiguity": 4,
+      "induced_ambiguity": 0
+    },
+    "currency_layer1_exceptions": 0
+  },
+  "layer2_strict_worst_case": null,
+  "per_field": {
+    "invoice_number": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "vendor_name": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "bill_to_name": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "invoice_date": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 23,
+        "d": 24,
+        "pct": 95.8
+      },
+      "layer2_decided": {
+        "n": 23,
+        "d": 23,
+        "pct": 100.0
+      },
+      "ambiguous": 1,
+      "errors": 0
+    },
+    "due_date": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 23,
+        "d": 24,
+        "pct": 95.8
+      },
+      "layer2_decided": {
+        "n": 23,
+        "d": 23,
+        "pct": 100.0
+      },
+      "ambiguous": 1,
+      "errors": 0
+    },
+    "currency": {
+      "layer1": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 22,
+        "d": 24,
+        "pct": 91.7
+      },
+      "layer2_decided": {
+        "n": 22,
+        "d": 22,
+        "pct": 100.0
+      },
+      "ambiguous": 2,
+      "errors": 0
+    },
+    "subtotal": {
+      "layer1": {
+        "n": 17,
+        "d": 24,
+        "pct": 70.8
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "tax": {
+      "layer1": {
+        "n": 17,
+        "d": 24,
+        "pct": 70.8
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "total": {
+      "layer1": {
+        "n": 17,
+        "d": 24,
+        "pct": 70.8
+      },
+      "layer2_strict": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 24,
+        "d": 24,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "description": {
+      "layer1": {
+        "n": 265,
+        "d": 357,
+        "pct": 74.2
+      },
+      "layer2_strict": {
+        "n": 265,
+        "d": 357,
+        "pct": 74.2
+      },
+      "layer2_decided": {
+        "n": 265,
+        "d": 357,
+        "pct": 74.2
+      },
+      "ambiguous": 0,
+      "errors": 92
+    },
+    "quantity": {
+      "layer1": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "layer2_strict": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "unit_price": {
+      "layer1": {
+        "n": 266,
+        "d": 357,
+        "pct": 74.5
+      },
+      "layer2_strict": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    },
+    "amount": {
+      "layer1": {
+        "n": 266,
+        "d": 357,
+        "pct": 74.5
+      },
+      "layer2_strict": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "layer2_decided": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "ambiguous": 0,
+      "errors": 0
+    }
+  },
+  "document_accuracy": {
+    "header_only": {
+      "n": 21,
+      "d": 24,
+      "pct": 87.5
+    },
+    "full": {
+      "n": 18,
+      "d": 24,
+      "pct": 75.0
+    },
+    "only_ambiguous_problems": 3
+  },
+  "lines": {
+    "truth_lines": 357,
+    "predicted_lines": 357,
+    "matched_lines": 357,
+    "true_positive_lines": 265,
+    "precision": {
+      "n": 265,
+      "d": 357,
+      "pct": 74.2
+    },
+    "recall": {
+      "n": 265,
+      "d": 357,
+      "pct": 74.2
+    },
+    "f1_pct": 74.2,
+    "match_rate": {
+      "n": 357,
+      "d": 357,
+      "pct": 100.0
+    },
+    "field_accuracy_over_matched": {
+      "description": {
+        "n": 265,
+        "d": 357,
+        "pct": 74.2
+      },
+      "quantity": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "unit_price": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      },
+      "amount": {
+        "n": 357,
+        "d": 357,
+        "pct": 100.0
+      }
+    }
+  },
+  "arithmetic": {
+    "consistent_valid": {
+      "n": 20,
+      "d": 20,
+      "pct": 100.0
+    },
+    "consistent_with_flags": [],
+    "deliberate_cases": [
+      {
+        "doc_id": "test-03",
+        "expected_code": "TOTAL_MISMATCH",
+        "expected_fired": true,
+        "arithmetic_flags": {
+          "TOTAL_MISMATCH": [
+            "subtotal",
+            "tax",
+            "total"
+          ]
+        },
+        "extraction_failed": false
+      },
+      {
+        "doc_id": "test-08",
+        "expected_code": "SUBTOTAL_MISMATCH",
+        "expected_fired": true,
+        "arithmetic_flags": {
+          "SUBTOTAL_MISMATCH": [
+            "subtotal",
+            "line_items"
+          ]
+        },
+        "extraction_failed": false
+      },
+      {
+        "doc_id": "test-16",
+        "expected_code": "LINE_AMOUNT_MISMATCH",
+        "expected_fired": true,
+        "arithmetic_flags": {
+          "LINE_AMOUNT_MISMATCH": [
+            "line_items[0].quantity",
+            "line_items[0].unit_price",
+            "line_items[0].amount"
+          ]
+        },
+        "extraction_failed": false
+      },
+      {
+        "doc_id": "test-20",
+        "expected_code": "LINE_AMOUNT_MISMATCH",
+        "expected_fired": true,
+        "arithmetic_flags": {
+          "LINE_AMOUNT_MISMATCH": [
+            "line_items[41].quantity",
+            "line_items[41].unit_price",
+            "line_items[41].amount"
+          ]
+        },
+        "extraction_failed": false
+      }
+    ]
+  },
+  "flags": {
+    "error_fields": 92,
+    "flagged_error_fields": 0,
+    "false_alarms": 0,
+    "explained_flags_on_accurate_fields": 22,
+    "recall": {
+      "n": 0,
+      "d": 92,
+      "pct": 0.0
+    },
+    "precision": {
+      "n": 0,
+      "d": 0,
+      "pct": null
+    },
+    "errors_in_failed_documents": 0,
+    "missed_errors_per_document": {
+      "unflagged_errors": 92,
+      "documents": 24,
+      "value": 3.83
+    },
+    "review_items_per_document": {
+      "mean": 0.62,
+      "median": 0.0,
+      "n_documents": 24
+    },
+    "flagged_instances_per_document": {
+      "mean": 1.08,
+      "median": 0.0,
+      "n_documents": 24
+    },
+    "flags_on_unmatched_predicted_lines": 0,
+    "reference": {
+      "no_review": {
+        "load": 0,
+        "recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "review_every_field": {
+        "load_per_document": {
+          "mean": 68.5,
+          "median": 35.0,
+          "n_documents": 24
+        },
+        "recall": {
+          "n": 92,
+          "d": 92,
+          "pct": 100.0
+        }
+      }
+    }
+  },
+  "groups": [
+    {
+      "key": "layout:classic_us",
+      "label": "Layout: classic_us",
+      "doc_ids": [
+        "test-01",
+        "test-02",
+        "test-03",
+        "test-04",
+        "test-05",
+        "test-06"
+      ],
+      "not_scored": [],
+      "case_study": false,
+      "counts": {
+        "documents": 6,
+        "field_instances": 174,
+        "layer1": {
+          "n": 163,
+          "d": 174,
+          "pct": 93.7
+        },
+        "layer2_strict": {
+          "n": 173,
+          "d": 174,
+          "pct": 99.4
+        },
+        "layer2_decided": {
+          "n": 173,
+          "d": 173,
+          "pct": 100.0
+        },
+        "ambiguous": 1,
+        "errors": 0,
+        "line_recall": {
+          "n": 30,
+          "d": 30,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 18,
+        "field_instances": 1470,
+        "layer1": {
+          "n": 1186,
+          "d": 1470,
+          "pct": 80.7
+        },
+        "layer2_strict": {
+          "n": 1375,
+          "d": 1470,
+          "pct": 93.5
+        },
+        "layer2_decided": {
+          "n": 1375,
+          "d": 1467,
+          "pct": 93.7
+        },
+        "ambiguous": 3,
+        "errors": 92,
+        "line_recall": {
+          "n": 235,
+          "d": 327,
+          "pct": 71.9
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      }
+    },
+    {
+      "key": "layout:european",
+      "label": "Layout: european",
+      "doc_ids": [
+        "test-07",
+        "test-08",
+        "test-09",
+        "test-10",
+        "test-11",
+        "test-12"
+      ],
+      "not_scored": [],
+      "case_study": false,
+      "counts": {
+        "documents": 6,
+        "field_instances": 182,
+        "layer1": {
+          "n": 139,
+          "d": 182,
+          "pct": 76.4
+        },
+        "layer2_strict": {
+          "n": 182,
+          "d": 182,
+          "pct": 100.0
+        },
+        "layer2_decided": {
+          "n": 182,
+          "d": 182,
+          "pct": 100.0
+        },
+        "ambiguous": 0,
+        "errors": 0,
+        "line_recall": {
+          "n": 32,
+          "d": 32,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 18,
+        "field_instances": 1462,
+        "layer1": {
+          "n": 1210,
+          "d": 1462,
+          "pct": 82.8
+        },
+        "layer2_strict": {
+          "n": 1366,
+          "d": 1462,
+          "pct": 93.4
+        },
+        "layer2_decided": {
+          "n": 1366,
+          "d": 1458,
+          "pct": 93.7
+        },
+        "ambiguous": 4,
+        "errors": 92,
+        "line_recall": {
+          "n": 233,
+          "d": 325,
+          "pct": 71.7
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      }
+    },
+    {
+      "key": "layout:modern",
+      "label": "Layout: modern",
+      "doc_ids": [
+        "test-13",
+        "test-14",
+        "test-15",
+        "test-16",
+        "test-17",
+        "test-18"
+      ],
+      "not_scored": [],
+      "case_study": false,
+      "counts": {
+        "documents": 6,
+        "field_instances": 206,
+        "layer1": {
+          "n": 172,
+          "d": 206,
+          "pct": 83.5
+        },
+        "layer2_strict": {
+          "n": 205,
+          "d": 206,
+          "pct": 99.5
+        },
+        "layer2_decided": {
+          "n": 205,
+          "d": 205,
+          "pct": 100.0
+        },
+        "ambiguous": 1,
+        "errors": 0,
+        "line_recall": {
+          "n": 38,
+          "d": 38,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 18,
+        "field_instances": 1438,
+        "layer1": {
+          "n": 1177,
+          "d": 1438,
+          "pct": 81.8
+        },
+        "layer2_strict": {
+          "n": 1343,
+          "d": 1438,
+          "pct": 93.4
+        },
+        "layer2_decided": {
+          "n": 1343,
+          "d": 1435,
+          "pct": 93.6
+        },
+        "ambiguous": 3,
+        "errors": 92,
+        "line_recall": {
+          "n": 227,
+          "d": 319,
+          "pct": 71.2
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      }
+    },
+    {
+      "key": "layout:multipage",
+      "label": "Layout: multipage",
+      "doc_ids": [
+        "test-19",
+        "test-20",
+        "test-21",
+        "test-22",
+        "test-23",
+        "test-24"
+      ],
+      "not_scored": [],
+      "case_study": false,
+      "counts": {
+        "documents": 6,
+        "field_instances": 1082,
+        "layer1": {
+          "n": 875,
+          "d": 1082,
+          "pct": 80.9
+        },
+        "layer2_strict": {
+          "n": 988,
+          "d": 1082,
+          "pct": 91.3
+        },
+        "layer2_decided": {
+          "n": 988,
+          "d": 1080,
+          "pct": 91.5
+        },
+        "ambiguous": 2,
+        "errors": 92,
+        "line_recall": {
+          "n": 165,
+          "d": 257,
+          "pct": 64.2
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 18,
+        "field_instances": 562,
+        "layer1": {
+          "n": 474,
+          "d": 562,
+          "pct": 84.3
+        },
+        "layer2_strict": {
+          "n": 560,
+          "d": 562,
+          "pct": 99.6
+        },
+        "layer2_decided": {
+          "n": 560,
+          "d": 560,
+          "pct": 100.0
+        },
+        "ambiguous": 2,
+        "errors": 0,
+        "line_recall": {
+          "n": 100,
+          "d": 100,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      }
+    },
+    {
+      "key": "currency:JPY",
+      "label": "Currency JPY",
+      "doc_ids": [
+        "test-14",
+        "test-18",
+        "test-24"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 3,
+        "field_instances": 231,
+        "layer1": {
+          "n": 224,
+          "d": 231,
+          "pct": 97.0
+        },
+        "layer2_strict": {
+          "n": 224,
+          "d": 231,
+          "pct": 97.0
+        },
+        "layer2_decided": {
+          "n": 224,
+          "d": 231,
+          "pct": 97.0
+        },
+        "ambiguous": 0,
+        "errors": 7,
+        "line_recall": {
+          "n": 44,
+          "d": 51,
+          "pct": 86.3
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 7,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 21,
+        "field_instances": 1413,
+        "layer1": {
+          "n": 1125,
+          "d": 1413,
+          "pct": 79.6
+        },
+        "layer2_strict": {
+          "n": 1324,
+          "d": 1413,
+          "pct": 93.7
+        },
+        "layer2_decided": {
+          "n": 1324,
+          "d": 1409,
+          "pct": 94.0
+        },
+        "ambiguous": 4,
+        "errors": 85,
+        "line_recall": {
+          "n": 221,
+          "d": 306,
+          "pct": 72.2
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 85,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-14",
+          "outcome": "success",
+          "layer1": "29 of 29 fields",
+          "layer2": "29 of 29 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "5 of 5 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-18",
+          "outcome": "success",
+          "layer1": "41 of 41 fields",
+          "layer2": "41 of 41 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "8 of 8 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-24",
+          "outcome": "success",
+          "layer1": "154 of 161 fields",
+          "layer2": "154 of 161 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "B769-75 Label printer tape #2835",
+              "printed": "Label printer tape #2835"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "T135-83 Whiteboard markers (pack of 12) #4778",
+              "printed": "Whiteboard markers (pack of 12) #4778"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "F810-62 USB-C docking station #8606",
+              "printed": "USB-C docking station #8606"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "R814-86 Whiteboard markers (pack of 12) #3229",
+              "printed": "Whiteboard markers (pack of 12) #3229"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "D415-38 USB-C docking station #7042",
+              "printed": "USB-C docking station #7042"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "F607-76 Laser toner cartridge #3316",
+              "printed": "Laser toner cartridge #3316"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "R801-63 A4 copy paper (box of 5 reams) #7345",
+              "printed": "A4 copy paper (box of 5 reams) #7345"
+            }
+          ],
+          "lines": "38 of 38 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "currency:CAD",
+      "label": "Currency CAD",
+      "doc_ids": [
+        "test-04",
+        "test-21"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 2,
+        "field_instances": 262,
+        "layer1": {
+          "n": 147,
+          "d": 262,
+          "pct": 56.1
+        },
+        "layer2_strict": {
+          "n": 262,
+          "d": 262,
+          "pct": 100.0
+        },
+        "layer2_decided": {
+          "n": 262,
+          "d": 262,
+          "pct": 100.0
+        },
+        "ambiguous": 0,
+        "errors": 0,
+        "line_recall": {
+          "n": 61,
+          "d": 61,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 22,
+        "field_instances": 1382,
+        "layer1": {
+          "n": 1202,
+          "d": 1382,
+          "pct": 87.0
+        },
+        "layer2_strict": {
+          "n": 1286,
+          "d": 1382,
+          "pct": 93.1
+        },
+        "layer2_decided": {
+          "n": 1286,
+          "d": 1378,
+          "pct": 93.3
+        },
+        "ambiguous": 4,
+        "errors": 92,
+        "line_recall": {
+          "n": 204,
+          "d": 296,
+          "pct": 68.9
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-04",
+          "outcome": "success",
+          "layer1": "29 of 29 fields",
+          "layer2": "29 of 29 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "5 of 5 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-21",
+          "outcome": "success",
+          "layer1": "118 of 233 fields",
+          "layer2": "233 of 233 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "56 of 56 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "currency:other",
+      "label": "Other currencies",
+      "doc_ids": [
+        "test-01",
+        "test-02",
+        "test-03",
+        "test-05",
+        "test-06",
+        "test-07",
+        "test-08",
+        "test-09",
+        "test-10",
+        "test-11",
+        "test-12",
+        "test-13",
+        "test-15",
+        "test-16",
+        "test-17",
+        "test-19",
+        "test-20",
+        "test-22",
+        "test-23"
+      ],
+      "not_scored": [],
+      "case_study": false,
+      "counts": {
+        "documents": 19,
+        "field_instances": 1151,
+        "layer1": {
+          "n": 978,
+          "d": 1151,
+          "pct": 85.0
+        },
+        "layer2_strict": {
+          "n": 1062,
+          "d": 1151,
+          "pct": 92.3
+        },
+        "layer2_decided": {
+          "n": 1062,
+          "d": 1147,
+          "pct": 92.6
+        },
+        "ambiguous": 4,
+        "errors": 85,
+        "line_recall": {
+          "n": 160,
+          "d": 245,
+          "pct": 65.3
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 85,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 5,
+        "field_instances": 493,
+        "layer1": {
+          "n": 371,
+          "d": 493,
+          "pct": 75.3
+        },
+        "layer2_strict": {
+          "n": 486,
+          "d": 493,
+          "pct": 98.6
+        },
+        "layer2_decided": {
+          "n": 486,
+          "d": 493,
+          "pct": 98.6
+        },
+        "ambiguous": 0,
+        "errors": 7,
+        "line_recall": {
+          "n": 105,
+          "d": 112,
+          "pct": 93.8
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 7,
+          "pct": 0.0
+        }
+      }
+    },
+    {
+      "key": "numbers:plain",
+      "label": "Plain numbers (no separators)",
+      "doc_ids": [
+        "test-21"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 1,
+        "field_instances": 233,
+        "layer1": {
+          "n": 118,
+          "d": 233,
+          "pct": 50.6
+        },
+        "layer2_strict": {
+          "n": 233,
+          "d": 233,
+          "pct": 100.0
+        },
+        "layer2_decided": {
+          "n": 233,
+          "d": 233,
+          "pct": 100.0
+        },
+        "ambiguous": 0,
+        "errors": 0,
+        "line_recall": {
+          "n": 56,
+          "d": 56,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 23,
+        "field_instances": 1411,
+        "layer1": {
+          "n": 1231,
+          "d": 1411,
+          "pct": 87.2
+        },
+        "layer2_strict": {
+          "n": 1315,
+          "d": 1411,
+          "pct": 93.2
+        },
+        "layer2_decided": {
+          "n": 1315,
+          "d": 1407,
+          "pct": 93.5
+        },
+        "ambiguous": 4,
+        "errors": 92,
+        "line_recall": {
+          "n": 209,
+          "d": 301,
+          "pct": 69.4
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-21",
+          "outcome": "success",
+          "layer1": "118 of 233 fields",
+          "layer2": "233 of 233 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "56 of 56 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "amount_before_qty",
+      "label": "Amount column before quantity",
+      "doc_ids": [
+        "test-20",
+        "test-23"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 2,
+        "field_instances": 350,
+        "layer1": {
+          "n": 308,
+          "d": 350,
+          "pct": 88.0
+        },
+        "layer2_strict": {
+          "n": 308,
+          "d": 350,
+          "pct": 88.0
+        },
+        "layer2_decided": {
+          "n": 308,
+          "d": 350,
+          "pct": 88.0
+        },
+        "ambiguous": 0,
+        "errors": 42,
+        "line_recall": {
+          "n": 41,
+          "d": 83,
+          "pct": 49.4
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 42,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 22,
+        "field_instances": 1294,
+        "layer1": {
+          "n": 1041,
+          "d": 1294,
+          "pct": 80.4
+        },
+        "layer2_strict": {
+          "n": 1240,
+          "d": 1294,
+          "pct": 95.8
+        },
+        "layer2_decided": {
+          "n": 1240,
+          "d": 1290,
+          "pct": 96.1
+        },
+        "ambiguous": 4,
+        "errors": 50,
+        "line_recall": {
+          "n": 224,
+          "d": 274,
+          "pct": 81.8
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 50,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-20",
+          "outcome": "success",
+          "layer1": "135 of 177 fields",
+          "layer2": "135 of 177 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[0].description",
+              "outcome": "wrong",
+              "raw": "T635-49 Whiteboard markers (pack of 12) #7870",
+              "printed": "Whiteboard markers (pack of 12) #7870"
+            },
+            {
+              "path": "line_items[1].description",
+              "outcome": "wrong",
+              "raw": "D587-59 Network switch, 8-port #3595",
+              "printed": "Network switch, 8-port #3595"
+            },
+            {
+              "path": "line_items[2].description",
+              "outcome": "wrong",
+              "raw": "A558-70 Label printer tape #2501",
+              "printed": "Label printer tape #2501"
+            },
+            {
+              "path": "line_items[3].description",
+              "outcome": "wrong",
+              "raw": "H579-54 Laser toner cartridge #4933",
+              "printed": "Laser toner cartridge #4933"
+            },
+            {
+              "path": "line_items[4].description",
+              "outcome": "wrong",
+              "raw": "M844-88 USB-C docking station #7713",
+              "printed": "USB-C docking station #7713"
+            },
+            {
+              "path": "line_items[5].description",
+              "outcome": "wrong",
+              "raw": "D304-87 Standing desk frame #4363",
+              "printed": "Standing desk frame #4363"
+            },
+            {
+              "path": "line_items[6].description",
+              "outcome": "wrong",
+              "raw": "A802-50 Label printer tape #3439",
+              "printed": "Label printer tape #3439"
+            },
+            {
+              "path": "line_items[7].description",
+              "outcome": "wrong",
+              "raw": "F889-14 Laser toner cartridge #8411",
+              "printed": "Laser toner cartridge #8411"
+            },
+            {
+              "path": "line_items[8].description",
+              "outcome": "wrong",
+              "raw": "B752-88 Ergonomic office chair #3649",
+              "printed": "Ergonomic office chair #3649"
+            },
+            {
+              "path": "line_items[9].description",
+              "outcome": "wrong",
+              "raw": "B719-10 Laser toner cartridge #9805",
+              "printed": "Laser toner cartridge #9805"
+            },
+            {
+              "path": "line_items[10].description",
+              "outcome": "wrong",
+              "raw": "T448-20 Acoustic wall panel #8791",
+              "printed": "Acoustic wall panel #8791"
+            },
+            {
+              "path": "line_items[11].description",
+              "outcome": "wrong",
+              "raw": "T961-98 Cable management kit #1669",
+              "printed": "Cable management kit #1669"
+            },
+            {
+              "path": "line_items[12].description",
+              "outcome": "wrong",
+              "raw": "P706-63 Laser toner cartridge #1808",
+              "printed": "Laser toner cartridge #1808"
+            },
+            {
+              "path": "line_items[13].description",
+              "outcome": "wrong",
+              "raw": "R698-76 Webcam 1080p #6651",
+              "printed": "Webcam 1080p #6651"
+            },
+            {
+              "path": "line_items[14].description",
+              "outcome": "wrong",
+              "raw": "C982-50 Webcam 1080p #4555",
+              "printed": "Webcam 1080p #4555"
+            },
+            {
+              "path": "line_items[15].description",
+              "outcome": "wrong",
+              "raw": "P177-88 Ergonomic office chair #9714",
+              "printed": "Ergonomic office chair #9714"
+            },
+            {
+              "path": "line_items[16].description",
+              "outcome": "wrong",
+              "raw": "P487-67 Acoustic wall panel #2532",
+              "printed": "Acoustic wall panel #2532"
+            },
+            {
+              "path": "line_items[17].description",
+              "outcome": "wrong",
+              "raw": "K757-56 Label printer tape #5308",
+              "printed": "Label printer tape #5308"
+            },
+            {
+              "path": "line_items[18].description",
+              "outcome": "wrong",
+              "raw": "H690-60 Cable management kit #3546",
+              "printed": "Cable management kit #3546"
+            },
+            {
+              "path": "line_items[19].description",
+              "outcome": "wrong",
+              "raw": "C533-71 LED desk lamp #9832",
+              "printed": "LED desk lamp #9832"
+            },
+            {
+              "path": "line_items[20].description",
+              "outcome": "wrong",
+              "raw": "M394-42 A4 copy paper (box of 5 reams) #8600",
+              "printed": "A4 copy paper (box of 5 reams) #8600"
+            },
+            {
+              "path": "line_items[21].description",
+              "outcome": "wrong",
+              "raw": "C461-35 USB-C docking station #6032",
+              "printed": "USB-C docking station #6032"
+            },
+            {
+              "path": "line_items[22].description",
+              "outcome": "wrong",
+              "raw": "T576-20 Network switch, 8-port #8533",
+              "printed": "Network switch, 8-port #8533"
+            },
+            {
+              "path": "line_items[23].description",
+              "outcome": "wrong",
+              "raw": "H601-97 USB-C docking station #9444",
+              "printed": "USB-C docking station #9444"
+            },
+            {
+              "path": "line_items[24].description",
+              "outcome": "wrong",
+              "raw": "A817-79 LED desk lamp #9559",
+              "printed": "LED desk lamp #9559"
+            },
+            {
+              "path": "line_items[25].description",
+              "outcome": "wrong",
+              "raw": "C243-43 Label printer tape #4941",
+              "printed": "Label printer tape #4941"
+            },
+            {
+              "path": "line_items[26].description",
+              "outcome": "wrong",
+              "raw": "T374-40 Acoustic wall panel #5023",
+              "printed": "Acoustic wall panel #5023"
+            },
+            {
+              "path": "line_items[27].description",
+              "outcome": "wrong",
+              "raw": "D816-96 Label printer tape #5821",
+              "printed": "Label printer tape #5821"
+            },
+            {
+              "path": "line_items[28].description",
+              "outcome": "wrong",
+              "raw": "E288-71 A4 copy paper (box of 5 reams) #3099",
+              "printed": "A4 copy paper (box of 5 reams) #3099"
+            },
+            {
+              "path": "line_items[29].description",
+              "outcome": "wrong",
+              "raw": "T464-47 Acoustic wall panel #7929",
+              "printed": "Acoustic wall panel #7929"
+            },
+            {
+              "path": "line_items[30].description",
+              "outcome": "wrong",
+              "raw": "P842-79 Monitor arm #5754",
+              "printed": "Monitor arm #5754"
+            },
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "B963-32 Wireless keyboard #8361",
+              "printed": "Wireless keyboard #8361"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "P100-28 Webcam 1080p #6722",
+              "printed": "Webcam 1080p #6722"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "F192-47 Standing desk frame #2628",
+              "printed": "Standing desk frame #2628"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "A285-52 Ergonomic office chair #4848",
+              "printed": "Ergonomic office chair #4848"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "F335-74 Label printer tape #4927",
+              "printed": "Label printer tape #4927"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "A638-76 Network switch, 8-port #9876",
+              "printed": "Network switch, 8-port #9876"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "T526-32 Cable management kit #9205",
+              "printed": "Cable management kit #9205"
+            },
+            {
+              "path": "line_items[38].description",
+              "outcome": "wrong",
+              "raw": "D744-40 Standing desk frame #1738",
+              "printed": "Standing desk frame #1738"
+            },
+            {
+              "path": "line_items[39].description",
+              "outcome": "wrong",
+              "raw": "D530-34 Network switch, 8-port #2602",
+              "printed": "Network switch, 8-port #2602"
+            },
+            {
+              "path": "line_items[40].description",
+              "outcome": "wrong",
+              "raw": "M782-52 Wireless keyboard #1948",
+              "printed": "Wireless keyboard #1948"
+            },
+            {
+              "path": "line_items[41].description",
+              "outcome": "wrong",
+              "raw": "E389-94 Whiteboard markers (pack of 12) #4986",
+              "printed": "Whiteboard markers (pack of 12) #4986"
+            }
+          ],
+          "lines": "42 of 42 matched, 0 extra",
+          "flags": [
+            "LINE_AMOUNT_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "LINE_AMOUNT_MISMATCH"
+        },
+        {
+          "doc_id": "test-23",
+          "outcome": "success",
+          "layer1": "173 of 173 fields",
+          "layer2": "173 of 173 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "41 of 41 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "sku_column",
+      "label": "SKU / item-code column",
+      "doc_ids": [
+        "test-19",
+        "test-20",
+        "test-22",
+        "test-24"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 4,
+        "field_instances": 676,
+        "layer1": {
+          "n": 584,
+          "d": 676,
+          "pct": 86.4
+        },
+        "layer2_strict": {
+          "n": 582,
+          "d": 676,
+          "pct": 86.1
+        },
+        "layer2_decided": {
+          "n": 582,
+          "d": 674,
+          "pct": 86.4
+        },
+        "ambiguous": 2,
+        "errors": 92,
+        "line_recall": {
+          "n": 68,
+          "d": 160,
+          "pct": 42.5
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 20,
+        "field_instances": 968,
+        "layer1": {
+          "n": 765,
+          "d": 968,
+          "pct": 79.0
+        },
+        "layer2_strict": {
+          "n": 966,
+          "d": 968,
+          "pct": 99.8
+        },
+        "layer2_decided": {
+          "n": 966,
+          "d": 966,
+          "pct": 100.0
+        },
+        "ambiguous": 2,
+        "errors": 0,
+        "line_recall": {
+          "n": 197,
+          "d": 197,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-19",
+          "outcome": "success",
+          "layer1": "138 of 181 fields",
+          "layer2": "138 of 181 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[0].description",
+              "outcome": "wrong",
+              "raw": "A599-19 Standing desk frame #5085",
+              "printed": "Standing desk frame #5085"
+            },
+            {
+              "path": "line_items[1].description",
+              "outcome": "wrong",
+              "raw": "C366-20 Webcam 1080p #6196",
+              "printed": "Webcam 1080p #6196"
+            },
+            {
+              "path": "line_items[2].description",
+              "outcome": "wrong",
+              "raw": "M586-34 Cable management kit #5785",
+              "printed": "Cable management kit #5785"
+            },
+            {
+              "path": "line_items[3].description",
+              "outcome": "wrong",
+              "raw": "F204-30 Monitor arm #4925",
+              "printed": "Monitor arm #4925"
+            },
+            {
+              "path": "line_items[4].description",
+              "outcome": "wrong",
+              "raw": "M941-42 Webcam 1080p #7866",
+              "printed": "Webcam 1080p #7866"
+            },
+            {
+              "path": "line_items[5].description",
+              "outcome": "wrong",
+              "raw": "F729-64 Laser toner cartridge #2170",
+              "printed": "Laser toner cartridge #2170"
+            },
+            {
+              "path": "line_items[6].description",
+              "outcome": "wrong",
+              "raw": "H627-63 Webcam 1080p #6250",
+              "printed": "Webcam 1080p #6250"
+            },
+            {
+              "path": "line_items[7].description",
+              "outcome": "wrong",
+              "raw": "T876-15 Standing desk frame #1514",
+              "printed": "Standing desk frame #1514"
+            },
+            {
+              "path": "line_items[8].description",
+              "outcome": "wrong",
+              "raw": "B142-36 Whiteboard markers (pack of 12) #7118",
+              "printed": "Whiteboard markers (pack of 12) #7118"
+            },
+            {
+              "path": "line_items[9].description",
+              "outcome": "wrong",
+              "raw": "D667-95 Whiteboard markers (pack of 12) #5437",
+              "printed": "Whiteboard markers (pack of 12) #5437"
+            },
+            {
+              "path": "line_items[10].description",
+              "outcome": "wrong",
+              "raw": "E639-18 Webcam 1080p #4332",
+              "printed": "Webcam 1080p #4332"
+            },
+            {
+              "path": "line_items[11].description",
+              "outcome": "wrong",
+              "raw": "P369-12 Acoustic wall panel #8931",
+              "printed": "Acoustic wall panel #8931"
+            },
+            {
+              "path": "line_items[12].description",
+              "outcome": "wrong",
+              "raw": "F821-44 Label printer tape #2742",
+              "printed": "Label printer tape #2742"
+            },
+            {
+              "path": "line_items[13].description",
+              "outcome": "wrong",
+              "raw": "P436-12 Ergonomic office chair #3569",
+              "printed": "Ergonomic office chair #3569"
+            },
+            {
+              "path": "line_items[14].description",
+              "outcome": "wrong",
+              "raw": "E255-20 A4 copy paper (box of 5 reams) #8238",
+              "printed": "A4 copy paper (box of 5 reams) #8238"
+            },
+            {
+              "path": "line_items[15].description",
+              "outcome": "wrong",
+              "raw": "P739-60 Monitor arm #1856",
+              "printed": "Monitor arm #1856"
+            },
+            {
+              "path": "line_items[16].description",
+              "outcome": "wrong",
+              "raw": "A220-10 Wireless keyboard #2928",
+              "printed": "Wireless keyboard #2928"
+            },
+            {
+              "path": "line_items[17].description",
+              "outcome": "wrong",
+              "raw": "T107-75 LED desk lamp #1815",
+              "printed": "LED desk lamp #1815"
+            },
+            {
+              "path": "line_items[18].description",
+              "outcome": "wrong",
+              "raw": "T189-64 Ergonomic office chair #7453",
+              "printed": "Ergonomic office chair #7453"
+            },
+            {
+              "path": "line_items[19].description",
+              "outcome": "wrong",
+              "raw": "H919-47 Whiteboard markers (pack of 12) #8643",
+              "printed": "Whiteboard markers (pack of 12) #8643"
+            },
+            {
+              "path": "line_items[20].description",
+              "outcome": "wrong",
+              "raw": "P832-33 Label printer tape #8160",
+              "printed": "Label printer tape #8160"
+            },
+            {
+              "path": "line_items[21].description",
+              "outcome": "wrong",
+              "raw": "F199-24 A4 copy paper (box of 5 reams) #7561",
+              "printed": "A4 copy paper (box of 5 reams) #7561"
+            },
+            {
+              "path": "line_items[22].description",
+              "outcome": "wrong",
+              "raw": "B635-50 Wireless keyboard #5661",
+              "printed": "Wireless keyboard #5661"
+            },
+            {
+              "path": "line_items[23].description",
+              "outcome": "wrong",
+              "raw": "H593-21 Acoustic wall panel #4484",
+              "printed": "Acoustic wall panel #4484"
+            },
+            {
+              "path": "line_items[24].description",
+              "outcome": "wrong",
+              "raw": "C941-30 Acoustic wall panel #5651",
+              "printed": "Acoustic wall panel #5651"
+            },
+            {
+              "path": "line_items[25].description",
+              "outcome": "wrong",
+              "raw": "C894-95 Cable management kit #2695",
+              "printed": "Cable management kit #2695"
+            },
+            {
+              "path": "line_items[26].description",
+              "outcome": "wrong",
+              "raw": "E729-11 Label printer tape #5998",
+              "printed": "Label printer tape #5998"
+            },
+            {
+              "path": "line_items[27].description",
+              "outcome": "wrong",
+              "raw": "R441-23 Network switch, 8-port #4093",
+              "printed": "Network switch, 8-port #4093"
+            },
+            {
+              "path": "line_items[28].description",
+              "outcome": "wrong",
+              "raw": "A500-76 Whiteboard markers (pack of 12) #1362",
+              "printed": "Whiteboard markers (pack of 12) #1362"
+            },
+            {
+              "path": "line_items[29].description",
+              "outcome": "wrong",
+              "raw": "E426-74 USB-C docking station #5861",
+              "printed": "USB-C docking station #5861"
+            },
+            {
+              "path": "line_items[30].description",
+              "outcome": "wrong",
+              "raw": "D897-54 USB-C docking station #6536",
+              "printed": "USB-C docking station #6536"
+            },
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "A368-75 LED desk lamp #3749",
+              "printed": "LED desk lamp #3749"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "P913-61 Webcam 1080p #6130",
+              "printed": "Webcam 1080p #6130"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "B755-68 Ergonomic office chair #3241",
+              "printed": "Ergonomic office chair #3241"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "D873-89 Standing desk frame #2406",
+              "printed": "Standing desk frame #2406"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "M637-87 Acoustic wall panel #9294",
+              "printed": "Acoustic wall panel #9294"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "K284-58 Monitor arm #7415",
+              "printed": "Monitor arm #7415"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "E198-13 Cable management kit #3872",
+              "printed": "Cable management kit #3872"
+            },
+            {
+              "path": "line_items[38].description",
+              "outcome": "wrong",
+              "raw": "T427-21 Acoustic wall panel #8559",
+              "printed": "Acoustic wall panel #8559"
+            },
+            {
+              "path": "line_items[39].description",
+              "outcome": "wrong",
+              "raw": "E286-46 Whiteboard markers (pack of 12) #3962",
+              "printed": "Whiteboard markers (pack of 12) #3962"
+            },
+            {
+              "path": "line_items[40].description",
+              "outcome": "wrong",
+              "raw": "F469-16 Monitor arm #9237",
+              "printed": "Monitor arm #9237"
+            },
+            {
+              "path": "line_items[41].description",
+              "outcome": "wrong",
+              "raw": "A385-40 Acoustic wall panel #4945",
+              "printed": "Acoustic wall panel #4945"
+            },
+            {
+              "path": "line_items[42].description",
+              "outcome": "wrong",
+              "raw": "C939-61 Network switch, 8-port #8024",
+              "printed": "Network switch, 8-port #8024"
+            }
+          ],
+          "lines": "43 of 43 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-20",
+          "outcome": "success",
+          "layer1": "135 of 177 fields",
+          "layer2": "135 of 177 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[0].description",
+              "outcome": "wrong",
+              "raw": "T635-49 Whiteboard markers (pack of 12) #7870",
+              "printed": "Whiteboard markers (pack of 12) #7870"
+            },
+            {
+              "path": "line_items[1].description",
+              "outcome": "wrong",
+              "raw": "D587-59 Network switch, 8-port #3595",
+              "printed": "Network switch, 8-port #3595"
+            },
+            {
+              "path": "line_items[2].description",
+              "outcome": "wrong",
+              "raw": "A558-70 Label printer tape #2501",
+              "printed": "Label printer tape #2501"
+            },
+            {
+              "path": "line_items[3].description",
+              "outcome": "wrong",
+              "raw": "H579-54 Laser toner cartridge #4933",
+              "printed": "Laser toner cartridge #4933"
+            },
+            {
+              "path": "line_items[4].description",
+              "outcome": "wrong",
+              "raw": "M844-88 USB-C docking station #7713",
+              "printed": "USB-C docking station #7713"
+            },
+            {
+              "path": "line_items[5].description",
+              "outcome": "wrong",
+              "raw": "D304-87 Standing desk frame #4363",
+              "printed": "Standing desk frame #4363"
+            },
+            {
+              "path": "line_items[6].description",
+              "outcome": "wrong",
+              "raw": "A802-50 Label printer tape #3439",
+              "printed": "Label printer tape #3439"
+            },
+            {
+              "path": "line_items[7].description",
+              "outcome": "wrong",
+              "raw": "F889-14 Laser toner cartridge #8411",
+              "printed": "Laser toner cartridge #8411"
+            },
+            {
+              "path": "line_items[8].description",
+              "outcome": "wrong",
+              "raw": "B752-88 Ergonomic office chair #3649",
+              "printed": "Ergonomic office chair #3649"
+            },
+            {
+              "path": "line_items[9].description",
+              "outcome": "wrong",
+              "raw": "B719-10 Laser toner cartridge #9805",
+              "printed": "Laser toner cartridge #9805"
+            },
+            {
+              "path": "line_items[10].description",
+              "outcome": "wrong",
+              "raw": "T448-20 Acoustic wall panel #8791",
+              "printed": "Acoustic wall panel #8791"
+            },
+            {
+              "path": "line_items[11].description",
+              "outcome": "wrong",
+              "raw": "T961-98 Cable management kit #1669",
+              "printed": "Cable management kit #1669"
+            },
+            {
+              "path": "line_items[12].description",
+              "outcome": "wrong",
+              "raw": "P706-63 Laser toner cartridge #1808",
+              "printed": "Laser toner cartridge #1808"
+            },
+            {
+              "path": "line_items[13].description",
+              "outcome": "wrong",
+              "raw": "R698-76 Webcam 1080p #6651",
+              "printed": "Webcam 1080p #6651"
+            },
+            {
+              "path": "line_items[14].description",
+              "outcome": "wrong",
+              "raw": "C982-50 Webcam 1080p #4555",
+              "printed": "Webcam 1080p #4555"
+            },
+            {
+              "path": "line_items[15].description",
+              "outcome": "wrong",
+              "raw": "P177-88 Ergonomic office chair #9714",
+              "printed": "Ergonomic office chair #9714"
+            },
+            {
+              "path": "line_items[16].description",
+              "outcome": "wrong",
+              "raw": "P487-67 Acoustic wall panel #2532",
+              "printed": "Acoustic wall panel #2532"
+            },
+            {
+              "path": "line_items[17].description",
+              "outcome": "wrong",
+              "raw": "K757-56 Label printer tape #5308",
+              "printed": "Label printer tape #5308"
+            },
+            {
+              "path": "line_items[18].description",
+              "outcome": "wrong",
+              "raw": "H690-60 Cable management kit #3546",
+              "printed": "Cable management kit #3546"
+            },
+            {
+              "path": "line_items[19].description",
+              "outcome": "wrong",
+              "raw": "C533-71 LED desk lamp #9832",
+              "printed": "LED desk lamp #9832"
+            },
+            {
+              "path": "line_items[20].description",
+              "outcome": "wrong",
+              "raw": "M394-42 A4 copy paper (box of 5 reams) #8600",
+              "printed": "A4 copy paper (box of 5 reams) #8600"
+            },
+            {
+              "path": "line_items[21].description",
+              "outcome": "wrong",
+              "raw": "C461-35 USB-C docking station #6032",
+              "printed": "USB-C docking station #6032"
+            },
+            {
+              "path": "line_items[22].description",
+              "outcome": "wrong",
+              "raw": "T576-20 Network switch, 8-port #8533",
+              "printed": "Network switch, 8-port #8533"
+            },
+            {
+              "path": "line_items[23].description",
+              "outcome": "wrong",
+              "raw": "H601-97 USB-C docking station #9444",
+              "printed": "USB-C docking station #9444"
+            },
+            {
+              "path": "line_items[24].description",
+              "outcome": "wrong",
+              "raw": "A817-79 LED desk lamp #9559",
+              "printed": "LED desk lamp #9559"
+            },
+            {
+              "path": "line_items[25].description",
+              "outcome": "wrong",
+              "raw": "C243-43 Label printer tape #4941",
+              "printed": "Label printer tape #4941"
+            },
+            {
+              "path": "line_items[26].description",
+              "outcome": "wrong",
+              "raw": "T374-40 Acoustic wall panel #5023",
+              "printed": "Acoustic wall panel #5023"
+            },
+            {
+              "path": "line_items[27].description",
+              "outcome": "wrong",
+              "raw": "D816-96 Label printer tape #5821",
+              "printed": "Label printer tape #5821"
+            },
+            {
+              "path": "line_items[28].description",
+              "outcome": "wrong",
+              "raw": "E288-71 A4 copy paper (box of 5 reams) #3099",
+              "printed": "A4 copy paper (box of 5 reams) #3099"
+            },
+            {
+              "path": "line_items[29].description",
+              "outcome": "wrong",
+              "raw": "T464-47 Acoustic wall panel #7929",
+              "printed": "Acoustic wall panel #7929"
+            },
+            {
+              "path": "line_items[30].description",
+              "outcome": "wrong",
+              "raw": "P842-79 Monitor arm #5754",
+              "printed": "Monitor arm #5754"
+            },
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "B963-32 Wireless keyboard #8361",
+              "printed": "Wireless keyboard #8361"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "P100-28 Webcam 1080p #6722",
+              "printed": "Webcam 1080p #6722"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "F192-47 Standing desk frame #2628",
+              "printed": "Standing desk frame #2628"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "A285-52 Ergonomic office chair #4848",
+              "printed": "Ergonomic office chair #4848"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "F335-74 Label printer tape #4927",
+              "printed": "Label printer tape #4927"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "A638-76 Network switch, 8-port #9876",
+              "printed": "Network switch, 8-port #9876"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "T526-32 Cable management kit #9205",
+              "printed": "Cable management kit #9205"
+            },
+            {
+              "path": "line_items[38].description",
+              "outcome": "wrong",
+              "raw": "D744-40 Standing desk frame #1738",
+              "printed": "Standing desk frame #1738"
+            },
+            {
+              "path": "line_items[39].description",
+              "outcome": "wrong",
+              "raw": "D530-34 Network switch, 8-port #2602",
+              "printed": "Network switch, 8-port #2602"
+            },
+            {
+              "path": "line_items[40].description",
+              "outcome": "wrong",
+              "raw": "M782-52 Wireless keyboard #1948",
+              "printed": "Wireless keyboard #1948"
+            },
+            {
+              "path": "line_items[41].description",
+              "outcome": "wrong",
+              "raw": "E389-94 Whiteboard markers (pack of 12) #4986",
+              "printed": "Whiteboard markers (pack of 12) #4986"
+            }
+          ],
+          "lines": "42 of 42 matched, 0 extra",
+          "flags": [
+            "LINE_AMOUNT_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "LINE_AMOUNT_MISMATCH"
+        },
+        {
+          "doc_id": "test-22",
+          "outcome": "success",
+          "layer1": "157 of 157 fields",
+          "layer2": "155 of 157 fields",
+          "ambiguous": 2,
+          "errors": [],
+          "lines": "37 of 37 matched, 0 extra",
+          "flags": [
+            "DATE_AMBIGUOUS"
+          ],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-24",
+          "outcome": "success",
+          "layer1": "154 of 161 fields",
+          "layer2": "154 of 161 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "B769-75 Label printer tape #2835",
+              "printed": "Label printer tape #2835"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "T135-83 Whiteboard markers (pack of 12) #4778",
+              "printed": "Whiteboard markers (pack of 12) #4778"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "F810-62 USB-C docking station #8606",
+              "printed": "USB-C docking station #8606"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "R814-86 Whiteboard markers (pack of 12) #3229",
+              "printed": "Whiteboard markers (pack of 12) #3229"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "D415-38 USB-C docking station #7042",
+              "printed": "USB-C docking station #7042"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "F607-76 Laser toner cartridge #3316",
+              "printed": "Laser toner cartridge #3316"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "R801-63 A4 copy paper (box of 5 reams) #7345",
+              "printed": "A4 copy paper (box of 5 reams) #7345"
+            }
+          ],
+          "lines": "38 of 38 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "wrapped_descriptions",
+      "label": "Wrapped descriptions",
+      "doc_ids": [
+        "test-04",
+        "test-22"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 2,
+        "field_instances": 186,
+        "layer1": {
+          "n": 186,
+          "d": 186,
+          "pct": 100.0
+        },
+        "layer2_strict": {
+          "n": 184,
+          "d": 186,
+          "pct": 98.9
+        },
+        "layer2_decided": {
+          "n": 184,
+          "d": 184,
+          "pct": 100.0
+        },
+        "ambiguous": 2,
+        "errors": 0,
+        "line_recall": {
+          "n": 42,
+          "d": 42,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 22,
+        "field_instances": 1458,
+        "layer1": {
+          "n": 1163,
+          "d": 1458,
+          "pct": 79.8
+        },
+        "layer2_strict": {
+          "n": 1364,
+          "d": 1458,
+          "pct": 93.6
+        },
+        "layer2_decided": {
+          "n": 1364,
+          "d": 1456,
+          "pct": 93.7
+        },
+        "ambiguous": 2,
+        "errors": 92,
+        "line_recall": {
+          "n": 223,
+          "d": 315,
+          "pct": 70.8
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-04",
+          "outcome": "success",
+          "layer1": "29 of 29 fields",
+          "layer2": "29 of 29 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "5 of 5 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-22",
+          "outcome": "success",
+          "layer1": "157 of 157 fields",
+          "layer2": "155 of 157 fields",
+          "ambiguous": 2,
+          "errors": [],
+          "lines": "37 of 37 matched, 0 extra",
+          "flags": [
+            "DATE_AMBIGUOUS"
+          ],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "injection",
+      "label": "Prompt-injection line",
+      "doc_ids": [
+        "test-03",
+        "test-09"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 2,
+        "field_instances": 54,
+        "layer1": {
+          "n": 43,
+          "d": 54,
+          "pct": 79.6
+        },
+        "layer2_strict": {
+          "n": 54,
+          "d": 54,
+          "pct": 100.0
+        },
+        "layer2_decided": {
+          "n": 54,
+          "d": 54,
+          "pct": 100.0
+        },
+        "ambiguous": 0,
+        "errors": 0,
+        "line_recall": {
+          "n": 9,
+          "d": 9,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 22,
+        "field_instances": 1590,
+        "layer1": {
+          "n": 1306,
+          "d": 1590,
+          "pct": 82.1
+        },
+        "layer2_strict": {
+          "n": 1494,
+          "d": 1590,
+          "pct": 94.0
+        },
+        "layer2_decided": {
+          "n": 1494,
+          "d": 1586,
+          "pct": 94.2
+        },
+        "ambiguous": 4,
+        "errors": 92,
+        "line_recall": {
+          "n": 256,
+          "d": 348,
+          "pct": 73.6
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-03",
+          "outcome": "success",
+          "layer1": "29 of 29 fields",
+          "layer2": "29 of 29 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "5 of 5 matched, 0 extra",
+          "flags": [
+            "TOTAL_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "TOTAL_MISMATCH"
+        },
+        {
+          "doc_id": "test-09",
+          "outcome": "success",
+          "layer1": "14 of 25 fields",
+          "layer2": "25 of 25 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "4 of 4 matched, 0 extra",
+          "flags": [],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    },
+    {
+      "key": "arith_error",
+      "label": "Deliberate arithmetic error",
+      "doc_ids": [
+        "test-03",
+        "test-08",
+        "test-16",
+        "test-20"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 4,
+        "field_instances": 268,
+        "layer1": {
+          "n": 207,
+          "d": 268,
+          "pct": 77.2
+        },
+        "layer2_strict": {
+          "n": 226,
+          "d": 268,
+          "pct": 84.3
+        },
+        "layer2_decided": {
+          "n": 226,
+          "d": 268,
+          "pct": 84.3
+        },
+        "ambiguous": 0,
+        "errors": 42,
+        "line_recall": {
+          "n": 16,
+          "d": 58,
+          "pct": 27.6
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 42,
+          "pct": 0.0
+        }
+      },
+      "rest": {
+        "documents": 20,
+        "field_instances": 1376,
+        "layer1": {
+          "n": 1142,
+          "d": 1376,
+          "pct": 83.0
+        },
+        "layer2_strict": {
+          "n": 1322,
+          "d": 1376,
+          "pct": 96.1
+        },
+        "layer2_decided": {
+          "n": 1322,
+          "d": 1372,
+          "pct": 96.4
+        },
+        "ambiguous": 4,
+        "errors": 50,
+        "line_recall": {
+          "n": 249,
+          "d": 299,
+          "pct": 83.3
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 50,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-03",
+          "outcome": "success",
+          "layer1": "29 of 29 fields",
+          "layer2": "29 of 29 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "5 of 5 matched, 0 extra",
+          "flags": [
+            "TOTAL_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "TOTAL_MISMATCH"
+        },
+        {
+          "doc_id": "test-08",
+          "outcome": "success",
+          "layer1": "21 of 21 fields",
+          "layer2": "21 of 21 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "3 of 3 matched, 0 extra",
+          "flags": [
+            "SUBTOTAL_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "SUBTOTAL_MISMATCH"
+        },
+        {
+          "doc_id": "test-16",
+          "outcome": "success",
+          "layer1": "22 of 41 fields",
+          "layer2": "41 of 41 fields",
+          "ambiguous": 0,
+          "errors": [],
+          "lines": "8 of 8 matched, 0 extra",
+          "flags": [
+            "LINE_AMOUNT_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "LINE_AMOUNT_MISMATCH"
+        },
+        {
+          "doc_id": "test-20",
+          "outcome": "success",
+          "layer1": "135 of 177 fields",
+          "layer2": "135 of 177 fields",
+          "ambiguous": 0,
+          "errors": [
+            {
+              "path": "line_items[0].description",
+              "outcome": "wrong",
+              "raw": "T635-49 Whiteboard markers (pack of 12) #7870",
+              "printed": "Whiteboard markers (pack of 12) #7870"
+            },
+            {
+              "path": "line_items[1].description",
+              "outcome": "wrong",
+              "raw": "D587-59 Network switch, 8-port #3595",
+              "printed": "Network switch, 8-port #3595"
+            },
+            {
+              "path": "line_items[2].description",
+              "outcome": "wrong",
+              "raw": "A558-70 Label printer tape #2501",
+              "printed": "Label printer tape #2501"
+            },
+            {
+              "path": "line_items[3].description",
+              "outcome": "wrong",
+              "raw": "H579-54 Laser toner cartridge #4933",
+              "printed": "Laser toner cartridge #4933"
+            },
+            {
+              "path": "line_items[4].description",
+              "outcome": "wrong",
+              "raw": "M844-88 USB-C docking station #7713",
+              "printed": "USB-C docking station #7713"
+            },
+            {
+              "path": "line_items[5].description",
+              "outcome": "wrong",
+              "raw": "D304-87 Standing desk frame #4363",
+              "printed": "Standing desk frame #4363"
+            },
+            {
+              "path": "line_items[6].description",
+              "outcome": "wrong",
+              "raw": "A802-50 Label printer tape #3439",
+              "printed": "Label printer tape #3439"
+            },
+            {
+              "path": "line_items[7].description",
+              "outcome": "wrong",
+              "raw": "F889-14 Laser toner cartridge #8411",
+              "printed": "Laser toner cartridge #8411"
+            },
+            {
+              "path": "line_items[8].description",
+              "outcome": "wrong",
+              "raw": "B752-88 Ergonomic office chair #3649",
+              "printed": "Ergonomic office chair #3649"
+            },
+            {
+              "path": "line_items[9].description",
+              "outcome": "wrong",
+              "raw": "B719-10 Laser toner cartridge #9805",
+              "printed": "Laser toner cartridge #9805"
+            },
+            {
+              "path": "line_items[10].description",
+              "outcome": "wrong",
+              "raw": "T448-20 Acoustic wall panel #8791",
+              "printed": "Acoustic wall panel #8791"
+            },
+            {
+              "path": "line_items[11].description",
+              "outcome": "wrong",
+              "raw": "T961-98 Cable management kit #1669",
+              "printed": "Cable management kit #1669"
+            },
+            {
+              "path": "line_items[12].description",
+              "outcome": "wrong",
+              "raw": "P706-63 Laser toner cartridge #1808",
+              "printed": "Laser toner cartridge #1808"
+            },
+            {
+              "path": "line_items[13].description",
+              "outcome": "wrong",
+              "raw": "R698-76 Webcam 1080p #6651",
+              "printed": "Webcam 1080p #6651"
+            },
+            {
+              "path": "line_items[14].description",
+              "outcome": "wrong",
+              "raw": "C982-50 Webcam 1080p #4555",
+              "printed": "Webcam 1080p #4555"
+            },
+            {
+              "path": "line_items[15].description",
+              "outcome": "wrong",
+              "raw": "P177-88 Ergonomic office chair #9714",
+              "printed": "Ergonomic office chair #9714"
+            },
+            {
+              "path": "line_items[16].description",
+              "outcome": "wrong",
+              "raw": "P487-67 Acoustic wall panel #2532",
+              "printed": "Acoustic wall panel #2532"
+            },
+            {
+              "path": "line_items[17].description",
+              "outcome": "wrong",
+              "raw": "K757-56 Label printer tape #5308",
+              "printed": "Label printer tape #5308"
+            },
+            {
+              "path": "line_items[18].description",
+              "outcome": "wrong",
+              "raw": "H690-60 Cable management kit #3546",
+              "printed": "Cable management kit #3546"
+            },
+            {
+              "path": "line_items[19].description",
+              "outcome": "wrong",
+              "raw": "C533-71 LED desk lamp #9832",
+              "printed": "LED desk lamp #9832"
+            },
+            {
+              "path": "line_items[20].description",
+              "outcome": "wrong",
+              "raw": "M394-42 A4 copy paper (box of 5 reams) #8600",
+              "printed": "A4 copy paper (box of 5 reams) #8600"
+            },
+            {
+              "path": "line_items[21].description",
+              "outcome": "wrong",
+              "raw": "C461-35 USB-C docking station #6032",
+              "printed": "USB-C docking station #6032"
+            },
+            {
+              "path": "line_items[22].description",
+              "outcome": "wrong",
+              "raw": "T576-20 Network switch, 8-port #8533",
+              "printed": "Network switch, 8-port #8533"
+            },
+            {
+              "path": "line_items[23].description",
+              "outcome": "wrong",
+              "raw": "H601-97 USB-C docking station #9444",
+              "printed": "USB-C docking station #9444"
+            },
+            {
+              "path": "line_items[24].description",
+              "outcome": "wrong",
+              "raw": "A817-79 LED desk lamp #9559",
+              "printed": "LED desk lamp #9559"
+            },
+            {
+              "path": "line_items[25].description",
+              "outcome": "wrong",
+              "raw": "C243-43 Label printer tape #4941",
+              "printed": "Label printer tape #4941"
+            },
+            {
+              "path": "line_items[26].description",
+              "outcome": "wrong",
+              "raw": "T374-40 Acoustic wall panel #5023",
+              "printed": "Acoustic wall panel #5023"
+            },
+            {
+              "path": "line_items[27].description",
+              "outcome": "wrong",
+              "raw": "D816-96 Label printer tape #5821",
+              "printed": "Label printer tape #5821"
+            },
+            {
+              "path": "line_items[28].description",
+              "outcome": "wrong",
+              "raw": "E288-71 A4 copy paper (box of 5 reams) #3099",
+              "printed": "A4 copy paper (box of 5 reams) #3099"
+            },
+            {
+              "path": "line_items[29].description",
+              "outcome": "wrong",
+              "raw": "T464-47 Acoustic wall panel #7929",
+              "printed": "Acoustic wall panel #7929"
+            },
+            {
+              "path": "line_items[30].description",
+              "outcome": "wrong",
+              "raw": "P842-79 Monitor arm #5754",
+              "printed": "Monitor arm #5754"
+            },
+            {
+              "path": "line_items[31].description",
+              "outcome": "wrong",
+              "raw": "B963-32 Wireless keyboard #8361",
+              "printed": "Wireless keyboard #8361"
+            },
+            {
+              "path": "line_items[32].description",
+              "outcome": "wrong",
+              "raw": "P100-28 Webcam 1080p #6722",
+              "printed": "Webcam 1080p #6722"
+            },
+            {
+              "path": "line_items[33].description",
+              "outcome": "wrong",
+              "raw": "F192-47 Standing desk frame #2628",
+              "printed": "Standing desk frame #2628"
+            },
+            {
+              "path": "line_items[34].description",
+              "outcome": "wrong",
+              "raw": "A285-52 Ergonomic office chair #4848",
+              "printed": "Ergonomic office chair #4848"
+            },
+            {
+              "path": "line_items[35].description",
+              "outcome": "wrong",
+              "raw": "F335-74 Label printer tape #4927",
+              "printed": "Label printer tape #4927"
+            },
+            {
+              "path": "line_items[36].description",
+              "outcome": "wrong",
+              "raw": "A638-76 Network switch, 8-port #9876",
+              "printed": "Network switch, 8-port #9876"
+            },
+            {
+              "path": "line_items[37].description",
+              "outcome": "wrong",
+              "raw": "T526-32 Cable management kit #9205",
+              "printed": "Cable management kit #9205"
+            },
+            {
+              "path": "line_items[38].description",
+              "outcome": "wrong",
+              "raw": "D744-40 Standing desk frame #1738",
+              "printed": "Standing desk frame #1738"
+            },
+            {
+              "path": "line_items[39].description",
+              "outcome": "wrong",
+              "raw": "D530-34 Network switch, 8-port #2602",
+              "printed": "Network switch, 8-port #2602"
+            },
+            {
+              "path": "line_items[40].description",
+              "outcome": "wrong",
+              "raw": "M782-52 Wireless keyboard #1948",
+              "printed": "Wireless keyboard #1948"
+            },
+            {
+              "path": "line_items[41].description",
+              "outcome": "wrong",
+              "raw": "E389-94 Whiteboard markers (pack of 12) #4986",
+              "printed": "Whiteboard markers (pack of 12) #4986"
+            }
+          ],
+          "lines": "42 of 42 matched, 0 extra",
+          "flags": [
+            "LINE_AMOUNT_MISMATCH"
+          ],
+          "expected_arithmetic_flag": "LINE_AMOUNT_MISMATCH"
+        }
+      ]
+    },
+    {
+      "key": "ambiguity",
+      "label": "Document ambiguity (oracle)",
+      "doc_ids": [
+        "test-02",
+        "test-17",
+        "test-22"
+      ],
+      "not_scored": [],
+      "case_study": true,
+      "counts": {
+        "documents": 3,
+        "field_instances": 215,
+        "layer1": {
+          "n": 215,
+          "d": 215,
+          "pct": 100.0
+        },
+        "layer2_strict": {
+          "n": 211,
+          "d": 215,
+          "pct": 98.1
+        },
+        "layer2_decided": {
+          "n": 211,
+          "d": 211,
+          "pct": 100.0
+        },
+        "ambiguous": 4,
+        "errors": 0,
+        "line_recall": {
+          "n": 47,
+          "d": 47,
+          "pct": 100.0
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 0,
+          "pct": null
+        }
+      },
+      "rest": {
+        "documents": 21,
+        "field_instances": 1429,
+        "layer1": {
+          "n": 1134,
+          "d": 1429,
+          "pct": 79.4
+        },
+        "layer2_strict": {
+          "n": 1337,
+          "d": 1429,
+          "pct": 93.6
+        },
+        "layer2_decided": {
+          "n": 1337,
+          "d": 1429,
+          "pct": 93.6
+        },
+        "ambiguous": 0,
+        "errors": 92,
+        "line_recall": {
+          "n": 218,
+          "d": 310,
+          "pct": 70.3
+        },
+        "flag_recall": {
+          "n": 0,
+          "d": 92,
+          "pct": 0.0
+        }
+      },
+      "cases": [
+        {
+          "doc_id": "test-02",
+          "outcome": "success",
+          "layer1": "21 of 21 fields",
+          "layer2": "20 of 21 fields",
+          "ambiguous": 1,
+          "errors": [],
+          "lines": "3 of 3 matched, 0 extra",
+          "flags": [
+            "CURRENCY_AMBIGUOUS"
+          ],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-17",
+          "outcome": "success",
+          "layer1": "37 of 37 fields",
+          "layer2": "36 of 37 fields",
+          "ambiguous": 1,
+          "errors": [],
+          "lines": "7 of 7 matched, 0 extra",
+          "flags": [
+            "CURRENCY_AMBIGUOUS"
+          ],
+          "expected_arithmetic_flag": null
+        },
+        {
+          "doc_id": "test-22",
+          "outcome": "success",
+          "layer1": "157 of 157 fields",
+          "layer2": "155 of 157 fields",
+          "ambiguous": 2,
+          "errors": [],
+          "lines": "37 of 37 matched, 0 extra",
+          "flags": [
+            "DATE_AMBIGUOUS"
+          ],
+          "expected_arithmetic_flag": null
+        }
+      ]
+    }
+  ],
+  "error_causes": {
+    "extraction": 92
+  },
+  "documents": {
+    "test-01": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:USD",
+        "date:us_slash",
+        "numbers:us"
+      ]
+    },
+    "test-02": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:USD",
+        "date:long_mdy",
+        "numbers:us",
+        "no_due_date",
+        "no_tax",
+        "services",
+        "odd_labels"
+      ]
+    },
+    "test-03": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:GBP",
+        "date:eu_slash",
+        "numbers:us",
+        "injection",
+        "arith_error:total"
+      ]
+    },
+    "test-04": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:CAD",
+        "date:us_slash",
+        "numbers:us",
+        "wrapped_descriptions"
+      ]
+    },
+    "test-05": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:USD",
+        "date:iso",
+        "numbers:us",
+        "no_bill_to"
+      ]
+    },
+    "test-06": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:classic_us",
+        "currency:AUD",
+        "date:eu_slash",
+        "numbers:us",
+        "odd_labels"
+      ]
+    },
+    "test-07": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:EUR",
+        "date:dotted",
+        "numbers:eu"
+      ]
+    },
+    "test-08": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:EUR",
+        "date:iso",
+        "numbers:space",
+        "no_due_date",
+        "services",
+        "odd_labels",
+        "arith_error:subtotal"
+      ]
+    },
+    "test-09": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:CHF",
+        "date:long_dmy",
+        "numbers:swiss",
+        "injection"
+      ]
+    },
+    "test-10": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:EUR",
+        "date:short_dmy",
+        "numbers:eu",
+        "no_bill_to"
+      ]
+    },
+    "test-11": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:EUR",
+        "date:dotted",
+        "numbers:eu",
+        "services"
+      ]
+    },
+    "test-12": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:european",
+        "currency:CHF",
+        "date:dotted",
+        "numbers:swiss",
+        "odd_labels"
+      ]
+    },
+    "test-13": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:INR",
+        "date:short_dmy",
+        "numbers:indian"
+      ]
+    },
+    "test-14": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:JPY",
+        "date:iso",
+        "numbers:us",
+        "odd_labels"
+      ]
+    },
+    "test-15": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:AUD",
+        "date:eu_slash",
+        "numbers:us",
+        "no_bill_to",
+        "no_tax",
+        "no_subtotal",
+        "services"
+      ]
+    },
+    "test-16": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:INR",
+        "date:long_dmy",
+        "numbers:indian",
+        "arith_error:line"
+      ]
+    },
+    "test-17": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:USD",
+        "date:long_mdy",
+        "numbers:us",
+        "no_tax",
+        "services"
+      ]
+    },
+    "test-18": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:modern",
+        "currency:JPY",
+        "date:long_dmy",
+        "numbers:us",
+        "no_due_date"
+      ]
+    },
+    "test-19": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:USD",
+        "date:us_slash",
+        "numbers:us",
+        "sku_column"
+      ]
+    },
+    "test-20": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:EUR",
+        "date:dotted",
+        "numbers:eu",
+        "odd_labels",
+        "sku_column",
+        "amount_before_qty",
+        "arith_error:line"
+      ]
+    },
+    "test-21": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:CAD",
+        "date:long_dmy",
+        "numbers:plain",
+        "no_due_date",
+        "qty_first"
+      ]
+    },
+    "test-22": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:USD",
+        "date:us_slash",
+        "numbers:us",
+        "sku_column",
+        "wrapped_descriptions"
+      ]
+    },
+    "test-23": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:GBP",
+        "date:eu_slash",
+        "numbers:us",
+        "amount_before_qty"
+      ]
+    },
+    "test-24": {
+      "outcome": "success",
+      "run_number": 1,
+      "history": [
+        {
+          "run": 1,
+          "outcome": "success",
+          "error_code": null
+        }
+      ],
+      "features": [
+        "layout:multipage",
+        "currency:JPY",
+        "date:iso",
+        "numbers:us",
+        "sku_column"
+      ]
+    }
+  }
+}

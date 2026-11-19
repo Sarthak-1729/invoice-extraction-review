@@ -1,0 +1,62 @@
+{
+  "set": "test",
+  "set_sha256": "5584672000bc2df17eacdbc4e8c7f442e0f214ce1182f1f47b8fa8e55f005681",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "prompt_version": "extraction_v4",
+  "prompt_hash": "852b70c465cb48cf452a552d3214b5206e1d9153c3ee2ac8a91ffb52174b0c2c",
+  "settings": {
+    "gemini_thinking_level": null,
+    "gemini_max_output_tokens": 16384,
+    "gemini_timeout_seconds": 120.0,
+    "gemini_min_interval_seconds": 6.0,
+    "llm_transient_retries": 3,
+    "llm_max_backoff_seconds": 60.0,
+    "max_pages": 20
+  },
+  "metrics_version": "1.1",
+  "git_commit": "f451523bbb2d664dd7262c60828ba3016d605018",
+  "git_dirty": false,
+  "dirty_files": [],
+  "created": "2026-11-18T12:45:36+00:00",
+  "runs": [
+    {
+      "run_number": 1,
+      "documents": [
+        "test-01",
+        "test-02",
+        "test-03",
+        "test-04",
+        "test-05",
+        "test-06",
+        "test-07",
+        "test-08",
+        "test-09",
+        "test-10",
+        "test-11",
+        "test-12",
+        "test-13",
+        "test-14",
+        "test-15",
+        "test-16",
+        "test-17",
+        "test-18",
+        "test-19",
+        "test-20",
+        "test-21",
+        "test-22",
+        "test-23",
+        "test-24"
+      ],
+      "sessions": [
+        {
+          "started": "2026-11-18T12:45:36+00:00",
+          "ended": "2026-11-18T12:51:20+00:00",
+          "stopped": null,
+          "git_commit": "f451523bbb2d664dd7262c60828ba3016d605018"
+        }
+      ],
+      "ended": "2026-11-18T12:51:20+00:00"
+    }
+  ]
+}
