@@ -1,0 +1,11 @@
+# Build context for backend/Dockerfile (the repo root). Allow-list: nothing is
+# sent to the Docker build except the files named here, so .env, data/,
+# uploads/, virtual environments, PDFs and truth files never reach an image.
+*
+!backend/pyproject.toml
+!backend/app/
+!eval/datasets/test/MANIFEST.sha256
+!eval/handmade/CHANGELOG.md
+!eval/handmade/MANIFEST.sha256
+**/__pycache__
+**/*.pyc

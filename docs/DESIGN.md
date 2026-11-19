@@ -207,3 +207,12 @@ add `INVALID_PDF` to the upload codes.
   membership comes from truth features; "document ambiguity" from the oracle
   run. The hand-made set lives in `eval/handmade/` (empty) and is guarded
   like the test set.
+- Phase 8 (Docker): `backend/Dockerfile` (python:3.11.9-slim-bookworm by
+  digest, non-root uid 10001, editable install so the upload guard finds the
+  test manifest copied into the image; only hashes, no PDFs or truth files),
+  `frontend/Dockerfile` (Node build, then nginx-unprivileged serving the
+  static files and proxying `/api/` to the backend, so the browser sees one
+  origin), allow-list `.dockerignore`, and `docker-compose.yml` (named volume
+  `app-data` for the database and uploads, ports on localhost only and
+  configurable, read-only root filesystems, all capabilities dropped,
+  settings and secrets only from `.env`).

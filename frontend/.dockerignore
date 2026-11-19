@@ -1,0 +1,12 @@
+# Build context for frontend/Dockerfile. Never send local installs, builds or
+# environment files (VITE_API_URL is a build argument instead).
+node_modules
+dist
+coverage
+.env
+.env.*
+src/__tests__
+src/test
+eslint.config.js
+Dockerfile
+.dockerignore

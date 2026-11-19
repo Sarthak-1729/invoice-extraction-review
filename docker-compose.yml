@@ -1,0 +1,64 @@
+# Run the API and the review UI:
+#   docker compose up --build
+# Then open http://localhost:${FRONTEND_PORT:-8080}.
+#
+# Secrets and settings come only from .env (copy .env.example). Nothing secret
+# is built into the images. Ports are published on localhost only; change them
+# with FRONTEND_PORT / BACKEND_PORT in .env or the shell.
+
+name: invoice-review
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: invoice-review-backend:local
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Container paths override the local ones in .env.
+      DATABASE_URL: sqlite:////data/app.sqlite3
+      UPLOAD_DIR: /data/uploads
+      # Uploads of held-out PDFs stay refused; the evaluation never uses uploads.
+      ALLOW_TEST_SET_UPLOADS: "false"
+      # The UI reaches the API through nginx on the same origin.
+      CORS_ORIGINS: "[]"
+    volumes:
+      - app-data:/data
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8000}:8000"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: frontend
+      args:
+        VITE_API_URL: /
+    image: invoice-review-frontend:local
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-8080}:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
+
+volumes:
+  # SQLite database and uploaded PDFs. Survives "docker compose down";
+  # removed only by "docker compose down -v".
+  app-data:
