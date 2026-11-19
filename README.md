@@ -68,29 +68,36 @@ the accessibility lint rules matter more here than the newer ESLint.
 
 ## Limitations
 
-- **Synthetic data only.** The dev and test sets come from the same generator
-  (`eval/generator/`), so evaluation results describe synthetic invoices with
-  these four layouts, not real-world invoices.
+- **Synthetic data from one generator.** The dev and test sets come from the
+  same generator (`eval/generator/`), so every reported number describes 24
+  synthetic test invoices in these four layouts, not real-world invoices. The
+  baseline (`eval/results/test/`) says nothing about other layouts, fonts or
+  scanned documents.
 - **Prices are random.** Unit prices are drawn from a range per currency, so
   some are unrealistic (for example an office chair at CAD 7.98). The
   arithmetic is always internally consistent, which is what the metrics rely on.
 - **Text-based PDFs only.** Scanned PDFs (no text layer) are rejected; there is
   no OCR.
-- **Grounding catches invented values, not misplaced ones.** The grounding
-  check confirms that an extracted value occurs in the PDF text. A value
-  copied from the wrong place still passes: for example an item code from a
-  SKU column copied into the description (seen on a dev document) is in the
-  text, so it is not flagged.
+- **Item codes in descriptions are not detected.** The grounding check only
+  confirms that an extracted value occurs in the PDF text, so a value copied
+  from the wrong place passes. Measured on the test-set baseline: 92 of 357
+  line-item descriptions came back as `<item code> <description>` (test-19:
+  43 of 43, test-20: 42 of 42, test-24: 7 of 38), and 0 of the 92 were
+  flagged. These were the only errors in the run. The two item-code tables
+  whose descriptions wrap (dev-09 and test-22) were extracted correctly; the
+  three that do not wrap were not. See
+  `eval/results/test/.../baseline.md`.
 - **Single runs vary.** The model's output is not fully repeatable: on one dev
   document the currency symbols on amounts were dropped in one run and kept
   in the next, with no relevant prompt change. Reported numbers therefore
   come from one specified run (model, prompt hash, git commit and date are
   recorded with every result), not from the best of several runs.
-- **Prompt example matches the generator.** The active prompt tells the model
-  to keep reference numbers "such as #1234" in descriptions, which is exactly
-  the format the generator puts in every synthetic description. It was
-  written to fix a dev document, but it also suits the test set (same
-  generator), so test-set description accuracy may be overstated compared
-  with real invoices, whose references look different.
+- **Prompt example matches the generator's reference format.** The active
+  prompt tells the model to keep reference numbers "such as #1234" in
+  descriptions, which is exactly the format the generator puts in every
+  synthetic description. It was written to fix a dev document, but it also
+  suits the test set (same generator), so the measured description accuracy
+  (265 of 357 right) may be overstated compared with real invoices, whose
+  references look different.
 - **Fonts.** The generator uses the built-in Helvetica/Courier fonts, which have
   no `₹` glyph, so INR amounts are printed with `Rs.`.
